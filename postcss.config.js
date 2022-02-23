@@ -1,3 +1,4 @@
+// 假如不起作用，请使用内联postcss，见 vite.config.ts
 module.exports = {
   plugins: {
     tailwindcss: {},
