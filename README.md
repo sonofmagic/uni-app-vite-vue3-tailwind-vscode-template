@@ -2,4 +2,4 @@
 
 基于 uni-app 的 vite/vue3 tailwindcss 模板
 
-> `postcss.config.js` 假如不起作用，请使用 `内联postcss`，见 `vite.config.ts`
+> `postcss.config.js` 假如不起作用，请使用 `内联postcss`
