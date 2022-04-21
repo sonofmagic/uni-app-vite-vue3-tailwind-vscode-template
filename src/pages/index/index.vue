@@ -4,7 +4,7 @@
       class="logo"
       src="/static/logo.png"
     />
-    <view class="text-area">
+    <view class="text-area bg-[#123456]">
       <text class="title">{{ title }}</text>
     </view>
     <view class="p-[20px] -mt-2 mb-[-20px] ">p-[20px] -mt-2 mb-[-20px] margin的jit 可不能这么写 -m-[20px]</view>
