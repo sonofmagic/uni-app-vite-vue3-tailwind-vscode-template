@@ -55,6 +55,8 @@
     "@dcloudio/uni-automator": "3.0.0-alpha-3040520220408002",
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3040520220408002",
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3040520220408002",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@types/node": "^17.0.31",
     "autoprefixer": "^10.4.4",
     "postcss": "^8.4.8",
     "postcss-rem-to-responsive-pixel": "^5.1.1",
