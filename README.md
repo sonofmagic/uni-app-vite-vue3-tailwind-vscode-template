@@ -4,6 +4,8 @@
 
 > `postcss.config.js` 假如不起作用，请使用 `内联postcss`
 
+假如你觉得好用，欢迎给我的 [`weapp-tailwindcss-webpack-plugin`](https://github.com/sonofmagic/weapp-tailwindcss-webpack-plugin) 点个 `Star` 吧。
+
 ## Tips
 
 `vite` 使用高德地图加载 `commonjs` 模块示例见 https://github.com/sonofmagic/uni-app-vue3-for-amap-wx
