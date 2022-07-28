@@ -30,7 +30,12 @@
     "build:mp-weixin": "uni build -p mp-weixin",
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
-    "build:quickapp-webview-union": "uni build -p quickapp-webview-union"
+    "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
+    "open:dev": "weapp open -p dist/dev/mp-weixin",
+    "open:build": "weapp open -p dist/build/mp-weixin",
+    "weapp:login": "weapp login",
+    "upload:dev": "weapp upload -p dist/dev/mp-weixin -v 1.0.0 -d \"dev version\"",
+    "upload:build": "weapp upload -p dist/build/mp-weixin -v 1.0.0 -d \"release version\""
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-3040520220408002",
@@ -55,15 +60,16 @@
     "@dcloudio/uni-automator": "3.0.0-alpha-3040520220408002",
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3040520220408002",
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3040520220408002",
-    "@rollup/plugin-commonjs": "^22.0.0",
-    "@types/node": "^18.0.0",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@types/node": "^18.6.2",
     "autoprefixer": "^10.4.4",
     "postcss": "^8.4.14",
     "postcss-rem-to-responsive-pixel": "^5.1.3",
-    "sass": "^1.52.3",
-    "tailwindcss": "^3.1.4",
+    "sass": "^1.54.0",
+    "tailwindcss": "^3.1.6",
     "typescript": "^4.7.4",
     "vite": "^2.9.12",
-    "weapp-tailwindcss-webpack-plugin": "^1.6.7"
+    "weapp-ide-cli": "^1.0.0",
+    "weapp-tailwindcss-webpack-plugin": "^1.6.8"
   }
 }
