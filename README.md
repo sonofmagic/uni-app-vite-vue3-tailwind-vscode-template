@@ -12,4 +12,6 @@
 
 ## Tips
 
-`vite` 使用高德地图加载 `commonjs` 模块示例见 https://github.com/sonofmagic/uni-app-vue3-for-amap-wx
+`uni-app` 依赖更新的方式为 `npx @dcloudio/uvm`
+
+`vite` 使用高德地图加载 `commonjs` 模块示例见 <https://github.com/sonofmagic/uni-app-vue3-for-amap-wx>
