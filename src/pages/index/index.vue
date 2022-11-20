@@ -6,6 +6,7 @@
     <view class="text-area bg-[#123456]">
       <text class="title">{{ title }}</text>
     </view>
+    <view class="text-[27rpx] border-[10rpx] border-[#faf]">text-[27rpx] border-[10rpx] border-[#111]</view>
     <view class="p-[20px] -mt-2 mb-[-20px]">p-[20px] -mt-2 mb-[-20px] margin的jit 可不能这么写 -m-[20px]</view>
     <view class="space-y-[1.6rem]">
       <view class="max-w-[300px] min-h-[100px] text-[#dddddd]">max-w-[300px] min-h-[100px] text-[#dddddd]</view>
