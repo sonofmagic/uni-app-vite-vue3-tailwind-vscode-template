@@ -1,8 +1,8 @@
 <template>
   <view class="content">
-    <view>当前系统主题:{{ themeRef }}</view>
+    <image class="logo mt-6" src="/static/logo.png" />
+    <view class="text-gray-900/50 my-4">当前系统主题:{{ themeRef }}</view>
     <view class="bg-[#010101] dark:bg-[#fefefe] h-10 w-10" hover-class="bg-[#e1e1e1] dark:bg-[#121212]"></view>
-    <image class="logo" src="/static/logo.png" />
     <view class="text-area bg-[#123456]">
       <text class="title">{{ title }}</text>
     </view>
@@ -11,43 +11,47 @@
     <view class="space-y-[1.6rem]">
       <view class="max-w-[300px] min-h-[100px] text-[#dddddd]">max-w-[300px] min-h-[100px] text-[#dddddd]</view>
       <view class="
-          flex
-          items-center
-          justify-center
-          h-[100px]
-          w-[100px]
-          rounded-[40px]
-          bg-[#123456] bg-opacity-[0.54]
-          text-[#ffffff]
-        ">Hello</view>
+                        flex
+                        items-center
+                        justify-center
+                        h-[100px]
+                        w-[100px]
+                        rounded-[40px]
+                        bg-[#123456] bg-opacity-[0.54]
+                        text-[#ffffff]
+                      ">Hello</view>
       <view class="
-          border-[10px] border-[#098765] border-solid border-opacity-[0.44]
-        ">border-[10px] border-[#098765] border-solid border-opacity-[0.44]</view>
+                        border-[10px] border-[#098765] border-solid border-opacity-[0.44]
+                      ">border-[10px] border-[#098765] border-solid border-opacity-[0.44]</view>
       <view class="grid grid-cols-3 divide-x-[10px] divide-[#010101] divide-solid">
-        <div>1</div>
+        <div :class="classArray">1</div>
         <div>2</div>
-        <div>3</div>
+        <div :class="classArray">3</div>
       </view>
       <view class="
-          w-32
-          py-2
-          rounded-md
-          font-semibold
-          text-white
-          bg-pink-500
-          ring-4 ring-pink-300
-        ">
+                        w-32
+                        py-2
+                        rounded-md
+                        font-semibold
+                        text-white
+                        bg-pink-500
+                        ring-4 ring-pink-300
+                      ">
         Default
       </view>
     </view>
     <view class="test">test</view>
+    <input v-model="title" />
   </view>
 </template>
 
 <script setup lang="ts">
-import { ref, onBeforeUnmount } from "vue";
+import { ref, onBeforeUnmount, computed } from "vue";
 const title = ref("Hello");
 const themeRef = ref(uni.getSystemInfoSync().theme);
+const classArray = computed(() => [Boolean(title.value) ? 'bg-[#ff00ff]' : undefined, {
+  'text-[#00ffff]': Boolean(title)
+}])
 // #ifdef MP
 uni.onThemeChange(({ theme }: { theme: "dark" | "light" }) => {
   themeRef.value = theme;
@@ -63,6 +67,10 @@ onBeforeUnmount(() => {
 <style lang="scss" scoped>
 .logo {
   @apply h-[100rpx] w-[100rpx];
+}
+
+.content {
+  @apply flex flex-col items-center;
 }
 
 .test {
