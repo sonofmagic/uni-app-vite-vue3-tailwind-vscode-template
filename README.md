@@ -12,10 +12,10 @@
 
 ## Tips
 
-升级 `uni-app` 依赖的方式为 `npx @dcloudio/uvm` 后，选择对应的 `Package Manager` 即可
+- 目前模板里没有初始化 `eslint` 配置，你可以自行 `eslint --init` 创建，然后再注册 `eslint-plugin-vue`。
 
-而升级其他包的方式，可以使用 `yarn upgradeInteractive --latest`，这个是 `yarn` 自带的方式。
+- 升级 `uni-app` 依赖的方式为 `npx @dcloudio/uvm` 后，选择对应的 `Package Manager` 即可。而升级其他包的方式，可以使用 `yarn upgradeInteractive --latest`，这个是 `yarn` 自带的方式。
 
-之前使用 `pnpm` 进行安装的时候，一直有 `bug` 导致控件库无法加载运行，如果发现 `pnpm` 好了可以 `issue` 里通知一声
+> 之前使用 `pnpm` 进行安装的时候，一直有 `bug` 导致控件库无法加载运行，如果发现 `pnpm` 好了可以 `issue` 里通知一声
 
-`vite` 使用高德地图加载 `commonjs` 模块示例见 <https://github.com/sonofmagic/uni-app-vue3-for-amap-wx>
+- `vite` 使用高德地图加载 `commonjs` 模块示例见 <https://github.com/sonofmagic/uni-app-vue3-for-amap-wx>，需要使用 `@rollup/plugin-commonjs`

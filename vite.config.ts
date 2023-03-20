@@ -8,8 +8,11 @@ const WeappTailwindcssDisabled = isH5 || isApp;
 import { UnifiedViteWeappTailwindcssPlugin as uvtw } from "weapp-tailwindcss-webpack-plugin/vite";
 // thanks to gaokun issue#4
 import rem2px from 'postcss-rem-to-responsive-pixel';
+import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
 
-const postcssPlugins = [require("autoprefixer")(), require("tailwindcss")()];
+const postcssPlugins = [tailwindcss(), autoprefixer()];
+
 if (!WeappTailwindcssDisabled) {
   postcssPlugins.push(
     rem2px({
