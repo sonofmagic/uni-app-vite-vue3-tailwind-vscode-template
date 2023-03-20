@@ -35,7 +35,8 @@
     "open:build": "weapp open -p dist/build/mp-weixin",
     "weapp:login": "weapp login",
     "upload:dev": "weapp upload -p dist/dev/mp-weixin -v 1.0.0 -d \"dev version\"",
-    "upload:build": "weapp upload -p dist/build/mp-weixin -v 1.0.0 -d \"release version\""
+    "upload:build": "weapp upload -p dist/build/mp-weixin -v 1.0.0 -d \"release version\"",
+    "postinstall": "weapp-tw patch"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-3070320230222002",
