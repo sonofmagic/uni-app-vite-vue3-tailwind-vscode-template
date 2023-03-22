@@ -1,6 +1,7 @@
 <template>
   <view class="content">
     <image class="logo mt-6" src="/static/logo.png" />
+    <button @click="increment">pinia {{ count }}</button>
     <view class="text-gray-900/50 my-4">当前系统主题:{{ themeRef }}</view>
     <view
       class="bg-[#010101] dark:bg-[#fefefe] h-10 w-10"
@@ -44,6 +45,12 @@
 
 <script setup lang="ts">
 import { ref, onBeforeUnmount, computed } from 'vue'
+import { useCounterStore } from '@/stores/counter'
+import { storeToRefs } from 'pinia'
+const store = useCounterStore()
+const { count } = storeToRefs(store)
+const { increment } = store
+
 const title = ref('Hello')
 const themeRef = ref(uni.getSystemInfoSync().theme)
 const classArray = computed(() => [
