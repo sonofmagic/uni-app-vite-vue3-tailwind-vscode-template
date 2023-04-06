@@ -66,7 +66,9 @@ uni.onThemeChange(({ theme }: { theme: 'dark' | 'light' }) => {
 // #endif
 onBeforeUnmount(() => {
   // #ifdef MP
-  uni.offThemeChange(() => {})
+  uni.offThemeChange(() => {
+    console.log('offThemeChange')
+  })
   // #endif
 })
 </script>
