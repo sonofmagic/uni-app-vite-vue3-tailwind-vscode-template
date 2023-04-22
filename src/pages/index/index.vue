@@ -1,7 +1,9 @@
 <template>
   <view class="content">
     <image class="logo mt-6" src="/static/logo.png" />
-    <button @click="increment">pinia {{ count }}</button>
+    <button class="text-[#fff]" :class="buttonClass" @click="increment">
+      pinia {{ count }}
+    </button>
     <view class="text-gray-900/50 my-4">当前系统主题:{{ themeRef }}</view>
     <view
       class="bg-[#010101] dark:bg-[#fefefe] h-10 w-10"
@@ -50,7 +52,18 @@ import { storeToRefs } from 'pinia'
 const store = useCounterStore()
 const { count } = storeToRefs(store)
 const { increment } = store
-
+const buttonColors = [
+  'bg-[#000]',
+  'bg-[#111]',
+  'bg-[#222]',
+  'bg-[#333]',
+  'bg-[#444]',
+  'bg-[#555]',
+  'bg-[#666]',
+  'bg-[#777]',
+  'bg-[#888]',
+  'bg-[#999]'
+]
 const title = ref('Hello')
 const themeRef = ref(uni.getSystemInfoSync().theme)
 const classArray = computed(() => [
@@ -59,6 +72,9 @@ const classArray = computed(() => [
     'text-[#00ffff]': Boolean(title)
   }
 ])
+const buttonClass = computed(() => {
+  return buttonColors[count.value % buttonColors.length]
+})
 // #ifdef MP
 uni.onThemeChange(({ theme }: { theme: 'dark' | 'light' }) => {
   themeRef.value = theme
