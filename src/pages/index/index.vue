@@ -69,7 +69,9 @@ const themeRef = ref(uni.getSystemInfoSync().theme)
 const classArray = computed(() => [
   title.value ? 'bg-[#ff00ff]' : undefined,
   {
-    'text-[#00ffff]': Boolean(title)
+    'text-[#00ffff]': Boolean(title),
+    "bg-[url('https://xxx.com/xx.webp')]": true,
+    "bg-[url('https://yyyy.com/ccc.webp')]": true
   }
 ])
 const buttonClass = computed(() => {
