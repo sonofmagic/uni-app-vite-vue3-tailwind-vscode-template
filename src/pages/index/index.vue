@@ -1,34 +1,21 @@
 <template>
   <view class="content">
-    <image class="logo mt-6" src="/static/logo.png" />
-    <button class="text-[#fff]" :class="buttonClass" @click="increment">
-      pinia {{ count }}
-    </button>
-    <view class="text-gray-900/50 my-4">当前系统主题:{{ themeRef }}</view>
     <view
-      class="bg-[#010101] dark:bg-[#fefefe] h-10 w-10"
-      hover-class="bg-[#e1e1e1] dark:bg-[#121212]"></view>
-    <view class="text-area bg-[#123456]">
-      <text class="title">{{ title }}</text>
+      class="bg-[url(https://pic1.zhimg.com/v2-3ee20468f54bbfefcd0027283b21aaa8_720w.jpg)] bg-[length:100%_100%] bg-no-repeat w-screen h-[41.54vw]"></view>
+
+    <view
+      class="after:content-['uni-app-vite-vue3-tailwind-vscode-template'] text-sky-400"></view>
+
+    <view class="text-gray-900/50 mb-2 before:content-['当前系统主题:']">
+      {{ themeRef }}
     </view>
-    <view class="text-[27rpx] border-[10rpx] border-[#faf]">
-      text-[27rpx] border-[10rpx] border-[#111]
-    </view>
-    <view class="p-[20px] -mt-2 mb-[-20px]">
-      p-[20px] -mt-2 mb-[-20px] margin的jit 可不能这么写 -m-[20px]
-    </view>
-    <view class="space-y-[1.6rem]">
-      <view class="max-w-[300px] min-h-[100px] text-[#dddddd]">
-        max-w-[300px] min-h-[100px] text-[#dddddd]
-      </view>
+    <view
+      class="text-gray-900/75 mb-2 before:content-['让我们开始神奇的_*tailwindcss*_开发吧！']"></view>
+
+    <view class="space-y-[20rpx] flex flex-col items-center">
       <view
-        class="flex items-center justify-center h-[100px] w-[100px] rounded-[40px] bg-[#123456] bg-opacity-[0.54] text-[#ffffff]">
-        Hello
-      </view>
-      <view
-        class="border-[10px] border-[#098765] border-solid border-opacity-[0.44]">
-        border-[10px] border-[#098765] border-solid border-opacity-[0.44]
-      </view>
+        class="bg-[#010101] dark:bg-[#fefefe] h-16 w-16 rounded-[20rpx] text-white flex justify-center items-center after:content-['hover']"
+        hover-class="bg-[gray] dark:bg-[#121212]  after:!content-['good!']"></view>
       <view
         class="grid grid-cols-3 divide-x-[10px] divide-[#010101] divide-solid">
         <div :class="classArray">1</div>
@@ -39,9 +26,14 @@
         class="w-32 py-2 rounded-md font-semibold text-white bg-pink-500 ring-4 ring-pink-300">
         Default
       </view>
+      <view>
+        <button class="text-[#fff]" :class="buttonClass" @click="increment">
+          click here to inc {{ count }}
+        </button>
+      </view>
+
+      <view class="test">test</view>
     </view>
-    <view class="test">test</view>
-    <input v-model="title" />
   </view>
 </template>
 
