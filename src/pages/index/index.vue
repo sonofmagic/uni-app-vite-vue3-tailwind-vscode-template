@@ -14,8 +14,8 @@
 
     <view class="space-y-[20rpx] flex flex-col items-center">
       <view
-        class="bg-[#010101] dark:bg-[#fefefe] h-16 w-16 rounded-[20rpx] text-white flex justify-center items-center after:content-['hover']"
-        hover-class="bg-[gray] dark:bg-[#121212]  after:!content-['good!']"></view>
+        class="bg-[#010101] h-16 w-16 rounded-[20rpx] text-white flex justify-center items-center after:content-['hover']"
+        hover-class="bg-[gray] after:!content-['good!']"></view>
       <view
         class="grid grid-cols-3 divide-x-[10px] divide-[#010101] divide-solid">
         <div :class="classArray">1</div>
@@ -32,7 +32,7 @@
         </button>
       </view>
 
-      <view class="test">test</view>
+      <view class="test">@apply</view>
     </view>
   </view>
 </template>

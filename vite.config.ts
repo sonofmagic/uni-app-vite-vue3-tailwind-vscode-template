@@ -2,8 +2,7 @@ import { defineConfig } from 'vite'
 import uni from '@dcloudio/vite-plugin-uni'
 // 假如要加载一些 commonjs 模块，需要引入这个插件，很多地图的sdk都是 commonjs，假如引用报错需要引入它并添加到 `plugins` 里
 // import commonjs from "@rollup/plugin-commonjs";
-import { UnifiedViteWeappTailwindcssPlugin as uvtw } from 'weapp-tailwindcss-webpack-plugin/vite'
-// thanks to gaokun issue#4
+import { UnifiedViteWeappTailwindcssPlugin as uvtw } from 'weapp-tailwindcss/vite'
 import rem2px from 'postcss-rem-to-responsive-pixel'
 import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
@@ -25,8 +24,13 @@ if (!WeappTailwindcssDisabled) {
 // https://vitejs.dev/config/
 export default defineConfig({
   // uvtw 一定要放在 uni 后面
-  plugins: [uni(), WeappTailwindcssDisabled ? undefined : uvtw()],
-  // 假如 postcss.config.js 不起作用，请使用内联 postcss
+  plugins: [
+    uni(),
+    uvtw({
+      disabled: WeappTailwindcssDisabled
+    })
+  ],
+  // 内联 postcss 注册 tailwindcss
   css: {
     postcss: {
       plugins: postcssPlugins

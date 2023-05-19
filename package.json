@@ -87,6 +87,6 @@
     "vite": "4.1.4",
     "vue-eslint-parser": "^9.2.1",
     "weapp-ide-cli": "^1.0.0",
-    "weapp-tailwindcss-webpack-plugin": "^2.2.0"
+    "weapp-tailwindcss": "^2.3.4"
   }
 }
