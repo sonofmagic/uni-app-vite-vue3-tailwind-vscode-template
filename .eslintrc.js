@@ -13,7 +13,8 @@ module.exports = {
     'plugin:prettier/recommended',
     'eslint:recommended',
     'plugin:vue/essential',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    './.eslintrc-auto-import.json'
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
@@ -27,7 +28,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.ts', '*.mts', '*.cts', '*.tsx'],
+      files: ['*.ts', '*.mts', '*.cts', '*.tsx', '*.vue'],
       rules: {
         'no-undef': 'off'
       }

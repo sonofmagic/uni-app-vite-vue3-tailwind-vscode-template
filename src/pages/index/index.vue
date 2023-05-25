@@ -1,17 +1,10 @@
 <template>
   <view class="content">
-    <view
-      class="bg-[url(https://pic1.zhimg.com/v2-3ee20468f54bbfefcd0027283b21aaa8_720w.jpg)] bg-[length:100%_100%] bg-no-repeat w-screen h-[41.54vw]"></view>
-
-    <view
-      class="after:content-['uni-app-vite-vue3-tailwind-vscode-template'] text-sky-400"></view>
+    <WeappTailwindcss></WeappTailwindcss>
 
     <view class="text-gray-900/50 mb-2 before:content-['当前系统主题:']">
       {{ themeRef }}
     </view>
-    <view
-      class="text-gray-900/75 mb-2 before:content-['让我们开始神奇的_*tailwindcss*_开发吧！']"></view>
-
     <view class="space-y-[20rpx] flex flex-col items-center">
       <view
         class="bg-[#010101] h-16 w-16 rounded-[20rpx] text-white flex justify-center items-center after:content-['hover']"
@@ -38,9 +31,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onBeforeUnmount, computed } from 'vue'
+import WeappTailwindcss from '@/components/WeappTailwindcss.vue'
 import { useCounterStore } from '@/stores/counter'
-import { storeToRefs } from 'pinia'
+
 const store = useCounterStore()
 const { count } = storeToRefs(store)
 const { increment } = store
@@ -54,7 +47,13 @@ const buttonColors = [
   'bg-[#666]',
   'bg-[#777]',
   'bg-[#888]',
-  'bg-[#999]'
+  'bg-[#999]',
+  'bg-[#aaa]',
+  'bg-[#bbb]',
+  'bg-[#ccc]',
+  'bg-[#ddd]',
+  'bg-[#eee]',
+  'bg-[#fff]'
 ]
 const title = ref('Hello')
 const themeRef = ref(uni.getSystemInfoSync().theme)
@@ -80,6 +79,10 @@ onBeforeUnmount(() => {
     console.log('offThemeChange')
   })
   // #endif
+})
+
+onLoad(() => {
+  console.log('欢迎使用uni-app-vite-vue3-tailwindcss模板')
 })
 </script>
 
