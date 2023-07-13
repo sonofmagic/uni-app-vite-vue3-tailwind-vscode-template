@@ -17,3 +17,5 @@
 > 之前使用 `pnpm` 进行安装的时候，一直有 `bug` 导致控件库无法加载运行，如果发现 `pnpm` 好了可以 `issue` 里通知一声
 
 - `vite` 使用高德地图加载 `commonjs` 模块示例见 <https://github.com/sonofmagic/uni-app-vue3-for-amap-wx>，需要使用 `@rollup/plugin-commonjs`
+
+- 另外暂时不要升级 `pinia` 的版本，不然会报`hasInjectionContext`相关的错误 ，详见 [pinia/issues/2210](https://github.com/vuejs/pinia/issues/2210)
