@@ -7,7 +7,7 @@
       class="after:content-['uni-app-vite-vue3-tailwind-vscode-template'] text-sky-400 text-center"></view>
 
     <view
-      class="text-gray-900/75 mb-2 before:content-['让我们开始神奇的_*tailwindcss*_开发吧！'] text-center"></view>
+      class="text-gray-900/75 mb-2 before:content-['让我们开始神奇的_*tailwindcss*_开发吧！'] before:text-sky-500 text-center"></view>
   </view>
 </template>
 

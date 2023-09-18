@@ -16,11 +16,14 @@
         <div :class="classArray">3</div>
       </view>
       <view
-        class="w-32 py-2 rounded-md font-semibold text-white bg-pink-500 ring-4 ring-pink-300">
+        class="w-32 py-2 rounded-md font-semibold text-white bg-pink-500 ring-4 ring-pink-300 text-center">
         Default
       </view>
       <view>
-        <button class="text-[#fff]" :class="buttonClass" @click="increment">
+        <button
+          class="text-[#fff] w-64"
+          :class="buttonClass"
+          @click="increment">
           click here to inc {{ count }}
         </button>
       </view>
