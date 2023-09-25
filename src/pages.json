@@ -11,6 +11,9 @@
     },
     {
       "path": "pages/index/tabbar1"
+    },
+    {
+      "path": "pages/switch/popup"
     }
   ],
   "globalStyle": {
@@ -27,7 +30,7 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "1111"
+        "text": "index"
       },
       {
         "pagePath": "pages/index/tabbar0",
