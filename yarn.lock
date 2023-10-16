@@ -6790,10 +6790,10 @@ weapp-ide-cli@^1.0.0:
   dependencies:
     execa "5.1.1"
 
-weapp-tailwindcss@^2.10.0:
-  version "2.10.0"
-  resolved "https://registry.npmmirror.com/weapp-tailwindcss/-/weapp-tailwindcss-2.10.0.tgz#3e6257b533e1796d79358f9c9592d9bed185dc8a"
-  integrity sha512-sC9+Fhy7bW+VrXTQRZtUF+6Mj7Ob8gqWdkXwHLNYUY2DZbKF5RQn4FU45TOECzY1+yntQL2zC9Vl5TMPMy/otg==
+weapp-tailwindcss@^2.10.1:
+  version "2.10.1"
+  resolved "https://registry.npmmirror.com/weapp-tailwindcss/-/weapp-tailwindcss-2.10.1.tgz#3aa35aa673442ea3b846085a7507643f52253e3e"
+  integrity sha512-2XNupXxP8cKXWuPz2sgmj9rQqQ4qPjrsjDdwzegSzrpTRlgB+zyILGF36Is0XtntOdBoCiKR+vWmhDNPheM6MA==
   dependencies:
     "@ast-core/escape" "^1.0.1"
     "@babel/generator" "^7.23.0"
