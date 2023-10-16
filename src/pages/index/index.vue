@@ -29,6 +29,20 @@
       </view>
 
       <view class="test">@apply</view>
+      <view>
+        <view
+          class="ifdef-[MP-WEIXIN]:bg-blue-500 ifndef-[MP-WEIXIN]:bg-red-500">
+          样式的条件编译:微信小程序为蓝色，不是微信小程序为红色
+        </view>
+
+        <view class="wx:bg-blue-500 -wx:bg-red-500">
+          <view>自定义配置的方式进行样式条件编译</view>
+          <view>相关配置见根目录下的tailwind.config.js</view>
+        </view>
+
+        <view class="apply-class-0">@apply 条件编译方式0</view>
+        <view class="apply-class-1">@apply 条件编译方式1</view>
+      </view>
     </view>
   </view>
 </template>
@@ -100,5 +114,14 @@ onLoad(() => {
 
 .test {
   @apply flex items-center justify-center h-[100px] w-[100px] rounded-[40px] bg-[#123456] bg-opacity-[0.54] text-[#ffffff] #{!important};
+}
+
+.apply-class-0 {
+  @apply ifdef-[MP-WEIXIN]:bg-blue-500 ifndef-[MP-WEIXIN]:bg-red-500;
+}
+
+.apply-class-1 {
+  // 这个需要在 tailwind.config.js 里进行自定义配置
+  @apply wx:bg-blue-500 -wx:bg-red-500;
 }
 </style>
