@@ -4,11 +4,18 @@
 
 > `postcss.config.js` 假如不起作用，请使用 `内联postcss`
 
-假如你觉得好用，欢迎给我的 [`weapp-tailwindcss-webpack-plugin`](https://github.com/sonofmagic/weapp-tailwindcss-webpack-plugin) 点个 `Star` 吧。
+假如你觉得好用，欢迎给我的 [`weapp-tailwindcss`](https://github.com/sonofmagic/weapp-tailwindcss) 点个 `Star` 吧。
 
 ## 快速开始
 
 本项目已经集成 `weapp-ide-cli` 可以通过 `cli` 对 `ide` 进行额外操作，[详细信息](https://www.npmjs.com/package/weapp-ide-cli)
+
+## 单位转换
+
+- `rem`->`rpx` (默认开启)
+- `px` -> `rpx` (默认不开启，可反注释开启配置)
+
+注册以及配置项都在 `postcss.config.cjs` 中，可以灵活配置
 
 ## Tips
 
