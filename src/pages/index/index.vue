@@ -50,6 +50,7 @@
 <script setup lang="ts">
 import WeappTailwindcss from '@/components/WeappTailwindcss.vue'
 import { useCounterStore } from '@/stores/counter'
+import { login } from '@/api'
 
 const store = useCounterStore()
 const { count } = storeToRefs(store)
@@ -84,6 +85,10 @@ const classArray = computed(() => [
 ])
 const buttonClass = computed(() => {
   return buttonColors[count.value % buttonColors.length]
+})
+
+onMounted(() => {
+  login()
 })
 // #ifdef MP
 uni.onThemeChange(({ theme }: { theme: 'dark' | 'light' }) => {

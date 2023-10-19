@@ -1230,6 +1230,11 @@
   resolved "https://registry.npmmirror.com/@csstools/selector-specificity/-/selector-specificity-3.0.0.tgz#798622546b63847e82389e473fd67f2707d82247"
   integrity sha512-hBI9tfBtuPIi885ZsZ32IMEU/5nlZH/KOVYJCOh7gyMxaVLGmLedYqFN6Ui1LXkI8JlC8IsuC0rF0btcRZKd5g==
 
+"@dcloudio/types@^2.0.16":
+  version "2.6.12"
+  resolved "https://registry.npmmirror.com/@dcloudio/types/-/types-2.6.12.tgz#6c9559b9e65483f355dd61cb88fe8c14c8e61189"
+  integrity sha512-mrCMwcINy1IFjU9VUqLeWBkj404yWs5paLDttBcA+eqUjanuUQbBcTVPqlrGgkyzLXDcV2oDDZRSNxNpXi4kMQ==
+
 "@dcloudio/types@^3.3.2":
   version "3.4.0"
   resolved "https://registry.npmmirror.com/@dcloudio/types/-/types-3.4.0.tgz#09d9a27f4ba1ffb5e72fa226d80bb2c7f08f3203"
@@ -5076,6 +5081,13 @@ lru-cache@^6.0.0:
   integrity sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==
   dependencies:
     yallist "^4.0.0"
+
+luch-request@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.npmmirror.com/luch-request/-/luch-request-3.1.1.tgz#a62b0aab54c5acd9da5b5fd0564ed2cdb8af9c2f"
+  integrity sha512-p7+mlcEtgRcd0OfXC4XZbyiwSr1XgCeqNT7LlVUjnk7InYl/8d5Rk7BUqAYNA2WRafI1wRIUQWRWZRpeUwWR0w==
+  dependencies:
+    "@dcloudio/types" "^2.0.16"
 
 magic-string@^0.25.7:
   version "0.25.9"
