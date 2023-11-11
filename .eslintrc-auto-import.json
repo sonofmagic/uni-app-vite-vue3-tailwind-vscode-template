@@ -94,6 +94,10 @@
     "onUnload": true,
     "setActivePinia": true,
     "setMapStoreSuffix": true,
-    "storeToRefs": true
+    "storeToRefs": true,
+    "ExtractDefaultPropTypes": true,
+    "ExtractPropTypes": true,
+    "ExtractPublicPropTypes": true,
+    "WritableComputedRef": true
   }
 }
