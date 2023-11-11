@@ -15,6 +15,12 @@
         <div>2</div>
         <div :class="classArray">3</div>
       </view>
+      <view class="group" :class="toggle ? 'is-published' : ''">
+        <button class="after:border-0 bg-transparent" @click="toggleClassName">
+          toggle
+        </button>
+        <view class="hidden group-[.is-published]:block">group published</view>
+      </view>
       <view
         class="w-32 py-2 rounded-md font-semibold text-white bg-pink-500 ring-4 ring-pink-300 text-center">
         Default
@@ -85,6 +91,11 @@ const classArray = computed(() => [
 const buttonClass = computed(() => {
   return buttonColors[count.value % buttonColors.length]
 })
+const toggle = ref(false)
+function toggleClassName() {
+  toggle.value = !toggle.value
+}
+
 // #ifdef MP
 uni.onThemeChange(({ theme }: { theme: 'dark' | 'light' }) => {
   themeRef.value = theme
