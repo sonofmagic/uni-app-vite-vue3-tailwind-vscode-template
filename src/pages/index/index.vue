@@ -50,11 +50,13 @@
         <view class="apply-class-1">@apply 条件编译方式1</view>
       </view>
     </view>
+    <FloatButton></FloatButton>
   </view>
 </template>
 
 <script setup lang="ts">
 import WeappTailwindcss from '@/components/WeappTailwindcss.vue'
+import FloatButton from '@/components/FloatButton.vue'
 import { useCounterStore } from '@/stores/counter'
 
 const store = useCounterStore()
