@@ -15,8 +15,15 @@
         :x="positionRef.x"
         :y="positionRef.y"
         class="w-10 h-10">
-        <view class="w-20 h-40 bg-sky-100 absolute left-0">
-          <slot name="expand"></slot>
+        <view class="w-20 h-40 target-menu">
+          <!-- <slot name="expand"> -->
+          <view>
+            <view>xxx</view>
+            <view>yyy</view>
+            <view>zzz</view>
+            <view>aaa</view>
+          </view>
+          <!-- </slot> -->
         </view>
 
         <slot name="button">
@@ -32,30 +39,13 @@
 </template>
 
 <script setup>
+import { getRect } from '@/utils'
 import debounce from 'lodash/debounce'
-import { flip, offset, computePosition } from '@floating-ui/core'
+import { flip, offset, computePosition, autoPlacement } from '@floating-ui/core'
+const vm = getCurrentInstance()
 const systemInfo = uni.getSystemInfoSync()
 const btnWidth = uni.upx2px(80)
 const edgeWidth = uni.upx2px(32)
-const vm = getCurrentInstance()
-function getRect(selector, all) {
-  const method = all ? 'selectAll' : 'select'
-  return new Promise((resolve) => {
-    uni
-      .createSelectorQuery()
-      .in(vm)
-      [method](selector)
-      .boundingClientRect((rect) => {
-        if (all && Array.isArray(rect) && rect.length) {
-          resolve(rect)
-        }
-        if (!all && rect) {
-          resolve(rect)
-        }
-      })
-      .exec()
-  })
-}
 
 const props = defineProps({
   storeKey: {
@@ -105,9 +95,26 @@ function onClick() {
   emit('click')
 }
 
+function getElementRects({ reference, floating, strategy }) {
+  return {
+    reference: { width: 0, height: 0, x: 0, y: 0 },
+    floating: { width: 0, height: 0, x: 0, y: 0 }
+  }
+}
+const btn = ref()
 onMounted(async () => {
-  const res = await getRect('.default-button')
-  console.log(res)
+  console.log(btn.value)
+  const reference = await getRect(vm, '.default-button')
+  console.log(reference)
+  const floating = await getRect(vm, '.target-menu')
+  console.log(floating)
+  // const referenceEl = { width: 100, height: 100, x: 50, y: 50 }
+  // const floatingEl = { width: 200, height: 200, x: 0, y: 0 }
+  // const res = await computePosition(referenceEl, floatingEl, {
+  //   platform: {},
+  //   placement: 'left'
+  // })
+  // console.log(res)
 })
 
 const resetToYaxis = debounce(function (x, y, source) {
