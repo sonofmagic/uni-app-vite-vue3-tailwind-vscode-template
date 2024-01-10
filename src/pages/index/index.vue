@@ -1,5 +1,5 @@
 <template>
-  <view class="content">
+  <view class="content center">
     <WeappTailwindcss></WeappTailwindcss>
     <view class="mt-[13.14758px]"></view>
     <view class="text-gray-900/50 mb-2 before:content-['当前系统主题:']">
