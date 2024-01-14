@@ -2,9 +2,9 @@
 
 基于 uni-app 的 vite/vue3 tailwindcss 模板
 
-> `postcss.config.js` 假如不起作用，请使用 `内联postcss`
-
 假如你觉得好用，欢迎给我的 [`weapp-tailwindcss`](https://github.com/sonofmagic/weapp-tailwindcss) 点个 `Star` 吧。
+
+官网地址: <https://weapp-tw.icebreaker.top/>
 
 ## 快速开始
 
@@ -12,10 +12,8 @@
 
 ## 单位转换
 
-- `rem`->`rpx` (默认开启)
-- `px` -> `rpx` (默认不开启，可反注释开启配置)
-
-注册以及配置项都在 `postcss.config.cjs` 中，可以灵活配置
+- `rem`->`rpx` (默认开启,  `uvtw` 的 `rem2rpx` 选项)
+- `px` -> `rpx` (默认不开启，可反注释 `postcss.config.cjs` 中的 `postcss-pxtransform` 开启配置)
 
 ## Tips
 
