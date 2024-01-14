@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const cssMacro = require('weapp-tailwindcss/css-macro')
-
+const { iconsPlugin, getIconCollections } = require('@egoist/tailwindcss-icons')
 module.exports = {
   content: ['./index.html', './src/**/*.{html,js,ts,jsx,tsx,vue}'],
   theme: {
@@ -23,6 +23,10 @@ module.exports = {
         //   negative: true
         // }
       }
+    }),
+    iconsPlugin({
+      // Select the icon collections you want to use
+      collections: getIconCollections(['svg-spinners', 'mdi'])
     })
   ],
   corePlugins: {

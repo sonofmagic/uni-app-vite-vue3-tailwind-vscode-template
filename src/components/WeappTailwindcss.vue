@@ -1,16 +1,35 @@
 <template>
-  <view>
+  <view class="space-y-1.5 [&>view]:text-center">
     <view
-      class="bg-[url(https://pic1.zhimg.com/v2-3ee20468f54bbfefcd0027283b21aaa8_720w.jpg)] bg-[length:100%_100%] bg-no-repeat w-screen h-[41.54vw]"></view>
+      class="bg-[url(https://pic4.zhimg.com/80/v2-63755eaa318858e33445862d72581207.png)] bg-[length:100%_100%] bg-no-repeat aspect-[100/16.1]"></view>
 
     <view
-      class="after:content-['uni-app-vite-vue3-tailwind-vscode-template'] text-sky-400 text-center"></view>
+      class="flex items-center justify-center text-gray-600/75"
+      @click="copy('https://github.com/sonofmagic/weapp-tailwindcss')">
+      <view class="i-mdi-github-circle text-[32px] mx-2 text-black"></view>
+      <view class="text-[22px]">+</view>
+      <view class="i-mdi-star text-[32px] mx-2 text-yellow-400"></view>
+    </view>
+    <view
+      @click="copy('https://weapp-tw.icebreaker.top/')"
+      class="bg-gradient-to-r from-green-400 to-sky-400 bg-clip-text font-extrabold text-2xl text-transparent underline">
+      weapp-tw.icebreaker.top
+    </view>
+    <view class="text-xs text-gray-600/75">
+      你可以在上方的官网上，找到大量的提效解决方案
+    </view>
 
     <view
-      class="text-gray-900/75 mb-2 before:content-['让我们开始神奇的_*tailwindcss*_开发吧！'] before:text-sky-500 text-center"></view>
+      class="mb-2 before:content-['现在，让我们开始神奇的_tailwindcss_开发之旅吧！'] before:text-sky-400 before:text-xs text-center"></view>
   </view>
 </template>
 
-<script setup></script>
+<script setup>
+function copy(data) {
+  uni.setClipboardData({
+    data
+  })
+}
+</script>
 
 <style lang="scss" scoped></style>
