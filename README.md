@@ -1,6 +1,6 @@
 # uni-app-vite-vue3-tailwind-vscode-template
 
-基于 uni-app 的 vite/vue3 tailwindcss 模板
+基于 `uni-app` 的 `vite/vue3` `tailwindcss` 模板
 
 假如你觉得好用，欢迎给我的 [`weapp-tailwindcss`](https://github.com/sonofmagic/weapp-tailwindcss) 点个 `Star` 吧。
 
@@ -21,6 +21,10 @@
 - 🦾 [TypeScript](https://www.typescriptlang.org/) & [ESLint](https://eslint.org/) & [Prettier](https://github.com/prettier/prettier) - 类型，校验与格式化，保证你的代码质量
 
 ## 快速开始
+
+使用 `vscode` 的朋友，请先安装 [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) 智能提示与感应插件
+
+其他 IDE 请参考: <https://weapp-tw.icebreaker.top/docs/quick-start/intelliSense>
 
 本项目已经集成 `weapp-ide-cli` 可以通过 `cli` 对 `ide` 进行额外操作，[详细信息](https://www.npmjs.com/package/weapp-ide-cli)
 
