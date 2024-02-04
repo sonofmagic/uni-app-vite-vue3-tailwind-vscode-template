@@ -6,6 +6,20 @@
 
 官网地址: <https://weapp-tw.icebreaker.top/>
 
+## 特性
+
+- ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite](https://github.com/vitejs/vite), [Yarn](https://github.com/yarnpkg/yarn) - 快且稳定
+
+- 🎨 [TailwindCSS](https://tailwindcss.com/) - 世界上最流行，生态最好的原子化CSS框架
+
+- 😃 [集成 Iconify](https://github.com/egoist/tailwindcss-icons) - [icones.js.org](https://icones.js.org/) 中的所有图标都为你所用
+
+- 📥 [API 自动加载](https://github.com/antfu/unplugin-auto-import) - 直接使用 Composition API 无需引入
+
+- 🧬 [uni-app 条件编译样式](https://weapp-tw.icebreaker.top/docs/quick-start/uni-app-css-macro) - 帮助你在多端更灵活的使用 `TailwindCSS`
+
+- 🦾 [TypeScript](https://www.typescriptlang.org/) & [ESLint](https://eslint.org/) & [Prettier](https://github.com/prettier/prettier) - 类型，校验与格式化，保证你的代码质量
+
 ## 快速开始
 
 本项目已经集成 `weapp-ide-cli` 可以通过 `cli` 对 `ide` 进行额外操作，[详细信息](https://www.npmjs.com/package/weapp-ide-cli)

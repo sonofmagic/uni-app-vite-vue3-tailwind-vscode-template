@@ -1,15 +1,15 @@
 <template>
   <view class="content">
     <WeappTailwindcss></WeappTailwindcss>
-    <view class="border-t border-solid border-gray-200 w-full my-3"></view>
-    <view class="text-gray-600/95 text-xl">写法示例Start!</view>
-    <view class="space-y-[20rpx] flex flex-col items-center mt-[13.14758px]">
+    <view class="my-3 w-full border-t border-solid border-gray-200"></view>
+    <view class="text-xl text-gray-600/95">写法示例Start!</view>
+    <view class="mt-[13.14758px] flex flex-col items-center space-y-[20rpx]">
       <view
-        class="bg-[#389f2bb1] h-16 w-32 rounded-[20rpx] text-white flex justify-center items-center after:content-['hover_here!']"
+        class="flex h-16 w-32 items-center justify-center rounded-[20rpx] bg-[#389f2bb1] text-white after:content-['hover_here!']"
         hover-class="!bg-[gray] after:!content-['good_work!']"></view>
       <view class="text-neutral-400">group published 示例</view>
       <view
-        class="group bg-green-300 p-6 text-xs relative before:content-['父元素'] before:absolute before:left-1 before:top-1"
+        class="group relative bg-green-300 p-6 text-xs before:absolute before:left-1 before:top-1 before:content-['父元素']"
         hover-class="published">
         <view class="bg-pink-400 p-2 group-[.published]:bg-yellow-400">
           hover 父元素使得子元素背景变成黄色
@@ -17,12 +17,12 @@
       </view>
 
       <view
-        class="w-32 py-2 rounded-md font-semibold text-white bg-pink-500 ring-4 ring-pink-300 text-center">
+        class="w-32 rounded-md bg-pink-500 py-2 text-center font-semibold text-white ring-4 ring-pink-300">
         Default Ring
       </view>
       <view>
         <button
-          class="text-[#fff] w-64"
+          class="w-64 text-[#fff]"
           :class="buttonClass"
           @click="increment">
           click here to inc {{ count }}
@@ -36,7 +36,7 @@
         Grid布局+ Icon 方案（点击复制链接）
       </view>
       <view
-        class="grid grid-cols-3 place-items-center text-center w-[80vw] [&_text]:text-[32px] [&>view]:py-1 [&>view]:w-full">
+        class="grid w-[80vw] grid-cols-3 place-items-center text-center [&>view]:w-full [&>view]:py-1 [&_text]:text-[32px]">
         <view :class="classArray">
           <text class="i-svg-spinners-12-dots-scale-rotate"></text>
         </view>
@@ -64,7 +64,7 @@
         </view>
       </view>
       <view>
-        <view class="text-neutral-400 mb-4">
+        <view class="mb-4 text-neutral-400">
           样式的条件编译
           <text
             class="text-sky-400 underline"
@@ -160,7 +160,7 @@ function copy(data: string) {
 }
 
 .test {
-  @apply flex items-center justify-center h-[100px] w-[100px] rounded-[40px] bg-[#123456] bg-opacity-[0.54] text-[#ffffff] #{!important};
+  @apply flex h-[100px] w-[100px] items-center justify-center rounded-[40px] bg-[#123456] bg-opacity-[0.54] text-[#ffffff] #{!important};
 }
 
 .apply-class-0 {
