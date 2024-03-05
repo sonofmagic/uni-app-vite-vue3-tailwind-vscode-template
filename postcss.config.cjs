@@ -6,7 +6,7 @@
  */
 const plugins = [require('tailwindcss')(), require('autoprefixer')()]
 
-// 下方为 px 转 rpx 功能
+// 下方为 px 转 rpx 功能, 根据你自己的需求打开它
 // if (!WeappTailwindcssDisabled) {
 // plugins.push(
 //   require('postcss-pxtransform')({
