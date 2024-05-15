@@ -36,7 +36,7 @@
         Grid布局+ Icon 方案（点击复制链接）
       </view>
       <view
-        class="grid w-[80vw] grid-cols-3 place-items-center text-center [&>view]:w-full [&>view]:py-1 [&_text]:text-[32px]">
+        class="grid w-[80vw] grid-cols-3 place-items-center border text-center [&>view]:w-full [&>view]:py-1 [&_text]:text-[32px]">
         <view :class="classArray">
           <text class="i-svg-spinners-12-dots-scale-rotate"></text>
         </view>

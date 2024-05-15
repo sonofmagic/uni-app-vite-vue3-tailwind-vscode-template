@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const cssMacro = require('weapp-tailwindcss/css-macro')
 const { iconsPlugin, getIconCollections } = require('@egoist/tailwindcss-icons')
+const { isMp } = require('./platform')
+
 module.exports = {
   content: ['./index.html', './src/**/*.{html,js,ts,jsx,tsx,vue}'],
   theme: {
@@ -30,6 +32,6 @@ module.exports = {
     })
   ],
   corePlugins: {
-    preflight: false
+    preflight: !isMp
   }
 }
