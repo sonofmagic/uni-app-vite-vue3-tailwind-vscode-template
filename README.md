@@ -28,6 +28,10 @@
 
 本项目已经集成 `weapp-ide-cli` 可以通过 `cli` 对 `ide` 进行额外操作，[详细信息](https://www.npmjs.com/package/weapp-ide-cli)
 
+## 其他模板
+
+👉 [🔥 tarojs / 🔥 uni-app / 🔥 hbuilderx 等更多模板链接](https://weapp-tw.icebreaker.top/docs/community/templates)
+
 ## 单位转换
 
 - `rem`->`rpx` (默认开启,  `uvtw` 的 `rem2rpx` 选项)
