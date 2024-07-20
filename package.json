@@ -87,15 +87,15 @@
     "postcss": "^8.4.39",
     "postcss-pxtransform": "^3.6.34",
     "postcss-rem-to-responsive-pixel": "^6.0.1",
-    "prettier": "^3.3.2",
+    "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "sass": "^1.77.8",
-    "tailwindcss": "^3.4.4",
-    "typescript": "^5.5.2",
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5.5.3",
     "unplugin-auto-import": "^0.18.0",
     "vite": "4.3.5",
     "vue-eslint-parser": "^9.4.3",
     "weapp-ide-cli": "^1.0.0",
-    "weapp-tailwindcss": "^3.3.7"
+    "weapp-tailwindcss": "^3.4.0"
   }
 }
