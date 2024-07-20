@@ -75,7 +75,7 @@ function copy(data: string) {
         group published 示例
       </view>
       <view
-        class="group relative bg-green-300 p-6 text-xs before:absolute before:left-1 before:top-1 before:content-['父元素']"
+        class="group relative bg-green-300 p-[60px] text-xs before:absolute before:left-1 before:top-1 before:content-['父元素']"
         hover-class="published"
       >
         <view class="bg-pink-400 p-2 group-[.published]:bg-yellow-400">
@@ -99,7 +99,7 @@ function copy(data: string) {
       </view>
 
       <view class="test">
-        @apply
+        @apply 的用法，详见 `index.vue` 的 `style` 标签块
       </view>
       <view
         class="text-neutral-600 underline"
@@ -178,7 +178,7 @@ function copy(data: string) {
 }
 
 .test {
-  @apply flex h-[100px] w-[100px] items-center justify-center rounded-[40px] bg-[#123456] bg-opacity-[0.54] text-[#ffffff] #{!important};
+  @apply flex text-center h-[100px] w-[222.222px] items-center justify-center rounded-[40px] bg-[#123456] bg-opacity-[0.54] text-[#ffffff] #{!important};
 }
 
 .apply-class-0 {
