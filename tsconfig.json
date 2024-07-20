@@ -1,28 +1,28 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "useDefineForClassFields": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "strict": true,
-    "allowJs": true,
     "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
     "lib": [
       "esnext",
       "dom"
     ],
-    "types": [
-      "@dcloudio/types"
-    ],
+    "useDefineForClassFields": true,
     "baseUrl": ".",
+    "module": "esnext",
+    "moduleResolution": "node",
     "paths": {
       "@/*": [
         "src/*"
       ]
-    }
+    },
+    "resolveJsonModule": true,
+    "types": [
+      "@dcloudio/types"
+    ],
+    "allowJs": true,
+    "strict": true,
+    "sourceMap": true,
+    "esModuleInterop": true
   },
   "include": [
     "src/**/*.ts",

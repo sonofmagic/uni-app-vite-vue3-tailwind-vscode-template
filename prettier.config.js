@@ -9,5 +9,5 @@ module.exports = {
   printWidth: 80,
   bracketSameLine: true,
   htmlWhitespaceSensitivity: 'ignore',
-  plugins: ['prettier-plugin-tailwindcss']
+  plugins: ['prettier-plugin-tailwindcss'],
 }

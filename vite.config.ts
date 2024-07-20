@@ -12,7 +12,7 @@ export default defineConfig({
     uni(),
     uvtw({
       rem2rpx: true,
-      disabled: WeappTailwindcssDisabled
+      disabled: WeappTailwindcssDisabled,
       // 使用新的 ast-grep 来处理 js 资源，速度是 babel 的2倍左右
       // 需要先安装 `@ast-grep/napi`, 安装完成后再启用下方配置
       // jsAstTool: 'ast-grep'
@@ -21,14 +21,15 @@ export default defineConfig({
       imports: ['vue', 'uni-app', 'pinia'],
       dts: './src/auto-imports.d.ts',
       eslintrc: {
-        enabled: true
-      }
-    })
+        enabled: true,
+      },
+    }),
   ],
   // 内联 postcss 注册 tailwindcss
   css: {
     postcss: {
-      plugins: postcssPlugins
-    }
-  }
+      // @ts-ignore
+      plugins: postcssPlugins,
+    },
+  },
 })

@@ -1,5 +1,6 @@
 import { icebreaker } from '@icebreakers/eslint-config'
 
 export default icebreaker({
-  vue: true
+  vue: true,
+  tailwindcss: true,
 })
