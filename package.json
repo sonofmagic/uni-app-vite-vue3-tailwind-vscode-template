@@ -55,7 +55,7 @@
     "@dcloudio/uni-mp-xhs": "3.0.0-4020320240708001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4020320240708001",
     "@vue/shared": "^3.3.11",
-    "pinia": "~2.0.36",
+    "pinia": "~2.1.7",
     "vue": "^3.4.21",
     "vue-i18n": "^9.1.9",
     "vuex": "^4.0.2"
@@ -71,7 +71,7 @@
     "@iconify-json/mdi": "^1.1.67",
     "@iconify-json/svg-spinners": "^1.1.2",
     "@rollup/plugin-commonjs": "^26.0.1",
-    "@types/node": "^20.14.10",
+    "@types/node": "^20.14.11",
     "@vue/runtime-core": "^3.4.21",
     "autoprefixer": "^10.4.19",
     "eslint": "^9.7.0",
