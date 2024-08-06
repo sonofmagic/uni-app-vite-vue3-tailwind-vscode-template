@@ -83,17 +83,11 @@ function copy(data: string) {
         </view>
       </view>
 
-      <view
-        class="w-32 rounded-md bg-pink-500 py-2 text-center font-semibold text-white ring-4 ring-pink-300"
-      >
+      <view class="w-32 rounded-md bg-pink-500 py-2 text-center font-semibold text-white ring-4 ring-pink-300">
         Default Ring
       </view>
       <view>
-        <button
-          class="w-64 text-white"
-          :class="buttonClass"
-          @click="increment"
-        >
+        <button class="w-64 text-white" :class="buttonClass" @click="increment">
           click here to inc {{ count }}
         </button>
       </view>
@@ -101,10 +95,7 @@ function copy(data: string) {
       <view class="test">
         @apply 的用法，详见 `index.vue` 的 `style` 标签块
       </view>
-      <view
-        class="text-neutral-600 underline"
-        @click="copy('https://weapp-tw.icebreaker.top/docs/icons')"
-      >
+      <view class="text-neutral-600 underline" @click="copy('https://weapp-tw.icebreaker.top/docs/icons')">
         Grid布局+ Icon 方案（点击复制链接）
       </view>
       <view
@@ -140,8 +131,7 @@ function copy(data: string) {
         <view class="mb-4 text-neutral-400">
           样式的条件编译
           <text
-            class="text-sky-400 underline"
-            @click="
+            class="text-sky-400 underline" @click="
               copy(
                 'https://weapp-tw.icebreaker.top/docs/quick-start/uni-app-css-macro',
               )
@@ -150,9 +140,7 @@ function copy(data: string) {
             weapp-tailwindcss/css-macro
           </text>
         </view>
-        <view
-          class="ifdef-[MP-WEIXIN]:bg-blue-500 ifndef-[MP-WEIXIN]:bg-red-500"
-        >
+        <view class="ifdef-[MP-WEIXIN]:bg-blue-500 ifndef-[MP-WEIXIN]:bg-red-500">
           微信小程序为蓝色，不是微信小程序为红色
         </view>
 
