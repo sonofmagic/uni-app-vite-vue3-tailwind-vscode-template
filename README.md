@@ -18,7 +18,7 @@
 
 - 🧬 [uni-app 条件编译样式](https://weapp-tw.icebreaker.top/docs/quick-start/uni-app-css-macro) - 帮助你在多端更灵活的使用 `TailwindCSS`
 
-- 🦾 [TypeScript](https://www.typescriptlang.org/) & [ESLint](https://eslint.org/) - 类型，校验与格式化，保证你的代码质量
+- 🦾 [TypeScript](https://www.typescriptlang.org/) & [ESLint](https://eslint.org/) - 类型，统一的校验与格式化规则，保证你的代码风格和质量
 
 ## 快速开始
 
