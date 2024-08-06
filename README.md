@@ -1,6 +1,6 @@
 # uni-app-vite-vue3-tailwind-vscode-template
 
-基于 `uni-app` 的 `vite/vue3` `tailwindcss` 模板
+基于 `uni-app` 的 `vite` + `vue3` + `tailwindcss` 模板
 
 假如你觉得好用，欢迎给我的 [`weapp-tailwindcss`](https://github.com/sonofmagic/weapp-tailwindcss) 点个 `Star` 吧。
 
@@ -8,7 +8,7 @@
 
 ## 特性
 
-- ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/) - 快且稳定
+- ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/) - 快 & 稳定
 
 - 🎨 [TailwindCSS](https://tailwindcss.com/) - 世界上最流行，生态最好的原子化CSS框架
 
@@ -18,11 +18,11 @@
 
 - 🧬 [uni-app 条件编译样式](https://weapp-tw.icebreaker.top/docs/quick-start/uni-app-css-macro) - 帮助你在多端更灵活的使用 `TailwindCSS`
 
-- 🦾 [TypeScript](https://www.typescriptlang.org/) & [ESLint](https://eslint.org/) & [Prettier](https://github.com/prettier/prettier) - 类型，校验与格式化，保证你的代码质量
+- 🦾 [TypeScript](https://www.typescriptlang.org/) & [ESLint](https://eslint.org/) - 类型，校验与格式化，保证你的代码质量
 
 ## 快速开始
 
-使用 `vscode` 的朋友，请先安装 [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) 智能提示与感应插件
+使用 `vscode` 的开发者，请先安装 [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) 智能提示与感应插件
 
 其他 IDE 请参考: <https://weapp-tw.icebreaker.top/docs/quick-start/intelliSense>
 
@@ -36,13 +36,11 @@
 
 ## 单位转换
 
-- `rem`->`rpx` (默认开启,  `uvtw` 的 `rem2rpx` 选项)
-- `px` -> `rpx` (默认不开启，可反注释 `postcss.config.cjs` 中的 `postcss-pxtransform` 开启配置)
+- `rem` -> `rpx` (默认开启, 见 `vite.config.ts` 中 `uvtw` 插件的 `rem2rpx` 选项)
+- `px` -> `rpx` (默认不开启，可在 `postcss.config.ts` 中引入 `postcss-pxtransform` 开启配置)
 
 ## Tips
 
-- 升级 `uni-app` 依赖的方式为 `npx @dcloudio/uvm` 后，选择对应的 `Package Manager` 即可。而升级其他包的方式，可以使用 `yarn upgradeInteractive --latest`，这个是 `yarn` 自带的方式。
+- 升级 `uni-app` 依赖的方式为 `npx @dcloudio/uvm` 后，选择对应的 `Package Manager` 即可。而升级其他包的方式，可以使用 `pnpm up -Li`，这个是 `pnpm` 自带的方式。
 
 - `vite` 使用高德地图加载 `commonjs` 模块示例见 <https://github.com/sonofmagic/uni-app-vue3-for-amap-wx>，需要使用 `@rollup/plugin-commonjs`
-
-- 另外暂时不要升级 `pinia` 的版本，不然会报`hasInjectionContext`相关的错误 ，详见 [pinia/issues/2210](https://github.com/vuejs/pinia/issues/2210)
