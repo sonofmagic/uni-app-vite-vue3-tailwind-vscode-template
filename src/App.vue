@@ -14,4 +14,10 @@ onHide(() => {
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+/*  #ifdef  H5  */
+svg {
+  display: initial;
+}
+/*  #endif  */
 </style>

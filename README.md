@@ -22,6 +22,8 @@
 
 ## 快速开始
 
+> 请使用 `Node 20(LTS)` 运行此项目!
+
 使用 `vscode` 的开发者，请先安装 [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) 智能提示与感应插件
 
 其他 IDE 请参考: <https://weapp-tw.icebreaker.top/docs/quick-start/intelliSense>
