@@ -57,11 +57,10 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-4020420240722002",
     "@dcloudio/uni-mp-xhs": "3.0.0-4020420240722002",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4020420240722002",
-    "@vue/shared": "^3.3.11",
+    "@vue/shared": "3.4.21",
     "pinia": "^2.2.0",
-    "vue": "^3.4.35",
-    "vue-i18n": "^9.13.1",
-    "vuex": "^4.0.2"
+    "vue": "3.4.21",
+    "vue-i18n": "^9.13.1"
   },
   "devDependencies": {
     "@dcloudio/types": "^3.4.12",
@@ -70,11 +69,11 @@
     "@dcloudio/uni-stacktracey": "3.0.0-4020420240722002",
     "@dcloudio/vite-plugin-uni": "3.0.0-4020420240722002",
     "@egoist/tailwindcss-icons": "^1.8.1",
-    "@icebreakers/eslint-config": "^0.3.18",
+    "@icebreakers/eslint-config": "^0.3.22",
     "@iconify-json/mdi": "^1.1.67",
     "@iconify-json/svg-spinners": "^1.1.3",
     "@types/node": "^22.4.1",
-    "@vue/runtime-core": "^3.4.38",
+    "@vue/runtime-core": "3.4.21",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.9.0",
     "postcss": "^8.4.41",
