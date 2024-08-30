@@ -175,6 +175,8 @@ function copy(data: string) {
 }
 
 .apply-class-1 {
+  font-size: large d;
+  display: block;
   // 依赖 weapp-tailwindcss/css-macro
   // 这个需要在 tailwind.config.js 里进行自定义配置
   @apply wx:bg-blue-500 -wx:bg-red-500;

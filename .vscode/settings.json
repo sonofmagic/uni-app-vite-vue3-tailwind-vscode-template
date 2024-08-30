@@ -7,6 +7,9 @@
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
   },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
   // Silent the stylistic rules in you IDE, but still auto fix them
   "eslint.rules.customizations": [
     {
@@ -72,5 +75,8 @@
     "scss",
     "pcss",
     "postcss"
+  ],
+  "stylelint.validate": [
+    "vue"
   ]
 }
