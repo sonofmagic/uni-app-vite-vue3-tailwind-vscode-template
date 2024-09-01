@@ -28,7 +28,12 @@
 
 其他 IDE 请参考: <https://weapp-tw.icebreaker.top/docs/quick-start/intelliSense>
 
-本项目已经集成 `weapp-ide-cli` 可以通过 `cli` 对 `ide` 进行额外操作，[详细信息](https://www.npmjs.com/package/weapp-ide-cli)
+本项目已经集成 `weapp-ide-cli` 可以通过 `cli` 对 `ide` 进行额外操作
+
+- `pnpm open:dev` 打开微信开发者工具，引入 `dist/dev/mp-weixin`
+- `pnpm open:build` 打开微信开发者工具，引入 `dist/build/mp-weixin`
+
+[详细信息](https://www.npmjs.com/package/weapp-ide-cli)
 
 ## 其他模板
 
