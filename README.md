@@ -18,7 +18,7 @@
 
 - 🧬 [uni-app 条件编译样式](https://weapp-tw.icebreaker.top/docs/quick-start/uni-app-css-macro) - 帮助你在多端更灵活的使用 `TailwindCSS`
 
-- 🦾 [TypeScript](https://www.typescriptlang.org/) & [ESLint](https://eslint.org/) - 类型，统一的校验与格式化规则，保证你的代码风格和质量
+- 🦾 [TypeScript](https://www.typescriptlang.org/) & [ESLint](https://eslint.org/) & [Stylelint](https://stylelint.io/) - 样式，类型，统一的校验与格式化规则，保证你的代码风格和质量
 
 ## 快速开始
 
@@ -49,3 +49,4 @@
 ## Tips
 
 - 升级 `uni-app` 依赖的方式为 `npx @dcloudio/uvm` 后，选择对应的 `Package Manager` 即可。而升级其他包的方式，可以使用 `pnpm up -Li`，这个是 `pnpm` 自带的方式。
+- 使用 `vscode` 记得安装官方插件 `eslint`,`stylelint`,`tailwindcss`, 已在 `.vscode/extensions.json` 中设置推荐
