@@ -39,7 +39,11 @@
 
 👉 [🔥 tarojs / 🔥 uni-app / 🔥 hbuilderx 等更多模板链接](https://weapp-tw.icebreaker.top/docs/community/templates)
 
-👉 [使用 `yarn` 进行包管理的分支](https://github.com/sonofmagic/uni-app-vite-vue3-tailwind-vscode-template/tree/yarn)
+## tailwindcss 生态
+
+详见：https://github.com/aniftyco/awesome-tailwindcss
+
+你可以在这里找到许多现成的UI，组件模板。
 
 ## 单位转换
 

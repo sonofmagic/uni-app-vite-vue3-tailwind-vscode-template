@@ -156,6 +156,11 @@ function copy(data: string) {
           @apply 条件编译方式1
         </view>
       </view>
+      <view>
+        <button class="btn">
+          此样式定义详见 `App.vue` 的 `@layer` 部分
+        </button>
+      </view>
     </view>
   </view>
 </template>
