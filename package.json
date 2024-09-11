@@ -57,9 +57,9 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-4020420240722002",
     "@dcloudio/uni-mp-xhs": "3.0.0-4020420240722002",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4020420240722002",
-    "@vue/shared": "3.4.21",
+    "@vue/shared": "3.5.4",
     "pinia": "^2.2.0",
-    "vue": "3.4.21",
+    "vue": "3.5.4",
     "vue-i18n": "^9.13.1"
   },
   "devDependencies": {
@@ -74,16 +74,16 @@
     "@iconify-json/mdi": "^1.1.67",
     "@iconify-json/svg-spinners": "^1.2.0",
     "@types/node": "^22.5.4",
-    "@vue/runtime-core": "3.5.3",
+    "@vue/runtime-core": "3.5.4",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.10.0",
     "postcss": "^8.4.45",
     "sass": "^1.78.0",
     "tailwindcss": "^3.4.10",
-    "typescript": "^5.5.4",
+    "typescript": "^5.6.2",
     "unplugin-auto-import": "^0.18.2",
-    "vite": "5.4.3",
+    "vite": "5.4.4",
     "weapp-ide-cli": "^2.0.3",
-    "weapp-tailwindcss": "^3.5.1"
+    "weapp-tailwindcss": "^3.5.2"
   }
 }
