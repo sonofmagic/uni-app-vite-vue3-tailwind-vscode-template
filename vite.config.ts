@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite'
 import uni from '@dcloudio/vite-plugin-uni'
 import AutoImport from 'unplugin-auto-import/vite'
+import { defineConfig } from 'vite'
 import { UnifiedViteWeappTailwindcssPlugin as uvtw } from 'weapp-tailwindcss/vite'
 import { WeappTailwindcssDisabled } from './platform'
 import postcssPlugins from './postcss.config'
@@ -29,6 +29,12 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: postcssPlugins,
+    },
+    // https://vitejs.dev/config/shared-options.html#css-preprocessoroptions
+    preprocessorOptions: {
+      scss: {
+        silenceDeprecations: ['legacy-js-api'],
+      },
     },
   },
 })
