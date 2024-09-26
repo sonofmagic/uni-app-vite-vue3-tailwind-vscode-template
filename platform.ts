@@ -6,8 +6,8 @@ const WeappTailwindcssDisabled = isH5 || isApp
 const isMp = !isH5 && !isApp
 
 export {
-  isH5,
   isApp,
-  WeappTailwindcssDisabled,
+  isH5,
   isMp,
+  WeappTailwindcssDisabled,
 }

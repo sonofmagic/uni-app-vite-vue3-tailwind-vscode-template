@@ -1,6 +1,6 @@
-import cssMacro from 'weapp-tailwindcss/css-macro'
-import { getIconCollections, iconsPlugin } from '@egoist/tailwindcss-icons'
 import type { Config } from 'tailwindcss'
+import { getIconCollections, iconsPlugin } from '@egoist/tailwindcss-icons'
+import cssMacro from 'weapp-tailwindcss/css-macro'
 import { isMp } from './platform'
 
 export default <Config>{

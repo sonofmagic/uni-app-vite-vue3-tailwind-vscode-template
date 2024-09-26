@@ -1,6 +1,6 @@
-import tailwindcss from 'tailwindcss'
-import autoprefixer from 'autoprefixer'
 import type { AcceptedPlugin } from 'postcss'
+import autoprefixer from 'autoprefixer'
+import tailwindcss from 'tailwindcss'
 import cssMacro from 'weapp-tailwindcss/css-macro/postcss'
 
 const plugins: AcceptedPlugin[] = [tailwindcss(), autoprefixer()]
