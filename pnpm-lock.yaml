@@ -88,8 +88,8 @@ importers:
         specifier: ^0.5.3
         version: 0.5.3(@typescript-eslint/utils@8.7.0(eslint@9.11.1(jiti@2.0.0))(typescript@5.6.2))(@vue/compiler-sfc@3.5.9)(eslint@9.11.1(jiti@2.0.0))(tailwindcss@3.4.13)(typescript@5.6.2)
       '@icebreakers/stylelint-config':
-        specifier: ^0.0.3
-        version: 0.0.3(postcss@8.4.47)(stylelint@16.9.0(typescript@5.6.2))
+        specifier: ^0.0.4
+        version: 0.0.4(postcss@8.4.47)(stylelint@16.9.0(typescript@5.6.2))
       '@iconify-json/mdi':
         specifier: ^1.1.67
         version: 1.1.67
@@ -1504,8 +1504,8 @@ packages:
   '@icebreakers/eslint-config@0.5.3':
     resolution: {integrity: sha512-4lsQranXvW6Dzy7E49rtNmot5N7Ot0qqBQFkJMsDFw1e5WhGH02WIn0/GqAHNwGCWsjhIetMPB/ZVhTGnKoeNA==}
 
-  '@icebreakers/stylelint-config@0.0.3':
-    resolution: {integrity: sha512-Jkru2/SuWxy3zPUDb2Qs4AFXmDMEapkaUmZOJgwfqH26v28zTAhkVUE6IbQjW4LyxDJkw22yiwAgk8Dn4JCqdQ==}
+  '@icebreakers/stylelint-config@0.0.4':
+    resolution: {integrity: sha512-g7o9g0vrEuF/ONbL+O5KawDLV3DKszfPG7x4LMt3FBpqOgT+Nq2MTkhjxFfibwRUeNPgL6PopCmKhcwA9R9k/Q==}
     hasBin: true
 
   '@iconify-json/mdi@1.1.67':
@@ -8317,7 +8317,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@icebreakers/stylelint-config@0.0.3(postcss@8.4.47)(stylelint@16.9.0(typescript@5.6.2))':
+  '@icebreakers/stylelint-config@0.0.4(postcss@8.4.47)(stylelint@16.9.0(typescript@5.6.2))':
     dependencies:
       comment-json: 4.2.5
       postcss-html: 1.7.0
