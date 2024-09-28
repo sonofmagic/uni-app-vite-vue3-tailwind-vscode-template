@@ -70,7 +70,7 @@
     "@dcloudio/vite-plugin-uni": "3.0.0-4020820240925001",
     "@egoist/tailwindcss-icons": "^1.8.1",
     "@icebreakers/eslint-config": "^0.5.3",
-    "@icebreakers/stylelint-config": "^0.0.4",
+    "@icebreakers/stylelint-config": "^0.1.0",
     "@iconify-json/mdi": "^1.1.67",
     "@iconify-json/svg-spinners": "^1.2.0",
     "@types/node": "^22.7.3",
