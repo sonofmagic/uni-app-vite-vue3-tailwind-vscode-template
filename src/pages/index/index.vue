@@ -75,10 +75,10 @@ function copy(data: string) {
         group published 示例
       </view>
       <view
-        class="group relative bg-green-300 p-[60px] text-xs before:absolute before:left-1 before:top-1 before:content-['父元素']"
+        class="group relative rounded bg-green-300 p-[60px] text-xs before:absolute before:left-1 before:top-1 before:content-['父元素']"
         hover-class="published"
       >
-        <view class="bg-pink-400 p-2 group-[.published]:bg-yellow-400">
+        <view class="rounded bg-pink-400 p-2 group-[.published]:bg-yellow-400">
           hover 父元素使得子元素背景变成黄色
         </view>
       </view>

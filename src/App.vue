@@ -11,9 +11,9 @@ onHide(() => {
 </script>
 
 <style lang="scss">
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@use 'tailwindcss/base';
+@use 'tailwindcss/components';
+@use 'tailwindcss/utilities';
 
 /*  #ifdef  H5  */
 svg {
