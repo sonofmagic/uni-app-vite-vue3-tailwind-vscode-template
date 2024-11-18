@@ -37,10 +37,10 @@
 
 ## 升级依赖
 
-- `pnpm upgrade:pkg` 升级除了 `uni-app` 相关的其他依赖
-- `pnpm upgrade:uniapp` 升级 `uni-app` 相关的依赖
+- `pnpm up:pkg` 升级除了 `uni-app` 相关的其他依赖
+- `pnpm up:uniapp` 升级 `uni-app` 相关的依赖
 
-推荐先使用 `pnpm upgrade:pkg` 升级, 再使用 `pnpm upgrade:uniapp` 进行升级，因为 `pnpm upgrade:uniapp` 很有可能会进行版本的降级已达到和 `uni-app` 版本匹配的效果
+推荐先使用 `pnpm up:pkg` 升级, 再使用 `pnpm up:uniapp` 进行升级，因为 `pnpm up:uniapp` 很有可能会进行版本的降级已达到和 `uni-app` 版本匹配的效果
 
 ## 其他模板
 
