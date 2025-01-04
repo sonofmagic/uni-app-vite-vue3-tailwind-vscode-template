@@ -24,6 +24,7 @@ svg {
 
 @layer components {
   .raw-btn {
+    // 注意 after: 后面不能加任何空格，有些格式化工具可能会在这里自动加一个空格
     @apply after:border-none inline-flex items-center gap-2 rounded text-sm font-semibold transition-all;
   }
 
