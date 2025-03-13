@@ -7,10 +7,12 @@ function copy(data) {
 </script>
 
 <template>
-  <view class="space-y-1.5 [&>view]:text-center">
-    <view
-      class="aspect-[100/16.1] bg-[url(https://pic4.zhimg.com/80/v2-63755eaa318858e33445862d72581207.png)] bg-[length:100%_100%] bg-no-repeat"
-    />
+  <view class="space-y-1.5 px-4 [&>view]:text-center">
+    <view class="px-[48px]">
+      <view
+        class="aspect-[100/16.1] bg-[url(https://pic4.zhimg.com/80/v2-63755eaa318858e33445862d72581207.png)] bg-[length:100%_100%] bg-no-repeat"
+      />
+    </view>
     <view
       class="flex items-center justify-center text-gray-600/75"
       @click="copy('https://github.com/sonofmagic/weapp-tailwindcss')"
@@ -23,9 +25,9 @@ function copy(data) {
     </view>
     <view
       class="bg-gradient-to-r from-green-400 to-sky-400 bg-clip-text text-2xl font-extrabold text-transparent underline"
-      @click="copy('https://weapp-tw.icebreaker.top/')"
+      @click="copy('https://tw.icebreaker.top/')"
     >
-      weapp-tw.icebreaker.top
+      tw.icebreaker.top
     </view>
     <view class="text-xs text-gray-600/75">
       你可以在上方的官网上，找到大量的提效解决方案
