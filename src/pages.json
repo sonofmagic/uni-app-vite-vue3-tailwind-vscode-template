@@ -5,6 +5,12 @@
       "style": {
         "navigationBarTitleText": "weapp-tailwindcss"
       }
+    },
+    {
+      "path": "pages/test/index",
+      "style": {
+        "navigationBarTitleText": "test page"
+      }
     }
   ],
   "globalStyle": {
@@ -12,5 +18,17 @@
     "navigationBarTitleText": "weapp-tailwindcss",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/test/index",
+        "text": "测试"
+      }
+    ]
   }
 }
