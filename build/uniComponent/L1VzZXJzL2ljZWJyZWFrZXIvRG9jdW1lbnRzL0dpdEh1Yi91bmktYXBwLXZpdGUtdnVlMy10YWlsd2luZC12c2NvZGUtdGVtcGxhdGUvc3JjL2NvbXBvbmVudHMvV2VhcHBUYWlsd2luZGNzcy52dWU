@@ -1,0 +1,2 @@
+import Component from '/Users/icebreaker/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template/src/components/WeappTailwindcss.vue'
+wx.createComponent(Component)

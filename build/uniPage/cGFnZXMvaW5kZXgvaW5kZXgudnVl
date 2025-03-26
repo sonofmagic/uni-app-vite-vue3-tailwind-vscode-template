@@ -1,0 +1,2 @@
+import MiniProgramPage from '/Users/icebreaker/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template/src/pages/index/index.vue'
+wx.createPage(MiniProgramPage)
