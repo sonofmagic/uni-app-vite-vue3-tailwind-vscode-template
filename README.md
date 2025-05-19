@@ -26,9 +26,13 @@
 >
 > 另外谨慎升级 `package.json` 中锁定的 `pinia`/`vue`/`@vue/*` 相关包的版本，新版本可能 `uni-app` 没有兼容，造成一些奇怪的 bug
 
+### vscode
+
 使用 `vscode` 的开发者，请先安装 [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) 智能提示与感应插件
 
 其他 IDE 请参考: <https://tw.icebreaker.top/docs/quick-start/intelliSense>
+
+### weapp-ide-cli
 
 本项目已经集成 `weapp-ide-cli` 可以通过 `cli` 对 `ide` 进行额外操作
 
@@ -36,6 +40,10 @@
 - `pnpm open:build` 打开微信开发者工具，引入 `dist/build/mp-weixin`
 
 [详细信息](https://www.npmjs.com/package/weapp-ide-cli)
+
+### 更换 Appid
+
+把 `src/manifest.json` 中的 `appid`, 更换为你自己的 `appid`, 比如 `uni-app` / `mp-weixin` 平台。
 
 ## 升级依赖
 

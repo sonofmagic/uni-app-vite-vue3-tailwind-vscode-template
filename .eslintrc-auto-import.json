@@ -105,6 +105,8 @@
     "useTemplateRef": true,
     "DirectiveBinding": true,
     "MaybeRef": true,
-    "MaybeRefOrGetter": true
+    "MaybeRefOrGetter": true,
+    "Slot": true,
+    "Slots": true
   }
 }
