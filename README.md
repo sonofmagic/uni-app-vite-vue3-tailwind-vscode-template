@@ -32,15 +32,6 @@
 
 其他 IDE 请参考: <https://tw.icebreaker.top/docs/quick-start/intelliSense>
 
-### weapp-ide-cli
-
-本项目已经集成 `weapp-ide-cli` 可以通过 `cli` 对 `ide` 进行额外操作
-
-- `pnpm open:dev` 打开微信开发者工具，引入 `dist/dev/mp-weixin`
-- `pnpm open:build` 打开微信开发者工具，引入 `dist/build/mp-weixin`
-
-[详细信息](https://www.npmjs.com/package/weapp-ide-cli)
-
 ### 更换 Appid
 
 把 `src/manifest.json` 中的 `appid`, 更换为你自己的 `appid`, 比如 `uni-app` / `mp-weixin` 平台。
@@ -51,6 +42,33 @@
 - `pnpm up:uniapp` 升级 `uni-app` 相关的依赖
 
 推荐先使用 `pnpm up:pkg` 升级, 再使用 `pnpm up:uniapp` 进行升级，因为 `pnpm up:uniapp` 很有可能会进行版本的降级已达到和 `uni-app` 版本匹配的效果
+
+## 切换到国内镜像源
+
+默认情况下，走的是官方 `npmjs` 源: `registry.npmjs.com`
+
+假如你访问网速慢，要切换到淘宝镜像源，那就把目录下的 `.npmrc` 中的 `registry=http://registry.npmmirror.com/` **反注释**
+
+然后再把 `registry=http://registry.npmjs.com/` 注释(前面加个 `#` 号即可)，然后重新进行 `pnpm i` 安装包即可
+
+## 包管理器
+
+本项目默认使用 `pnpm@10` 进行管理，当然你也可以切换到其他包管理器，比如 `yarn`, `npm`
+
+你只需要把 `pnpm-lock.yaml` 删掉，然后把 `package.json` 中的 `packageManager` 字段去除或者换成你具体的包管理器版本，然后重新安装即可
+
+## eslint 代码校验
+
+本项目集成的是我自己封装的 `@icebreakers/eslint-config` 规则，你不喜欢完全可以更换，卸载掉它然后自行配置 `eslint`，把它变成你想要的样子
+
+### weapp-ide-cli
+
+本项目已经集成 `weapp-ide-cli` 可以通过 `cli` 对 `ide` 进行额外操作
+
+- `pnpm open:dev` 打开微信开发者工具，引入 `dist/dev/mp-weixin`
+- `pnpm open:build` 打开微信开发者工具，引入 `dist/build/mp-weixin`
+
+[详细信息](https://www.npmjs.com/package/weapp-ide-cli)
 
 ## 其他模板
 
