@@ -95,7 +95,7 @@ function copy(data: string) {
       <view class="test">
         @apply 的用法，详见 `index.vue` 的 `style` 标签块
       </view>
-      <view class="text-neutral-600 underline" @click="copy('https://weapp-tw.icebreaker.top/docs/icons')">
+      <view class="text-neutral-600 underline" @click="copy('https://tw.icebreaker.top/docs/icons')">
         Grid布局+ Icon 方案（点击复制链接）
       </view>
       <view
@@ -133,7 +133,7 @@ function copy(data: string) {
           <text
             class="text-sky-400 underline" @click="
               copy(
-                'https://weapp-tw.icebreaker.top/docs/quick-start/uni-app-css-macro',
+                'https://tw.icebreaker.top/docs/quick-start/uni-app-css-macro',
               )
             "
           >

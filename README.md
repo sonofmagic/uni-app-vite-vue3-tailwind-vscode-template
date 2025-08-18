@@ -4,7 +4,7 @@
 
 假如你觉得好用，欢迎给我的 [`weapp-tailwindcss`](https://github.com/sonofmagic/weapp-tailwindcss) 点个 `Star` 吧。
 
-官网地址: <https://weapp-tw.icebreaker.top/>
+官网地址: <https://tw.icebreaker.top/>
 
 ## 特性
 
@@ -16,13 +16,14 @@
 
 - 📥 [API 自动加载](https://github.com/antfu/unplugin-auto-import) - 直接使用 Composition API 无需引入
 
-- 🧬 [uni-app 条件编译样式](https://weapp-tw.icebreaker.top/docs/quick-start/uni-app-css-macro) - 帮助你在多端更灵活的使用 `TailwindCSS`
+- 🧬 [uni-app 条件编译样式](https://tw.icebreaker.top/docs/quick-start/uni-app-css-macro) - 帮助你在多端更灵活的使用 `TailwindCSS`
 
 - 🦾 [TypeScript](https://www.typescriptlang.org/) & [ESLint](https://eslint.org/) & [Stylelint](https://stylelint.io/) - 样式，类型，统一的校验与格式化规则，保证你的代码风格和质量
 
 ## 快速开始
 
-> [!IMPORTANT] 请使用 Node >=22(LTS) 运行此项目!
+> [!IMPORTANT]
+> 请使用 Node >=22(LTS) 运行此项目! 详见 [issues/29](https://github.com/sonofmagic/uni-app-vite-vue3-tailwind-vscode-template/issues/29)
 >
 > 另外谨慎升级 `package.json` 中锁定的 `pinia`/`vue`/`@vue/*` 相关包的版本，新版本可能 `uni-app` 没有兼容，造成一些奇怪的 bug
 
@@ -72,7 +73,7 @@
 
 ## 其他模板
 
-👉 [🔥 tarojs / 🔥 uni-app / 🔥 hbuilderx 等更多模板链接](https://weapp-tw.icebreaker.top/docs/community/templates)
+👉 [🔥 tarojs / 🔥 uni-app / 🔥 hbuilderx 等更多模板链接](https://tw.icebreaker.top/docs/community/templates)
 
 ## tailwindcss 生态
 
