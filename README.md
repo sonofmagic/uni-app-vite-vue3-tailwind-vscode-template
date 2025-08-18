@@ -22,7 +22,7 @@
 
 ## 快速开始
 
-> 请使用 `Node >=20(LTS)` 运行此项目!
+> [!IMPORTANT] 请使用 Node >=22(LTS) 运行此项目!
 >
 > 另外谨慎升级 `package.json` 中锁定的 `pinia`/`vue`/`@vue/*` 相关包的版本，新版本可能 `uni-app` 没有兼容，造成一些奇怪的 bug
 
