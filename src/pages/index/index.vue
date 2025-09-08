@@ -68,22 +68,39 @@ function copy(data: string) {
     </view>
     <view class="mt-[13.14758px] flex flex-col items-center space-y-[20rpx]">
       <view
-        class="flex h-16 w-32 items-center justify-center rounded-[20rpx] bg-[#389f2bb1] text-white after:content-['hover_here!']"
+        class="
+          flex h-16 w-32 items-center justify-center rounded-[20rpx]
+          bg-[#389f2bb1] text-white
+          after:content-['hover_here!']
+        "
         hover-class="!bg-[gray] after:!content-['good_work!']"
       />
       <view class="text-neutral-400">
         group published 示例
       </view>
       <view
-        class="group relative rounded bg-green-300 p-[60px] text-xs before:absolute before:left-1 before:top-1 before:content-['父元素']"
+        class="
+          group relative rounded bg-green-300 p-[60px] text-xs
+          before:absolute before:left-1 before:top-1 before:content-['父元素']
+        "
         hover-class="published"
       >
-        <view class="rounded bg-pink-400 p-2 group-[.published]:bg-yellow-400">
+        <view
+          class="
+            rounded bg-pink-400 p-2
+            group-[.published]:bg-yellow-400
+          "
+        >
           hover 父元素使得子元素背景变成黄色
         </view>
       </view>
 
-      <view class="w-32 rounded-md bg-pink-500 py-2 text-center font-semibold text-white ring-4 ring-pink-300">
+      <view
+        class="
+          w-32 rounded-md bg-pink-500 py-2 text-center font-semibold text-white
+          ring-4 ring-pink-300
+        "
+      >
         Default Ring
       </view>
       <view>
@@ -99,7 +116,11 @@ function copy(data: string) {
         Grid布局+ Icon 方案（点击复制链接）
       </view>
       <view
-        class="grid w-[80vw] grid-cols-3 place-items-center border text-center [&>view]:w-full [&>view]:py-1 [&_text]:text-[32px]"
+        class="
+          grid w-[80vw] grid-cols-3 place-items-center border text-center
+          [&>view]:w-full [&>view]:py-1
+          [&_text]:text-[32px]
+        "
       >
         <view :class="classArray">
           <text class="i-svg-spinners-12-dots-scale-rotate" />
@@ -140,11 +161,21 @@ function copy(data: string) {
             weapp-tailwindcss/css-macro
           </text>
         </view>
-        <view class="ifdef-[MP-WEIXIN]:bg-blue-500 ifndef-[MP-WEIXIN]:bg-red-500">
+        <view
+          class="
+            ifdef-[MP-WEIXIN]:bg-blue-500
+            ifndef-[MP-WEIXIN]:bg-red-500
+          "
+        >
           微信小程序为蓝色，不是微信小程序为红色
         </view>
 
-        <view class="wx:bg-blue-500 -wx:bg-red-500">
+        <view
+          class="
+            wx:bg-blue-500
+            -wx:bg-red-500
+          "
+        >
           <view>自定义配置的方式进行样式条件编译</view>
           <view>相关配置见根目录下的tailwind.config.js</view>
         </view>
