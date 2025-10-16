@@ -1,7 +1,7 @@
 {
   "name": "uni-app-vite-vue3-tailwind-vscode-template",
   "version": "0.0.0",
-  "packageManager": "pnpm@10.18.2",
+  "packageManager": "pnpm@10.18.3",
   "scripts": {
     "dev": "uni -p mp-weixin",
     "build": "npm run build:mp-weixin",
@@ -73,7 +73,7 @@
     "@dcloudio/uni-stacktracey": "3.0.0-4070620250821001",
     "@dcloudio/vite-plugin-uni": "3.0.0-4070620250821001",
     "@egoist/tailwindcss-icons": "^1.9.0",
-    "@icebreakers/eslint-config": "^1.5.0",
+    "@icebreakers/eslint-config": "^1.5.2",
     "@icebreakers/stylelint-config": "^1.2.1",
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/svg-spinners": "^1.2.4",
