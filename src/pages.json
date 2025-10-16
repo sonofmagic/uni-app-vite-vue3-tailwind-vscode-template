@@ -13,4 +13,7 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   }
+  // "easycom": {
+  //   "^t-(.*)": "tdesign-uniapp/$1/$1.vue"
+  // }
 }

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import TButton from 'tdesign-uniapp/button/button.vue'
+import TLoading from 'tdesign-uniapp/loading/loading.vue'
 import WeappTailwindcss from '@/components/WeappTailwindcss.vue'
 import { useCounterStore } from '@/stores/counter'
 
@@ -61,6 +63,13 @@ function copy(data: string) {
 
 <template>
   <view class="content">
+    <TLoading />
+    <TButton theme="primary" size="large">
+      填充按钮
+    </TButton>
+    <TButton theme="light" size="large">
+      填充按钮
+    </TButton>
     <WeappTailwindcss />
     <view class="my-3 w-full border-t border-solid border-gray-200" />
     <view class="text-xl text-gray-600/95">
@@ -72,8 +81,7 @@ function copy(data: string) {
           flex h-16 w-32 items-center justify-center rounded-[20rpx]
           bg-[#389f2bb1] text-white
           after:content-['hover_here!']
-        "
-        hover-class="!bg-[gray] after:!content-['good_work!']"
+        " hover-class="!bg-[gray] after:!content-['good_work!']"
       />
       <view class="text-neutral-400">
         group published 示例
@@ -82,8 +90,7 @@ function copy(data: string) {
         class="
           group relative rounded bg-green-300 p-[60px] text-xs
           before:absolute before:left-1 before:top-1 before:content-['父元素']
-        "
-        hover-class="published"
+        " hover-class="published"
       >
         <view
           class="

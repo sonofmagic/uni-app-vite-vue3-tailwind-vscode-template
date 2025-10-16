@@ -62,6 +62,9 @@ importers:
       pinia:
         specifier: 2.2.4
         version: 2.2.4(typescript@5.9.3)(vue@3.4.21(typescript@5.9.3))
+      tdesign-uniapp:
+        specifier: ^0.2.0
+        version: 0.2.0
       vue:
         specifier: ^3.4.21
         version: 3.4.21(typescript@5.9.3)
@@ -6237,6 +6240,9 @@ packages:
   tar@6.2.1:
     resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==, tarball: https://registry.npmjs.org/tar/-/tar-6.2.1.tgz}
     engines: {node: '>=10'}
+
+  tdesign-uniapp@0.2.0:
+    resolution: {integrity: sha512-DU2Mela13WpRe2wNjnaIykohPn7D8AEGT43XspmMrmPpPa3VSsKw1SI/RW/Rwj+G5+fefRHHdMQ2jv7MwI9SuQ==, tarball: https://registry.npmjs.org/tdesign-uniapp/-/tdesign-uniapp-0.2.0.tgz}
 
   terser@5.31.3:
     resolution: {integrity: sha512-pAfYn3NIZLyZpa83ZKigvj6Rn9c/vd5KfYGX7cN1mnzqgDcxWvrU5ZtAfIKhEXz9nRecw4z3LXkjaq96/qZqAA==, tarball: https://registry.npmjs.org/terser/-/terser-5.31.3.tgz}
@@ -15029,6 +15035,8 @@ snapshots:
       minizlib: 2.1.2
       mkdirp: 1.0.4
       yallist: 4.0.0
+
+  tdesign-uniapp@0.2.0: {}
 
   terser@5.31.3:
     dependencies:
