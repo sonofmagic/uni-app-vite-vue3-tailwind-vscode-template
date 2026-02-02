@@ -1,4 +1,5 @@
 import uni from '@dcloudio/vite-plugin-uni'
+import Mokup from 'mokup/vite'
 import { defineConfig } from 'vite'
 import { UnifiedViteWeappTailwindcssPlugin } from 'weapp-tailwindcss/vite'
 import { WeappTailwindcssDisabled } from './platform'
@@ -24,6 +25,14 @@ export default defineConfig(async () => {
         eslintrc: {
           enabled: true,
         },
+      }),
+      Mokup({
+        entries: [
+          {
+            dir: 'mock',
+            prefix: '/api',
+          },
+        ],
       }),
     ],
     // 内联 postcss 注册 tailwindcss
