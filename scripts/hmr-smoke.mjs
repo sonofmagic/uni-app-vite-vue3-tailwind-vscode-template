@@ -18,10 +18,11 @@ if (!platform) {
 }
 
 const distPlatformDir = path.join(cwd, 'dist', 'dev', platform)
-const targetVueFile = path.join(cwd, 'src', 'components', 'sections', 'GradientFeature.vue')
-const markerPrefix = 'feature cards [hmr-smoke:'
+const targetVueFile = path.join(cwd, 'src', 'components', 'sections', 'ExperienceLab.vue')
+const componentRelativeDir = path.join('components', 'sections')
+const componentName = 'ExperienceLab'
 
-const expectedColorSnippets = [
+const baselineExpectedColorSnippets = [
   'rgba(0, 0, 0, var(--tw-bg-opacity, 1))',
   'rgba(17, 17, 17, var(--tw-bg-opacity, 1))',
   'rgba(34, 34, 34, var(--tw-bg-opacity, 1))',
@@ -39,6 +40,31 @@ const expectedColorSnippets = [
   'rgba(238, 238, 238, var(--tw-bg-opacity, 1))',
   'rgba(255, 255, 255, var(--tw-bg-opacity, 1))',
 ]
+
+const arbitraryMutationSteps = [
+  {
+    name: 'add-arbitrary-values',
+    scriptColors: ['bg-[#123435]', 'bg-[#987abc]'],
+    templateClasses: ['bg-[#a1b2c3]', 'px-[432.43px]'],
+    verifyOldStyleRemoved: false,
+  },
+  {
+    name: 'modify-arbitrary-values',
+    scriptColors: ['bg-[#0f0f0f]', 'bg-[#fedcba]'],
+    templateClasses: ['bg-[#112233]', 'px-[256.25px]'],
+    verifyOldStyleRemoved: true,
+  },
+  {
+    name: 'delete-arbitrary-values',
+    scriptColors: [],
+    templateClasses: [],
+    verifyOldStyleRemoved: false,
+  },
+]
+
+const allRawArbitraryTokens = Array.from(new Set(
+  arbitraryMutationSteps.flatMap(step => [...step.scriptColors, ...step.templateClasses]),
+))
 
 let devProcess
 let originalTargetContent
@@ -59,16 +85,69 @@ async function main() {
   devProcess = runDevScript(devScript)
 
   const styleFile = await waitForStyleFile(distPlatformDir, timeoutMs)
+  const componentArtifacts = await waitForComponentArtifacts(distPlatformDir, timeoutMs)
   console.log(`[hmr-smoke] style file: ${path.relative(cwd, styleFile)}`)
+  console.log(`[hmr-smoke] component js: ${path.relative(cwd, componentArtifacts.jsFile)}`)
+  console.log(`[hmr-smoke] component template: ${path.relative(cwd, componentArtifacts.templateFile)}`)
 
-  await waitForExpectedSnippets(styleFile, expectedColorSnippets, timeoutMs, 'initial build')
-  const beforeDirMtime = await getLatestMtimeMs(distPlatformDir)
-
-  await triggerIncrementalChange(targetVueFile, originalTargetContent)
-  await waitForDirMtimeBump(distPlatformDir, beforeDirMtime, timeoutMs)
-
-  await waitForExpectedSnippets(styleFile, expectedColorSnippets, timeoutMs, 'incremental build')
+  await waitForExpectedSnippets(styleFile, baselineExpectedColorSnippets, timeoutMs, 'initial build')
+  await runArbitraryMutationLoop({
+    styleFile,
+    componentJsFile: componentArtifacts.jsFile,
+    componentTemplateFile: componentArtifacts.templateFile,
+  })
   console.log('[hmr-smoke] PASS')
+}
+
+async function runArbitraryMutationLoop({
+  styleFile,
+  componentJsFile,
+  componentTemplateFile,
+}) {
+  let previousStyleSnippets = []
+
+  for (const step of arbitraryMutationSteps) {
+    const nextContent = buildExperienceLabContent(originalTargetContent, step)
+    const beforeDirMtime = await getLatestMtimeMs(distPlatformDir)
+    await fs.writeFile(targetVueFile, nextContent, 'utf8')
+    console.log(`[hmr-smoke] step=${step.name}: wrote ${path.relative(cwd, targetVueFile)}`)
+
+    await waitForDirMtimeBump(distPlatformDir, beforeDirMtime, timeoutMs)
+
+    const currentStyleSnippets = getArbitraryStyleSnippets(step)
+    if (currentStyleSnippets.length > 0) {
+      await waitForExpectedSnippets(
+        styleFile,
+        currentStyleSnippets,
+        timeoutMs,
+        `${step.name}: style snippets present`,
+      )
+    }
+
+    if (step.verifyOldStyleRemoved && previousStyleSnippets.length > 0) {
+      await waitForFileNotContains(
+        styleFile,
+        previousStyleSnippets,
+        timeoutMs,
+        `${step.name}: previous style snippets removed`,
+      )
+    }
+
+    await waitForFileNotContains(
+      componentJsFile,
+      allRawArbitraryTokens,
+      timeoutMs,
+      `${step.name}: js token transform`,
+    )
+    await waitForFileNotContains(
+      componentTemplateFile,
+      allRawArbitraryTokens,
+      timeoutMs,
+      `${step.name}: template token transform`,
+    )
+
+    previousStyleSnippets = currentStyleSnippets
+  }
 }
 
 function runDevScript(scriptName) {
@@ -106,6 +185,34 @@ function runDevScript(scriptName) {
   return child
 }
 
+async function waitForComponentArtifacts(platformDir, timeout) {
+  const startedAt = Date.now()
+  const componentDir = path.join(platformDir, componentRelativeDir)
+  const templateExtensions = ['.wxml', '.axml', '.swan', '.ttml', '.qml', '.jxml']
+
+  while (Date.now() - startedAt < timeout) {
+    if (existsSync(componentDir)) {
+      const files = await fs.readdir(componentDir)
+      const jsName = `${componentName}.js`
+      const templateName = templateExtensions
+        .map(ext => `${componentName}${ext}`)
+        .find(name => files.includes(name))
+
+      if (files.includes(jsName) && templateName) {
+        return {
+          jsFile: path.join(componentDir, jsName),
+          templateFile: path.join(componentDir, templateName),
+        }
+      }
+    }
+    await sleep(700)
+  }
+
+  throw new Error(
+    `Timed out waiting component artifacts under ${path.relative(cwd, path.join(platformDir, componentRelativeDir))}`,
+  )
+}
+
 async function waitForStyleFile(platformDir, timeout) {
   const startedAt = Date.now()
 
@@ -124,6 +231,9 @@ async function waitForStyleFile(platformDir, timeout) {
 }
 
 async function waitForExpectedSnippets(file, snippets, timeout, phase) {
+  if (snippets.length === 0)
+    return
+
   const startedAt = Date.now()
 
   while (Date.now() - startedAt < timeout) {
@@ -144,23 +254,94 @@ async function waitForExpectedSnippets(file, snippets, timeout, phase) {
   )
 }
 
-async function triggerIncrementalChange(file, currentContent) {
-  const markerValue = `${markerPrefix}${new Date().toISOString()}]`
-  const markerRegex = /feature cards \[hmr-smoke:[^\]]+\]/g
+async function waitForFileNotContains(file, snippets, timeout, phase) {
+  if (snippets.length === 0)
+    return
 
-  let updatedContent = currentContent
-  if (markerRegex.test(currentContent)) {
-    updatedContent = currentContent.replace(markerRegex, markerValue)
-  }
-  else if (currentContent.includes('feature cards')) {
-    updatedContent = currentContent.replace('feature cards', markerValue)
-  }
-  else {
-    throw new Error(`Cannot find trigger token "feature cards" in ${path.relative(cwd, file)}`)
+  const startedAt = Date.now()
+  while (Date.now() - startedAt < timeout) {
+    const content = await fs.readFile(file, 'utf8')
+    const hit = snippets.filter(snippet => content.includes(snippet))
+    if (hit.length === 0) {
+      console.log(`[hmr-smoke] ${phase}: no raw token/snippet hit`)
+      return
+    }
+    await sleep(700)
   }
 
-  await fs.writeFile(file, updatedContent, 'utf8')
-  console.log(`[hmr-smoke] touched ${path.relative(cwd, file)} to trigger incremental compile`)
+  const content = await fs.readFile(file, 'utf8')
+  const hit = snippets.filter(snippet => content.includes(snippet))
+  throw new Error(
+    `${phase}: still contains ${hit.length} snippets, file=${path.relative(cwd, file)}, firstHit=${hit[0]}\n` +
+    `content length=${content.length}`,
+  )
+}
+
+function buildExperienceLabContent(originalContent, step) {
+  const withScript = applyScriptColorMutation(originalContent, step.scriptColors)
+  const withTemplate = applyTemplateClassMutation(withScript, step.templateClasses)
+  return withTemplate
+}
+
+function applyScriptColorMutation(content, extraColors) {
+  const regex = /const buttonColors = \[(?<body>[\s\S]*?)\n\]\nconst buttonPalette =/
+  const match = content.match(regex)
+  if (!match || typeof match.index !== 'number' || !match.groups) {
+    throw new Error('Cannot locate "buttonColors" array block in ExperienceLab.vue')
+  }
+
+  const body = match.groups.body
+  const extraLines = extraColors.map(color => `  '${color}',`).join('\n')
+  const nextBody = extraLines.length > 0 ? `${body}\n${extraLines}` : body
+  const replacement = `const buttonColors = [${nextBody}\n]\nconst buttonPalette =`
+  return content.replace(regex, replacement)
+}
+
+function applyTemplateClassMutation(content, extraClasses) {
+  const token = '<view class="test">'
+  if (!content.includes(token)) {
+    throw new Error('Cannot locate template marker "<view class=\\"test\\">" in ExperienceLab.vue')
+  }
+
+  if (extraClasses.length === 0) {
+    return content
+  }
+
+  return content.replace(token, `<view class="test ${extraClasses.join(' ')}">`)
+}
+
+function getArbitraryStyleSnippets(step) {
+  const snippets = []
+  const tokens = [...step.scriptColors, ...step.templateClasses]
+
+  for (const token of tokens) {
+    const bgValue = getArbitraryValue(token, 'bg')
+    if (bgValue && /^#[0-9a-fA-F]{6}$/.test(bgValue)) {
+      snippets.push(hexToRgbaSnippet(bgValue))
+      continue
+    }
+
+    const pxValue = getArbitraryValue(token, 'px')
+    if (pxValue) {
+      snippets.push(pxValue)
+    }
+  }
+
+  return Array.from(new Set(snippets))
+}
+
+function getArbitraryValue(token, prefix) {
+  const escapedPrefix = prefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  const match = token.match(new RegExp(`^${escapedPrefix}-\\[(.+)\\]$`))
+  return match ? match[1] : null
+}
+
+function hexToRgbaSnippet(hexColor) {
+  const normalized = hexColor.slice(1)
+  const r = Number.parseInt(normalized.slice(0, 2), 16)
+  const g = Number.parseInt(normalized.slice(2, 4), 16)
+  const b = Number.parseInt(normalized.slice(4, 6), 16)
+  return `rgba(${r}, ${g}, ${b}, var(--tw-bg-opacity, 1))`
 }
 
 async function waitForDirMtimeBump(dir, beforeMtime, timeout) {

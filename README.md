@@ -77,9 +77,10 @@
 
 1. 启动对应平台的 `dev` 命令
 2. 等待首轮产物生成（`dist/dev/<platform>/app.*ss`）
-3. 修改 `src/components/sections/GradientFeature.vue` 触发增量编译
-4. 校验 `ExperienceLab.vue` 中 `bg-[#000]` 到 `bg-[#fff]` 对应的关键颜色规则仍存在
-5. 自动恢复源码并退出子进程
+3. 在 `src/components/sections/ExperienceLab.vue` 中针对模板和 `script` 的任意值语法做三阶段变更：新增 -> 修改 -> 删除
+4. 典型覆盖值包含：`bg-[#123435]`、`bg-[#fedcba]`、`px-[432.43px]`、`px-[256.25px]`
+5. 校验新任意值在样式产物中能被正确转译，同时在组件编译产物（JS/模板）中不保留原始 `bg-[...]` / `px-[...]` 中括号 token
+6. 自动恢复源码并退出子进程
 
 CI workflow: `.github/workflows/hmr-multi-platform.yml`
 
