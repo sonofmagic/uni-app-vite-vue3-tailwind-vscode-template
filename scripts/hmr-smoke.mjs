@@ -73,7 +73,8 @@ async function main() {
 
 function runDevScript(scriptName) {
   const isWindows = process.platform === 'win32'
-  const child = spawn('pnpm', ['run', scriptName], {
+  const pnpmCmd = isWindows ? 'pnpm.cmd' : 'pnpm'
+  const child = spawn(pnpmCmd, ['run', scriptName], {
     cwd,
     stdio: ['ignore', 'pipe', 'pipe'],
     env: process.env,
@@ -94,6 +95,9 @@ function runDevScript(scriptName) {
     if (signal) {
       console.log(`[hmr-smoke] dev terminated by signal=${signal}`)
     }
+  })
+  child.on('error', (error) => {
+    console.error(`[hmr-smoke] dev process spawn error: ${error.message}`)
   })
 
   return child
