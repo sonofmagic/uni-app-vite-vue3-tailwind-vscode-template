@@ -73,8 +73,11 @@ async function main() {
 
 function runDevScript(scriptName) {
   const isWindows = process.platform === 'win32'
-  const pnpmCmd = isWindows ? 'pnpm.cmd' : 'pnpm'
-  const child = spawn(pnpmCmd, ['run', scriptName], {
+  const spawnArgs = isWindows
+    ? ['cmd.exe', ['/d', '/s', '/c', `pnpm run ${scriptName}`]]
+    : ['pnpm', ['run', scriptName]]
+
+  const child = spawn(spawnArgs[0], spawnArgs[1], {
     cwd,
     stdio: ['ignore', 'pipe', 'pipe'],
     env: process.env,
