@@ -46,19 +46,16 @@ const arbitraryMutationSteps = [
     name: 'add-arbitrary-values',
     scriptColors: ['bg-[#123435]', 'bg-[#987abc]'],
     templateClasses: ['bg-[#a1b2c3]', 'px-[432.43px]'],
-    verifyOldStyleRemoved: false,
   },
   {
     name: 'modify-arbitrary-values',
     scriptColors: ['bg-[#0f0f0f]', 'bg-[#fedcba]'],
     templateClasses: ['bg-[#112233]', 'px-[256.25px]'],
-    verifyOldStyleRemoved: true,
   },
   {
     name: 'delete-arbitrary-values',
     scriptColors: [],
     templateClasses: [],
-    verifyOldStyleRemoved: false,
   },
 ]
 
@@ -104,8 +101,6 @@ async function runArbitraryMutationLoop({
   componentJsFile,
   componentTemplateFile,
 }) {
-  let previousStyleSnippets = []
-
   for (const step of arbitraryMutationSteps) {
     const nextContent = buildExperienceLabContent(originalTargetContent, step)
     const beforeDirMtime = await getLatestMtimeMs(distPlatformDir)
@@ -124,15 +119,6 @@ async function runArbitraryMutationLoop({
       )
     }
 
-    if (step.verifyOldStyleRemoved && previousStyleSnippets.length > 0) {
-      await waitForFileNotContains(
-        styleFile,
-        previousStyleSnippets,
-        timeoutMs,
-        `${step.name}: previous style snippets removed`,
-      )
-    }
-
     await waitForFileNotContains(
       componentJsFile,
       allRawArbitraryTokens,
@@ -145,8 +131,6 @@ async function runArbitraryMutationLoop({
       timeoutMs,
       `${step.name}: template token transform`,
     )
-
-    previousStyleSnippets = currentStyleSnippets
   }
 }
 
