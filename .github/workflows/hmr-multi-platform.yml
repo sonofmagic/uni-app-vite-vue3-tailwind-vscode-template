@@ -27,19 +27,19 @@ on:
 
 jobs:
   hmr-smoke:
-    name: HMR ${{ matrix.platform }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
+    name: HMR ${{ matrix.os_name }} / mp-weixin
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
     strategy:
       fail-fast: false
       matrix:
         include:
-          - platform: mp-weixin
-            dev_script: dev:mp-weixin
-          - platform: mp-alipay
-            dev_script: dev:mp-alipay
-          - platform: mp-baidu
-            dev_script: dev:mp-baidu
+          - os: ubuntu-latest
+            os_name: linux
+          - os: macos-latest
+            os_name: macos
+          - os: windows-latest
+            os_name: windows
 
     steps:
       - name: Checkout
@@ -60,4 +60,4 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Run HMR smoke test
-        run: pnpm run test:hmr -- --platform ${{ matrix.platform }} --script ${{ matrix.dev_script }} --timeout 180000
+        run: pnpm run test:hmr -- --platform mp-weixin --script dev:mp-weixin --timeout 240000

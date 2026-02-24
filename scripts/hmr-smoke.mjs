@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { spawn } from 'node:child_process'
+import { spawn, spawnSync } from 'node:child_process'
 import { existsSync } from 'node:fs'
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
@@ -228,6 +228,12 @@ function terminateDev(signal) {
 
   const isWindows = process.platform === 'win32'
   if (isWindows) {
+    if (typeof devProcess.pid === 'number') {
+      // Ensure watchers started by pnpm/uni are also terminated on Windows.
+      spawnSync('taskkill', ['/PID', String(devProcess.pid), '/T', '/F'], {
+        stdio: 'ignore',
+      })
+    }
     devProcess.kill(signal)
     return
   }

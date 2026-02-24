@@ -83,6 +83,8 @@
 
 CI workflow: `.github/workflows/hmr-multi-platform.yml`
 
+当前 CI 默认在 `linux` / `macos` / `windows` 三个操作系统 runner 上执行同一条 `mp-weixin` HMR 冒烟用例。
+
 ### weapp-ide-cli
 
 本项目已经集成 `weapp-ide-cli` 可以通过 `cli` 对 `ide` 进行额外操作
