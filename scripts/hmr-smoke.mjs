@@ -221,7 +221,11 @@ async function waitForExpectedSnippets(file, snippets, timeout, phase) {
   const startedAt = Date.now()
 
   while (Date.now() - startedAt < timeout) {
-    const css = await fs.readFile(file, 'utf8')
+    const css = await readFileIfExists(file)
+    if (css == null) {
+      await sleep(300)
+      continue
+    }
     const missing = snippets.filter((snippet) => !css.includes(snippet))
     if (missing.length === 0) {
       console.log(`[hmr-smoke] ${phase}: expected snippets found`)
@@ -230,7 +234,10 @@ async function waitForExpectedSnippets(file, snippets, timeout, phase) {
     await sleep(700)
   }
 
-  const css = await fs.readFile(file, 'utf8')
+  const css = await readFileIfExists(file)
+  if (css == null) {
+    throw new Error(`${phase}: file missing after timeout, file=${path.relative(cwd, file)}`)
+  }
   const missing = snippets.filter((snippet) => !css.includes(snippet))
   throw new Error(
     `${phase}: missing ${missing.length} expected color snippets, file=${path.relative(cwd, file)}, firstMissing=${missing[0]}\n` +
@@ -244,7 +251,11 @@ async function waitForFileNotContains(file, snippets, timeout, phase) {
 
   const startedAt = Date.now()
   while (Date.now() - startedAt < timeout) {
-    const content = await fs.readFile(file, 'utf8')
+    const content = await readFileIfExists(file)
+    if (content == null) {
+      await sleep(300)
+      continue
+    }
     const hit = snippets.filter(snippet => content.includes(snippet))
     if (hit.length === 0) {
       console.log(`[hmr-smoke] ${phase}: no raw token/snippet hit`)
@@ -253,12 +264,27 @@ async function waitForFileNotContains(file, snippets, timeout, phase) {
     await sleep(700)
   }
 
-  const content = await fs.readFile(file, 'utf8')
+  const content = await readFileIfExists(file)
+  if (content == null) {
+    throw new Error(`${phase}: file missing after timeout, file=${path.relative(cwd, file)}`)
+  }
   const hit = snippets.filter(snippet => content.includes(snippet))
   throw new Error(
     `${phase}: still contains ${hit.length} snippets, file=${path.relative(cwd, file)}, firstHit=${hit[0]}\n` +
     `content length=${content.length}`,
   )
+}
+
+async function readFileIfExists(file) {
+  try {
+    return await fs.readFile(file, 'utf8')
+  }
+  catch (error) {
+    if (typeof error === 'object' && error !== null && 'code' in error && error.code === 'ENOENT') {
+      return null
+    }
+    throw error
+  }
 }
 
 function buildExperienceLabContent(originalContent, step) {
@@ -268,16 +294,17 @@ function buildExperienceLabContent(originalContent, step) {
 }
 
 function applyScriptColorMutation(content, extraColors) {
-  const regex = /const buttonColors = \[(?<body>[\s\S]*?)\n\]\nconst buttonPalette =/
+  const newline = content.includes('\r\n') ? '\r\n' : '\n'
+  const regex = /const buttonColors = \[(?<body>[\s\S]*?)\r?\n\]\r?\nconst buttonPalette =/
   const match = content.match(regex)
   if (!match || typeof match.index !== 'number' || !match.groups) {
     throw new Error('Cannot locate "buttonColors" array block in ExperienceLab.vue')
   }
 
   const body = match.groups.body
-  const extraLines = extraColors.map(color => `  '${color}',`).join('\n')
-  const nextBody = extraLines.length > 0 ? `${body}\n${extraLines}` : body
-  const replacement = `const buttonColors = [${nextBody}\n]\nconst buttonPalette =`
+  const extraLines = extraColors.map(color => `  '${color}',`).join(newline)
+  const nextBody = extraLines.length > 0 ? `${body}${newline}${extraLines}` : body
+  const replacement = `const buttonColors = [${nextBody}${newline}]${newline}const buttonPalette =`
   return content.replace(regex, replacement)
 }
 
