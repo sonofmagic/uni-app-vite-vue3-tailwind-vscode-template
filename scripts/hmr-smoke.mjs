@@ -72,10 +72,12 @@ async function main() {
 }
 
 function runDevScript(scriptName) {
+  const isWindows = process.platform === 'win32'
   const child = spawn('pnpm', ['run', scriptName], {
     cwd,
     stdio: ['ignore', 'pipe', 'pipe'],
     env: process.env,
+    detached: !isWindows,
   })
 
   child.stdout.on('data', (chunk) => {
@@ -211,13 +213,36 @@ async function stopDevProcess() {
   if (!devProcess || devProcess.killed)
     return
 
-  devProcess.kill('SIGTERM')
+  terminateDev('SIGTERM')
   await waitForExit(devProcess, 8000)
 
   if (devProcess.exitCode === null) {
-    devProcess.kill('SIGKILL')
+    terminateDev('SIGKILL')
     await waitForExit(devProcess, 3000)
   }
+}
+
+function terminateDev(signal) {
+  if (!devProcess)
+    return
+
+  const isWindows = process.platform === 'win32'
+  if (isWindows) {
+    devProcess.kill(signal)
+    return
+  }
+
+  if (typeof devProcess.pid === 'number') {
+    try {
+      process.kill(-devProcess.pid, signal)
+      return
+    }
+    catch {
+      // fallback for environments without process group support
+    }
+  }
+
+  devProcess.kill(signal)
 }
 
 function waitForExit(child, timeout) {
