@@ -62,6 +62,27 @@
 
 本项目集成的是我自己封装的 `@icebreakers/eslint-config` 规则，你不喜欢完全可以更换，卸载掉它然后自行配置 `eslint`，把它变成你想要的样子
 
+## HMR 多平台冒烟测试
+
+为了回归 `pnpm dev` 下 tailwind 任意值语法在增量编译场景的稳定性，新增了 `scripts/hmr-smoke.mjs` 冒烟测试脚本。
+
+本地执行:
+
+- `pnpm run test:hmr:mp-weixin`
+- `pnpm run test:hmr:mp-alipay`
+- `pnpm run test:hmr:mp-baidu`
+- `pnpm run test:hmr:all`
+
+脚本行为:
+
+1. 启动对应平台的 `dev` 命令
+2. 等待首轮产物生成（`dist/dev/<platform>/app.*ss`）
+3. 修改 `src/components/sections/GradientFeature.vue` 触发增量编译
+4. 校验 `ExperienceLab.vue` 中 `bg-[#000]` 到 `bg-[#fff]` 对应的关键颜色规则仍存在
+5. 自动恢复源码并退出子进程
+
+CI workflow: `.github/workflows/hmr-multi-platform.yml`
+
 ### weapp-ide-cli
 
 本项目已经集成 `weapp-ide-cli` 可以通过 `cli` 对 `ide` 进行额外操作

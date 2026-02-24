@@ -1,0 +1,63 @@
+name: HMR Multi-Platform
+
+on:
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'scripts/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - 'postcss.config.ts'
+      - 'tailwind.config.ts'
+      - 'vite.config.ts'
+      - '.github/workflows/hmr-multi-platform.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - 'scripts/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - 'postcss.config.ts'
+      - 'tailwind.config.ts'
+      - 'vite.config.ts'
+      - '.github/workflows/hmr-multi-platform.yml'
+  workflow_dispatch:
+
+jobs:
+  hmr-smoke:
+    name: HMR ${{ matrix.platform }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: mp-weixin
+            dev_script: dev:mp-weixin
+          - platform: mp-alipay
+            dev_script: dev:mp-alipay
+          - platform: mp-baidu
+            dev_script: dev:mp-baidu
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.29.3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run HMR smoke test
+        run: pnpm run test:hmr -- --platform ${{ matrix.platform }} --script ${{ matrix.dev_script }} --timeout 180000
