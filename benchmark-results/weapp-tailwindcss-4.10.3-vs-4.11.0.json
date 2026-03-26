@@ -1,0 +1,186 @@
+{
+  "generatedAt": "2026-03-26T08:10:30.301Z",
+  "comparedVersions": [
+    "4.10.3",
+    "4.11.0"
+  ],
+  "buildScripts": [
+    "build:app",
+    "build:h5",
+    "build:h5:ssr",
+    "build:mp-alipay",
+    "build:mp-baidu",
+    "build:mp-kuaishou",
+    "build:mp-lark",
+    "build:mp-qq",
+    "build:mp-toutiao",
+    "build:mp-weixin",
+    "build:quickapp-webview",
+    "build:quickapp-webview-huawei",
+    "build:quickapp-webview-union"
+  ],
+  "devScripts": [
+    "dev:app",
+    "dev:h5",
+    "dev:mp-alipay",
+    "dev:mp-baidu",
+    "dev:mp-kuaishou",
+    "dev:mp-lark",
+    "dev:mp-qq",
+    "dev:mp-toutiao",
+    "dev:mp-weixin",
+    "dev:quickapp-webview",
+    "dev:quickapp-webview-huawei",
+    "dev:quickapp-webview-union"
+  ],
+  "results": {
+    "4.10.3": {
+      "build": {
+        "build:app": 5152.99,
+        "build:h5": 5068.91,
+        "build:h5:ssr": 6205.07,
+        "build:mp-alipay": 4043.29,
+        "build:mp-baidu": 4654.77,
+        "build:mp-kuaishou": 5228.51,
+        "build:mp-lark": 5889.68,
+        "build:mp-qq": 5152.69,
+        "build:mp-toutiao": 4781.58,
+        "build:mp-weixin": 4630.95,
+        "build:quickapp-webview": 4958.3,
+        "build:quickapp-webview-huawei": 5627.12,
+        "build:quickapp-webview-union": 4692.45
+      },
+      "dev": {
+        "dev:app": {
+          "readyInMs": 3168,
+          "hmrInMs": 311.28125
+        },
+        "dev:h5": {
+          "readyInMs": null,
+          "hmrInMs": null
+        },
+        "dev:mp-alipay": {
+          "readyInMs": 4459,
+          "hmrInMs": 1045.1366249999992
+        },
+        "dev:mp-baidu": {
+          "readyInMs": 4942,
+          "hmrInMs": 724.9297919999954
+        },
+        "dev:mp-kuaishou": {
+          "readyInMs": 4729,
+          "hmrInMs": 853.7657920000056
+        },
+        "dev:mp-lark": {
+          "readyInMs": 4257,
+          "hmrInMs": 632.8637909999961
+        },
+        "dev:mp-qq": {
+          "readyInMs": 4673,
+          "hmrInMs": 563.1526659999945
+        },
+        "dev:mp-toutiao": {
+          "readyInMs": 3818,
+          "hmrInMs": 615.2910419999971
+        },
+        "dev:mp-weixin": {
+          "readyInMs": 3754,
+          "hmrInMs": 840.7369999999937
+        },
+        "dev:quickapp-webview": {
+          "readyInMs": 4822,
+          "hmrInMs": 987.1476669999829
+        },
+        "dev:quickapp-webview-huawei": {
+          "readyInMs": 4163,
+          "hmrInMs": 717.0102079999924
+        },
+        "dev:quickapp-webview-union": {
+          "readyInMs": 4644,
+          "hmrInMs": 1080.130416
+        }
+      },
+      "errors": [
+        {
+          "script": "dev:h5",
+          "phase": "dev",
+          "message": "ENOENT: no such file or directory, scandir '/Users/icebreaker/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template/dist/dev/h5'"
+        }
+      ]
+    },
+    "4.11.0": {
+      "build": {
+        "build:app": 4848.59,
+        "build:h5": 5640.59,
+        "build:h5:ssr": 5880.84,
+        "build:mp-alipay": 4342.84,
+        "build:mp-baidu": 4756.17,
+        "build:mp-kuaishou": 4775.7,
+        "build:mp-lark": 4233.41,
+        "build:mp-qq": 4468.98,
+        "build:mp-toutiao": 4817.98,
+        "build:mp-weixin": 5439.23,
+        "build:quickapp-webview": 5816.24,
+        "build:quickapp-webview-huawei": 5163.7,
+        "build:quickapp-webview-union": 4734.57
+      },
+      "dev": {
+        "dev:app": {
+          "readyInMs": 3060,
+          "hmrInMs": 313.1197500000126
+        },
+        "dev:h5": {
+          "readyInMs": null,
+          "hmrInMs": null
+        },
+        "dev:mp-alipay": {
+          "readyInMs": 3609,
+          "hmrInMs": 1053.6231249999837
+        },
+        "dev:mp-baidu": {
+          "readyInMs": 4020,
+          "hmrInMs": 943.8099589999765
+        },
+        "dev:mp-kuaishou": {
+          "readyInMs": 4011,
+          "hmrInMs": 614.6322919999948
+        },
+        "dev:mp-lark": {
+          "readyInMs": 3807,
+          "hmrInMs": 720.6720830000122
+        },
+        "dev:mp-qq": {
+          "readyInMs": 4376,
+          "hmrInMs": 1132.4704589999747
+        },
+        "dev:mp-toutiao": {
+          "readyInMs": 4578,
+          "hmrInMs": 962.1130419999827
+        },
+        "dev:mp-weixin": {
+          "readyInMs": 4747,
+          "hmrInMs": 857.6035830000183
+        },
+        "dev:quickapp-webview": {
+          "readyInMs": 4892,
+          "hmrInMs": 720.4954169999692
+        },
+        "dev:quickapp-webview-huawei": {
+          "readyInMs": 4455,
+          "hmrInMs": 718.7559579999652
+        },
+        "dev:quickapp-webview-union": {
+          "readyInMs": 4146,
+          "hmrInMs": 824.9659579999861
+        }
+      },
+      "errors": [
+        {
+          "script": "dev:h5",
+          "phase": "dev",
+          "message": "ENOENT: no such file or directory, scandir '/Users/icebreaker/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template/dist/dev/h5'"
+        }
+      ]
+    }
+  }
+}

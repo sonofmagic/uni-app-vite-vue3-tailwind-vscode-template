@@ -39,6 +39,8 @@
     "upload:dev": "weapp upload -p dist/dev/mp-weixin -v 1.0.0 -d \"dev version\"",
     "upload:build": "weapp upload -p dist/build/mp-weixin -v 1.0.0 -d \"release version\"",
     "postinstall": "weapp-tw patch",
+    "benchmark:weapp-tailwindcss": "node scripts/benchmark-weapp-tailwindcss.mjs",
+    "benchmark:weapp-tailwindcss:mp-weixin": "node scripts/benchmark-weapp-tailwindcss.mjs",
     "lint": "eslint .",
     "lint:fix": "eslint ./src --fix",
     "up:pkg": "pnpm up -rLi \"!@dcloudio/*\"",
