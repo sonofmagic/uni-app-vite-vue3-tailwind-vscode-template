@@ -3,14 +3,14 @@
     {
       "path": "pages/index/index",
       "style": {
-        "navigationBarTitleText": "weapp-tailwindcss"
+        "navigationBarTitleText": "首页"
       }
     }
   ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "weapp-tailwindcss",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarTitleText": "首页",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF"
   }
 }

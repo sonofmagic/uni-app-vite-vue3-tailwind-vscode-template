@@ -1,49 +1,12 @@
 <script setup lang="ts">
-import CapabilityShowcase from '@/components/sections/CapabilityShowcase.vue'
-import ExperienceLab from '@/components/sections/ExperienceLab.vue'
-import GradientFeature from '@/components/sections/GradientFeature.vue'
-import HeroShowcase from '@/components/sections/HeroShowcase.vue'
-import IconGallery from '@/components/sections/IconGallery.vue'
-import MacroShowcase from '@/components/sections/MacroShowcase.vue'
+type PageStatus = 'idle' | 'loading' | 'success' | 'error'
 
-onLoad(() => {
-  console.log('欢迎使用 weapp-tailwindcss 模板')
-})
+const pageStatus = ref<PageStatus>('idle')
 </script>
 
 <template>
-  <view
-    class="
-      flex min-h-screen w-full justify-center
-      bg-[radial-gradient(circle_at_18%_20%,#e0f2fe,#fdf4ff_70%)] px-0 py-6
-      text-slate-800
-    "
-  >
-    <view
-      class="
-        flex w-full flex-col space-y-5 px-4
-        sm:px-5
-        md:w-[94vw] md:max-w-[960px]
-      "
-    >
-      <view>
-        <HeroShowcase />
-      </view>
-      <view>
-        <CapabilityShowcase />
-      </view>
-      <view>
-        <ExperienceLab />
-      </view>
-      <view>
-        <IconGallery />
-      </view>
-      <view>
-        <GradientFeature />
-      </view>
-      <view>
-        <MacroShowcase />
-      </view>
-    </view>
+  <view class="flex min-h-screen flex-col items-center justify-center gap-3 bg-white px-6">
+    <text class="text-3xl font-bold text-slate-900">Hello World</text>
+    <text class="text-sm text-slate-500">status: {{ pageStatus }}</text>
   </view>
 </template>
