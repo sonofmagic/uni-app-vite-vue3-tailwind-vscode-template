@@ -20,6 +20,8 @@ Use `pnpm install` to install dependencies; `postinstall` automatically runs `we
 
 Follow `.editorconfig`: 2-space indentation, LF line endings, UTF-8. Prefer Vue 3 SFCs with TypeScript. Use PascalCase for component filenames such as `HeroShowcase.vue`, camelCase for store and utility modules such as `counter.ts`, and keep page directories route-aligned, for example `src/pages/index/index.vue`. ESLint uses `@icebreakers/eslint-config` with Vue, Tailwind, and WeChat rules; run `pnpm lint` before opening a PR.
 
+Implement UI with Tailwind CSS utilities. Do not handwrite component or page styles in `<style>` blocks or separate CSS files unless the repository explicitly introduces an exception for a specific case.
+
 ## Testing Guidelines
 
 No automated test runner is configured yet. For now, treat `pnpm lint` as the minimum quality gate and verify changes manually in the target platform, usually `pnpm dev:mp-weixin` plus WeChat DevTools. If you add tests, keep them near the feature or under a future `tests/` directory and use `*.spec.ts` naming.

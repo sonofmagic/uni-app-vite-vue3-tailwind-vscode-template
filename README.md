@@ -53,6 +53,7 @@ pnpm open:build
 - 请先把 `src/manifest.json` 中的 `appid` 改成你自己的
 - 模板内保留了 `up:pkg` 和 `up:uniapp`，用于分别升级通用依赖和 `uni-app` 依赖
 - 推荐在 VS Code 中安装 `Tailwind CSS IntelliSense`、`ESLint`、`Stylelint`
+- 页面和组件样式默认全部使用 Tailwind CSS utilities 实现，不手写 `<style>` 或独立 CSS 文件，除非仓库明确为特殊场景开例外
 
 ## 项目级技能
 
