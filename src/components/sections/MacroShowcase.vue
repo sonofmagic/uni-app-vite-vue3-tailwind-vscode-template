@@ -58,15 +58,6 @@ function copy(data: string) {
           <view>自定义配置的方式进行样式条件编译</view>
           <view>相关配置见根目录下的 tailwind.config.ts</view>
         </view>
-
-        <view class="mt-3 rounded-xl bg-white/60 px-3 py-2 text-slate-700">
-          <view class="apply-class-0">
-            @apply 条件编译方式0
-          </view>
-          <view class="apply-class-1">
-            @apply 条件编译方式1
-          </view>
-        </view>
       </view>
     </view>
 
@@ -103,13 +94,3 @@ function copy(data: string) {
     </view>
   </view>
 </template>
-
-<style scoped lang="scss">
-.apply-class-0 {
-  @apply ifdef-[MP-WEIXIN]:bg-blue-500 ifndef-[MP-WEIXIN]:bg-red-500;
-}
-
-.apply-class-1 {
-  @apply wx:bg-blue-500 -wx:bg-red-500;
-}
-</style>
