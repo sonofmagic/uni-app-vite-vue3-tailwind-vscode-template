@@ -133,9 +133,6 @@ function copy(data: string) {
         <view class="text-xs text-white/70">
           任意色值 `bg-[#xxx]` + hover 保留
         </view>
-        <view class="test">
-          @apply + 自定义尺寸
-        </view>
       </view>
 
       <view
@@ -303,9 +300,3 @@ function copy(data: string) {
     </view>
   </view>
 </template>
-
-<style scoped lang="scss">
-.test {
-  @apply flex text-center h-[100px] w-[222.222px] items-center justify-center rounded-[40px] bg-[#123456] bg-opacity-[0.54] text-[#ffffff] #{!important};
-}
-</style>
