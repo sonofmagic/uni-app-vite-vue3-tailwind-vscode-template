@@ -1,0 +1,1 @@
+<!-- https://github.com/dcloudio/uni-app/issues/2648 -->

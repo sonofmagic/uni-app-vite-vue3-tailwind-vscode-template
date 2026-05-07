@@ -1,0 +1,11 @@
+[2026-05-07 19:36:28] running build:app
+
+> uni-app-vite-vue3-tailwind-vscode-template@0.0.0 build:app /Users/icebreaker/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template
+> uni build -p app
+
+Compiler version: 5.07（vue3）
+Compiling...
+ℹ Weapp-tailwindcss 使用 Tailwind CSS (v3.4.19)
+✔ 当前使用 Tailwind CSS 版本为: 3.4.19
+DONE  Build complete.
+Run method: open HBuilderX, import dist/build/app run.

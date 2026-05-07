@@ -1,0 +1,12 @@
+[2026-05-07 19:36:43] running build:mp-alipay
+
+> uni-app-vite-vue3-tailwind-vscode-template@0.0.0 build:mp-alipay /Users/icebreaker/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template
+> uni build -p mp-alipay
+
+Compiling...
+ℹ Weapp-tailwindcss 使用 Tailwind CSS (v3.4.19)
+✔ 当前使用 Tailwind CSS 版本为: 3.4.19
+ℹ 正在刷新当前子包的 Tailwind CSS 补丁记录，确保缓存隔离。
+ℹ 根据 Vite 项目根目录自动推断 appType -> uni-app-vite
+DONE  Build complete.
+Run method: open Alipay Mini Program Devtools, import dist/build/mp-alipay run.

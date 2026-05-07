@@ -1,0 +1,14 @@
+platform	before_files	after_files	added	removed	changed	before_kb	after_kb
+app	20	20	0	0	0	832	832
+h5	7	7	0	0	0	224	224
+h5-ssr	12	12	0	0	0	364	364
+mp-alipay	33	33	0	0	0	316	316
+mp-baidu	33	33	0	0	0	240	240
+mp-kuaishou	33	33	0	0	0	236	236
+mp-lark	34	34	0	0	0	240	240
+mp-qq	36	36	0	0	0	248	248
+mp-toutiao	33	33	0	0	0	236	236
+mp-weixin	34	34	0	0	0	240	240
+quickapp-webview	33	33	0	0	0	236	236
+quickapp-webview-huawei	34	34	0	0	0	240	240
+quickapp-webview-union	33	33	0	0	0	236	236

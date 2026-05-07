@@ -1,0 +1,14 @@
+script	exit_code	output_snapshot
+build:app	0	artifacts/weapp-tailwindcss-next-comparison/before/outputs/app
+build:h5	0	artifacts/weapp-tailwindcss-next-comparison/before/outputs/h5
+build:h5:ssr	0	artifacts/weapp-tailwindcss-next-comparison/before/outputs/h5-ssr
+build:mp-alipay	0	artifacts/weapp-tailwindcss-next-comparison/before/outputs/mp-alipay
+build:mp-baidu	0	artifacts/weapp-tailwindcss-next-comparison/before/outputs/mp-baidu
+build:mp-kuaishou	0	artifacts/weapp-tailwindcss-next-comparison/before/outputs/mp-kuaishou
+build:mp-lark	0	artifacts/weapp-tailwindcss-next-comparison/before/outputs/mp-lark
+build:mp-qq	0	artifacts/weapp-tailwindcss-next-comparison/before/outputs/mp-qq
+build:mp-toutiao	0	artifacts/weapp-tailwindcss-next-comparison/before/outputs/mp-toutiao
+build:mp-weixin	0	artifacts/weapp-tailwindcss-next-comparison/before/outputs/mp-weixin
+build:quickapp-webview	0	artifacts/weapp-tailwindcss-next-comparison/before/outputs/quickapp-webview
+build:quickapp-webview-huawei	0	artifacts/weapp-tailwindcss-next-comparison/before/outputs/quickapp-webview-huawei
+build:quickapp-webview-union	0	artifacts/weapp-tailwindcss-next-comparison/before/outputs/quickapp-webview-union

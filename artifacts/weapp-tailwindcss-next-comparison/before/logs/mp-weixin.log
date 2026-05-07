@@ -1,0 +1,11 @@
+[2026-05-07 19:25:10] running build:mp-weixin
+
+> uni-app-vite-vue3-tailwind-vscode-template@0.0.0 build:mp-weixin /Users/icebreaker/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template
+> uni build -p mp-weixin
+
+Compiling...
+ℹ Weapp-tailwindcss 使用 Tailwind CSS (v3.4.19)
+✔ 当前使用 Tailwind CSS 版本为: 3.4.19
+ℹ 根据 Vite 项目根目录自动推断 appType -> uni-app-vite
+DONE  Build complete.
+Run method: open Weixin Mini Program Devtools, import dist/build/mp-weixin run.

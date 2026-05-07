@@ -1,0 +1,16 @@
+[2026-05-07 19:24:37] running build:h5:ssr
+
+> uni-app-vite-vue3-tailwind-vscode-template@0.0.0 build:h5:ssr /Users/icebreaker/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template
+> uni build --ssr
+
+Compiler version: 5.07（vue3）
+Compiling...
+ℹ Weapp-tailwindcss 使用 Tailwind CSS (v3.4.19)
+✔ 当前使用 Tailwind CSS 版本为: 3.4.19
+​
+... referenced in /Users/icebreaker/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template/src/App.vue?vue&type=style&index=0&lang.scss didn't resolve at build time, it will remain unchanged to be resolved at runtime​
+​
+... referenced in /Users/icebreaker/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template/src/App.vue?vue&type=style&index=0&lang.scss didn't resolve at build time, it will remain unchanged to be resolved at runtime​
+
+欢迎将web站点部署到uniCloud前端网页托管平台，高速、免费、安全、省心，详见：https://uniapp.dcloud.io/uniCloud/hosting
+DONE  Build complete.
