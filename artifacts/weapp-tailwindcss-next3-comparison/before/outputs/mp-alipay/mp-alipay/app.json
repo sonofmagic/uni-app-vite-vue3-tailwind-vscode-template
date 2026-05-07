@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "defaultTitle": "weapp-tailwindcss",
+    "navigationBarFrontColor": "black",
+    "titleBarColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "subPackageBuildType": "shared",
+  "usingComponents": {}
+}

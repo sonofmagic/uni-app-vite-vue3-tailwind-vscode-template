@@ -1,0 +1,83 @@
+{
+  "\u0000plugin-vue:export-helper": [
+    "/assets/pages-index-index.Cs_PACTc.js",
+    "/assets/index-CWtnE9Y8.css"
+  ],
+  "\u0000vite/modulepreload-polyfill.js": [],
+  "\u0000vite/preload-helper.js": [],
+  "index.html": [],
+  "node_modules/.pnpm/@dcloudio+uni-app@3.0.0-5000720260410001_@dcloudio+types@3.4.12_postcss@8.5.14_rollup@4_b4109c5c5f385a8624d1455e2541b746/node_modules/@dcloudio/uni-app/dist/uni-app.es.js": [],
+  "node_modules/.pnpm/@dcloudio+uni-h5-vue@3.0.0-5000720260410001_vue@3.4.21_typescript@6.0.3_/node_modules/@dcloudio/uni-h5-vue/dist/vue.runtime.esm.js": [],
+  "node_modules/.pnpm/@dcloudio+uni-h5@3.0.0-5000720260410001_postcss@8.5.14_rollup@4.30.1_vue@3.4.21_typescript@6.0.3_/node_modules/@dcloudio/uni-h5/dist/uni-h5.es.js": [],
+  "node_modules/.pnpm/@dcloudio+uni-h5@3.0.0-5000720260410001_postcss@8.5.14_rollup@4.30.1_vue@3.4.21_typescript@6.0.3_/node_modules/@dcloudio/uni-h5/style/framework/async.css": [],
+  "node_modules/.pnpm/@dcloudio+uni-h5@3.0.0-5000720260410001_postcss@8.5.14_rollup@4.30.1_vue@3.4.21_typescript@6.0.3_/node_modules/@dcloudio/uni-h5/style/framework/base.css": [],
+  "node_modules/.pnpm/@dcloudio+uni-h5@3.0.0-5000720260410001_postcss@8.5.14_rollup@4.30.1_vue@3.4.21_typescript@6.0.3_/node_modules/@dcloudio/uni-h5/style/framework/pageHead.css": [],
+  "node_modules/.pnpm/@dcloudio+uni-h5@3.0.0-5000720260410001_postcss@8.5.14_rollup@4.30.1_vue@3.4.21_typescript@6.0.3_/node_modules/@dcloudio/uni-h5/style/framework/shadow.css": [],
+  "node_modules/.pnpm/@dcloudio+uni-i18n@3.0.0-5000720260410001/node_modules/@dcloudio/uni-i18n/dist/uni-i18n.es.js": [],
+  "node_modules/.pnpm/@dcloudio+uni-shared@3.0.0-5000720260410001/node_modules/@dcloudio/uni-shared/dist/uni-shared.es.js": [],
+  "node_modules/.pnpm/@vue+shared@3.4.21/node_modules/@vue/shared/dist/shared.esm-bundler.js": [],
+  "node_modules/.pnpm/pinia@2.2.4_typescript@6.0.3_vue@3.4.21_typescript@6.0.3_/node_modules/pinia/dist/pinia.mjs": [],
+  "node_modules/.pnpm/vue-router@4.4.4_vue@3.4.21_typescript@6.0.3_/node_modules/vue-router/dist/vue-router.mjs": [],
+  "src/App.vue": [],
+  "src/App.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/App.vue?vue&type=style&index=0&lang.scss": [],
+  "src/components/WeappTailwindcss.vue": [
+    "/assets/pages-index-index.Cs_PACTc.js",
+    "/assets/index-CWtnE9Y8.css"
+  ],
+  "src/components/sections/CapabilityShowcase.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/pages-index-index.Cs_PACTc.js",
+    "/assets/index-CWtnE9Y8.css"
+  ],
+  "src/components/sections/ExperienceLab.vue": [
+    "/assets/pages-index-index.Cs_PACTc.js",
+    "/assets/index-CWtnE9Y8.css"
+  ],
+  "src/components/sections/ExperienceLab.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/pages-index-index.Cs_PACTc.js",
+    "/assets/index-CWtnE9Y8.css"
+  ],
+  "src/components/sections/ExperienceLab.vue?vue&type=style&index=0&scoped=e2c9ca45&lang.scss": [
+    "/assets/pages-index-index.Cs_PACTc.js",
+    "/assets/index-CWtnE9Y8.css"
+  ],
+  "src/components/sections/GradientFeature.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/pages-index-index.Cs_PACTc.js",
+    "/assets/index-CWtnE9Y8.css"
+  ],
+  "src/components/sections/HeroShowcase.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/pages-index-index.Cs_PACTc.js",
+    "/assets/index-CWtnE9Y8.css"
+  ],
+  "src/components/sections/IconGallery.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/pages-index-index.Cs_PACTc.js",
+    "/assets/index-CWtnE9Y8.css"
+  ],
+  "src/components/sections/MacroShowcase.vue": [
+    "/assets/pages-index-index.Cs_PACTc.js",
+    "/assets/index-CWtnE9Y8.css"
+  ],
+  "src/components/sections/MacroShowcase.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/pages-index-index.Cs_PACTc.js",
+    "/assets/index-CWtnE9Y8.css"
+  ],
+  "src/components/sections/MacroShowcase.vue?vue&type=style&index=0&scoped=f036cb06&lang.scss": [
+    "/assets/pages-index-index.Cs_PACTc.js",
+    "/assets/index-CWtnE9Y8.css"
+  ],
+  "src/main.ts": [],
+  "src/manifest-json-js": [],
+  "src/pages-json-js": [],
+  "src/pages/index/index.vue": [
+    "/assets/pages-index-index.Cs_PACTc.js",
+    "/assets/index-CWtnE9Y8.css"
+  ],
+  "src/pages/index/index.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/pages-index-index.Cs_PACTc.js",
+    "/assets/index-CWtnE9Y8.css"
+  ],
+  "src/stores/counter.ts": [
+    "/assets/pages-index-index.Cs_PACTc.js",
+    "/assets/index-CWtnE9Y8.css"
+  ]
+}

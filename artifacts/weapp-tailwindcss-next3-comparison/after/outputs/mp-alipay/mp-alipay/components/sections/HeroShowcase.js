@@ -1,0 +1,1 @@
+"use strict";const common_vendor=require("../../common/vendor.js");if(!Math){WeappTailwindcss()}const WeappTailwindcss=()=>"../WeappTailwindcss.js";const _sfc_main=common_vendor.defineComponent({__name:"HeroShowcase",setup(__props){return(_ctx,_cache)=>({})}});my.createComponent(_sfc_main);

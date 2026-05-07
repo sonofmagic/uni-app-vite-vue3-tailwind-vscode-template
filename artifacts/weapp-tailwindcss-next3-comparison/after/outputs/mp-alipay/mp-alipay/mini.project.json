@@ -1,0 +1,26 @@
+{
+  "appid": "touristappid",
+  "component2": true,
+  "enableAppxNg": true,
+  "axmlStrictCheck": false,
+  "enableDistFileMinify": false,
+  "enableParallelLoader": false,
+  "enableNodeModuleBabelTransform": true,
+  "format": 2,
+  "pluginResolution": {},
+  "developOptions": {
+    "parallel": false,
+    "minify": false
+  },
+  "compileOptions": {
+    "component2": true,
+    "transpile": {
+      "script": {
+        "ignore": []
+      }
+    }
+  },
+  "uploadExclude": [],
+  "assetsInclude": [],
+  "projectname": "uni-app-vue3-vite"
+}

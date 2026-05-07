@@ -1,0 +1,3 @@
+Files artifacts/weapp-tailwindcss-next3-comparison/before/outputs/mp-lark/mp-lark/app.ttss and artifacts/weapp-tailwindcss-next3-comparison/after/outputs/mp-lark/mp-lark/app.ttss differ
+Files artifacts/weapp-tailwindcss-next3-comparison/before/outputs/mp-lark/mp-lark/components/sections/ExperienceLab.ttss and artifacts/weapp-tailwindcss-next3-comparison/after/outputs/mp-lark/mp-lark/components/sections/ExperienceLab.ttss differ
+Files artifacts/weapp-tailwindcss-next3-comparison/before/outputs/mp-lark/mp-lark/components/sections/MacroShowcase.ttss and artifacts/weapp-tailwindcss-next3-comparison/after/outputs/mp-lark/mp-lark/components/sections/MacroShowcase.ttss differ

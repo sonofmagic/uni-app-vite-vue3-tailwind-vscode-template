@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "weapp-tailwindcss",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "themeLocation": "theme.json",
+  "lazyCodeLoading": "requiredComponents",
+  "darkmode": true,
+  "usingComponents": {}
+}

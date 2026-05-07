@@ -1,0 +1,1 @@
+"use strict";const t=require("../common/vendor.js"),e={__name:"WeappTailwindcss",setup(e){function a(e){t.index.setClipboardData({data:e})}return(e,o)=>({a:t.o((t=>a("https://github.com/sonofmagic/weapp-tailwindcss")),"f3"),b:t.o((t=>a("https://tw.icebreaker.top/")),"a9")})}};qq.createComponent(e);

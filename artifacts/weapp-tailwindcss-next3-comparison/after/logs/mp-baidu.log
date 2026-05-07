@@ -1,0 +1,11 @@
+[2026-05-07 20:23:24] running build:mp-baidu
+
+> uni-app-vite-vue3-tailwind-vscode-template@0.0.0 build:mp-baidu /Users/icebreaker/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template
+> uni build -p mp-baidu
+
+Compiling...
+ℹ Weapp-tailwindcss 使用 Tailwind CSS (v3.4.19)
+✔ 当前使用 Tailwind CSS 版本为: 3.4.19
+ℹ 根据 Vite 项目根目录自动推断 appType -> uni-app-vite
+DONE  Build complete.
+Run method: open Baidu Mini Program Devtools, import dist/build/mp-baidu run.

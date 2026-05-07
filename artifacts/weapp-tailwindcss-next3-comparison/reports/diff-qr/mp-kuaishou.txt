@@ -1,0 +1,3 @@
+Files artifacts/weapp-tailwindcss-next3-comparison/before/outputs/mp-kuaishou/mp-kuaishou/app.css and artifacts/weapp-tailwindcss-next3-comparison/after/outputs/mp-kuaishou/mp-kuaishou/app.css differ
+Files artifacts/weapp-tailwindcss-next3-comparison/before/outputs/mp-kuaishou/mp-kuaishou/components/sections/ExperienceLab.css and artifacts/weapp-tailwindcss-next3-comparison/after/outputs/mp-kuaishou/mp-kuaishou/components/sections/ExperienceLab.css differ
+Files artifacts/weapp-tailwindcss-next3-comparison/before/outputs/mp-kuaishou/mp-kuaishou/components/sections/MacroShowcase.css and artifacts/weapp-tailwindcss-next3-comparison/after/outputs/mp-kuaishou/mp-kuaishou/components/sections/MacroShowcase.css differ

@@ -1,0 +1,11 @@
+[2026-05-07 20:23:39] running build:mp-qq
+
+> uni-app-vite-vue3-tailwind-vscode-template@0.0.0 build:mp-qq /Users/icebreaker/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template
+> uni build -p mp-qq
+
+Compiling...
+ℹ Weapp-tailwindcss 使用 Tailwind CSS (v3.4.19)
+✔ 当前使用 Tailwind CSS 版本为: 3.4.19
+ℹ 根据 Vite 项目根目录自动推断 appType -> uni-app-vite
+DONE  Build complete.
+Run method: open QQ Mini Program Devtools, import dist/build/mp-qq run.

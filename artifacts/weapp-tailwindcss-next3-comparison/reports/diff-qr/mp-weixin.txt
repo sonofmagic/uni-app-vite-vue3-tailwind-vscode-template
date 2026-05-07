@@ -1,0 +1,3 @@
+Files artifacts/weapp-tailwindcss-next3-comparison/before/outputs/mp-weixin/mp-weixin/app.wxss and artifacts/weapp-tailwindcss-next3-comparison/after/outputs/mp-weixin/mp-weixin/app.wxss differ
+Files artifacts/weapp-tailwindcss-next3-comparison/before/outputs/mp-weixin/mp-weixin/components/sections/ExperienceLab.wxss and artifacts/weapp-tailwindcss-next3-comparison/after/outputs/mp-weixin/mp-weixin/components/sections/ExperienceLab.wxss differ
+Files artifacts/weapp-tailwindcss-next3-comparison/before/outputs/mp-weixin/mp-weixin/components/sections/MacroShowcase.wxss and artifacts/weapp-tailwindcss-next3-comparison/after/outputs/mp-weixin/mp-weixin/components/sections/MacroShowcase.wxss differ

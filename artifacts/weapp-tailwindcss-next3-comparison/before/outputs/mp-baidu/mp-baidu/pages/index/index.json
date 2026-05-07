@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "navigationBarTitleText": "weapp-tailwindcss",
+  "usingComponents": {
+    "capability-showcase": "../../components/sections/CapabilityShowcase",
+    "experience-lab": "../../components/sections/ExperienceLab",
+    "gradient-feature": "../../components/sections/GradientFeature",
+    "hero-showcase": "../../components/sections/HeroShowcase",
+    "icon-gallery": "../../components/sections/IconGallery",
+    "macro-showcase": "../../components/sections/MacroShowcase"
+  }
+}
