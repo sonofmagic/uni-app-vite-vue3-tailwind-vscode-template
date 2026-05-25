@@ -89,7 +89,7 @@
     "unplugin-auto-import": "^20.3.0",
     "vite": "5.2.8",
     "weapp-ide-cli": "^5.2.8",
-    "weapp-tailwindcss": "5.0.0-next.19"
+    "weapp-tailwindcss": "5.0.0-next.20"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
