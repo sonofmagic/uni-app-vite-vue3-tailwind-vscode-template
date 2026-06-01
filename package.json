@@ -88,12 +88,15 @@
     "unplugin-auto-import": "^20.3.0",
     "vite": "5.2.8",
     "weapp-ide-cli": "^5.3.2",
-    "weapp-tailwindcss": "5.0.0-next.28"
+    "weapp-tailwindcss": "5.0.0-next.31"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
       "weapp-tailwindcss",
       "@weapp-tailwindcss/merge-v3"
-    ]
+    ],
+    "overrides": {
+      "weapp-tailwindcss": "link:../../../Projects/github/weapp-tailwindcss/packages/weapp-tailwindcss"
+    }
   }
 }

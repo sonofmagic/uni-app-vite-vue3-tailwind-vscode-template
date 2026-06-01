@@ -21,19 +21,19 @@ text,
   --tw-skew-y: 0;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
-  --tw-pan-x: ;
-  --tw-pan-y: ;
-  --tw-pinch-zoom: ;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
   --tw-scroll-snap-strictness: proximity;
-  --tw-gradient-from-position: ;
-  --tw-gradient-via-position: ;
-  --tw-gradient-to-position: ;
-  --tw-ordinal: ;
-  --tw-slashed-zero: ;
-  --tw-numeric-figure: ;
-  --tw-numeric-spacing: ;
-  --tw-numeric-fraction: ;
-  --tw-ring-inset: ;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: rgba(59, 130, 246, 0.5);
@@ -41,28 +41,29 @@ text,
   --tw-ring-shadow: 0 0 rgba(0, 0, 0, 0);
   --tw-shadow: 0 0 rgba(0, 0, 0, 0);
   --tw-shadow-colored: 0 0 rgba(0, 0, 0, 0);
-  --tw-blur: ;
-  --tw-brightness: ;
-  --tw-contrast: ;
-  --tw-grayscale: ;
-  --tw-hue-rotate: ;
-  --tw-invert: ;
-  --tw-saturate: ;
-  --tw-sepia: ;
-  --tw-drop-shadow: ;
-  --tw-backdrop-blur: ;
-  --tw-backdrop-brightness: ;
-  --tw-backdrop-contrast: ;
-  --tw-backdrop-grayscale: ;
-  --tw-backdrop-hue-rotate: ;
-  --tw-backdrop-invert: ;
-  --tw-backdrop-opacity: ;
-  --tw-backdrop-saturate: ;
-  --tw-backdrop-sepia: ;
-  --tw-contain-size: ;
-  --tw-contain-layout: ;
-  --tw-contain-paint: ;
-  --tw-contain-style: ;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:   
+;
 }
 :host,
 page,
@@ -466,9 +467,6 @@ wx-root-portal-content {
   margin-top: calc(40rpx * (1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(40rpx * var(--tw-space-y-reverse));
 }
-.rounded {
-  border-radius: 8rpx;
-}
 .rounded-2xl {
   border-radius: 32rpx;
 }
@@ -683,11 +681,6 @@ wx-root-portal-content {
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
-.from-_b_h9e58e9_B {
-  --tw-gradient-from: #9e58e9 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgba(158, 88, 233, 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
 .from-emerald-500_f15 {
   --tw-gradient-from: rgba(16, 185, 129, 0.15) var(--tw-gradient-from-position);
   --tw-gradient-to: rgba(16, 185, 129, 0) var(--tw-gradient-to-position);
@@ -717,9 +710,6 @@ wx-root-portal-content {
   --tw-gradient-from: rgba(15, 23, 42, 0.95) var(--tw-gradient-from-position);
   --tw-gradient-to: rgba(15, 23, 42, 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-.to-blue-500 {
-  --tw-gradient-to: #3b82f6 var(--tw-gradient-to-position);
 }
 .to-cyan-500_f15 {
   --tw-gradient-to: rgba(6, 182, 212, 0.15) var(--tw-gradient-to-position);
@@ -767,10 +757,6 @@ wx-root-portal-content {
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
-}
-.px-2 {
-  padding-left: 16rpx;
-  padding-right: 16rpx;
 }
 .px-3 {
   padding-left: 24rpx;
@@ -1056,11 +1042,6 @@ wx-root-portal-content {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
 .before_cabsolute::before {
   content: var(--tw-content);
   position: absolute;
@@ -1096,10 +1077,6 @@ wx-root-portal-content {
   --tw-content: "现在，让我们开始神奇的 tailwindcss 开发之旅吧！";
   content: var(--tw-content);
 }
-.after_cborder-none::after {
-  content: var(--tw-content);
-  border-style: none;
-}
 .after_c_econtent-_b_agood_work_e_a_B::after {
   --tw-content: "good work!" !important;
   content: var(--tw-content) !important;
@@ -1113,7 +1090,7 @@ wx-root-portal-content {
   content: var(--tw-content);
 }
 .after_ccontent-_b_B::after {
-  --tw-content:;
+  --tw-content: ;
   content: var(--tw-content);
 }
 .group.published .group-_b_dpublished_B_cbg-yellow-400 {
@@ -1124,24 +1101,24 @@ wx-root-portal-content {
   --tw-text-opacity: 1;
   color: rgba(30, 41, 59, var(--tw-text-opacity, 1));
 }
-@media (weapp-tw-platform: "MP-WEIXIN") {
-  .ifdef-_bMP-WEIXIN_B_cbg-blue-500 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(59, 130, 246, var(--tw-bg-opacity, 1));
-  }
+/* #ifdef MP-WEIXIN */
+.ifdef-_bMP-WEIXIN_B_cbg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(59, 130, 246, var(--tw-bg-opacity, 1));
 }
-@media not screen and (weapp-tw-platform: "MP-WEIXIN") {
-  .ifndef-_bMP-WEIXIN_B_cbg-red-500 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(239, 68, 68, var(--tw-bg-opacity, 1));
-  }
+/* #endif */
+/* #ifndef MP-WEIXIN */
+.ifndef-_bMP-WEIXIN_B_cbg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(239, 68, 68, var(--tw-bg-opacity, 1));
 }
-@media (weapp-tw-platform: "MP-WEIXIN") {
-  .wx_cbg-blue-500 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(59, 130, 246, var(--tw-bg-opacity, 1));
-  }
+/* #endif */
+/* #ifdef MP-WEIXIN */
+.wx_cbg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(59, 130, 246, var(--tw-bg-opacity, 1));
 }
+/* #endif */
 @media (min-width: 640px) {
   .sm_cgrid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1188,8 +1165,30 @@ wx-root-portal-content {
 ._b_n_text_B_ctext-_b32px_B text {
   font-size: 32px;
 }
-[data-c-h="true"] {
-  display: none !important;
+
+.rounded {
+  border-radius: 8rpx;
+}
+.from-_b_h9e58e9_B {
+  --tw-gradient-from: #9e58e9 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(158, 88, 233, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.to-blue-500 {
+  --tw-gradient-to: #3b82f6 var(--tw-gradient-to-position);
+}
+.px-2 {
+  padding-left: 16rpx;
+  padding-right: 16rpx;
+}
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.after_cborder-none::after {
+  content: var(--tw-content);
+  border-style: none;
 }
 .container {
   width: 100%;
@@ -1218,4 +1217,7 @@ wx-root-portal-content {
   .container {
     max-width: 3072rpx;
   }
+}
+[data-c-h="true"] {
+  display: none !important;
 }
