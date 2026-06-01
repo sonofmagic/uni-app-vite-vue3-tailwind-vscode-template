@@ -1101,24 +1101,14 @@ wx-root-portal-content {
   --tw-text-opacity: 1;
   color: rgba(30, 41, 59, var(--tw-text-opacity, 1));
 }
-/* #ifdef MP-WEIXIN */
 .ifdef-_bMP-WEIXIN_B_cbg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgba(59, 130, 246, var(--tw-bg-opacity, 1));
 }
-/* #endif */
-/* #ifndef MP-WEIXIN */
-.ifndef-_bMP-WEIXIN_B_cbg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(239, 68, 68, var(--tw-bg-opacity, 1));
-}
-/* #endif */
-/* #ifdef MP-WEIXIN */
 .wx_cbg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgba(59, 130, 246, var(--tw-bg-opacity, 1));
 }
-/* #endif */
 @media (min-width: 640px) {
   .sm_cgrid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
