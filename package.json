@@ -94,9 +94,6 @@
     "onlyBuiltDependencies": [
       "weapp-tailwindcss",
       "@weapp-tailwindcss/merge-v3"
-    ],
-    "overrides": {
-      "weapp-tailwindcss": "link:../../../Projects/github/weapp-tailwindcss/packages/weapp-tailwindcss"
-    }
+    ]
   }
 }

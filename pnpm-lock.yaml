@@ -4,9 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  weapp-tailwindcss: link:../../../Projects/github/weapp-tailwindcss/packages/weapp-tailwindcss
-
 importers:
 
   .:
