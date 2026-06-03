@@ -1,17 +1,12 @@
 view,
 text,
-:before,
-:after {
+:after,
+:before {
   --tw-content: "";
   box-sizing: border-box;
   border-width: 0;
   border-style: solid;
   border-color: currentColor;
-}
-view,
-text,
-:before,
-:after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -355,9 +350,6 @@ wx-root-portal-content {
   padding-bottom: 8rpx;
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity, 1));
-}
-.fixed {
-  position: fixed;
 }
 .relative {
   position: relative;
@@ -841,9 +833,6 @@ wx-root-portal-content {
 .uppercase {
   text-transform: uppercase;
 }
-.capitalize {
-  text-transform: capitalize;
-}
 .leading-relaxed {
   line-height: 1.625;
 }
@@ -988,11 +977,6 @@ wx-root-portal-content {
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow:
     var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
-}
-.ring {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 rgba(0, 0, 0, 0));
 }
 .ring-1 {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);

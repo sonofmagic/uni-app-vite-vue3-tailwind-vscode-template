@@ -136,8 +136,8 @@ importers:
         specifier: ^5.3.2
         version: 5.3.2
       weapp-tailwindcss:
-        specifier: 5.0.0-next.32
-        version: 5.0.0-next.32(jiti@2.7.0)(postcss@8.5.15)(tailwindcss@3.4.19)
+        specifier: 5.0.0-next.36
+        version: 5.0.0-next.36(jiti@2.7.0)(postcss@8.5.15)(tailwindcss@3.4.19)
 
 packages:
 
@@ -2732,8 +2732,8 @@ packages:
     peerDependencies:
       postcss: ^8.4.38
 
-  '@weapp-tailwindcss/postcss@3.0.0-next.8':
-    resolution: {integrity: sha512-H/uRKbshha1I9eKj3fDj3KiIobrWyVWA7S5nnltCYf1HyUhdo20Qu/ylo6oiyo6nwjYPPaVSsbmdIRTYkNHlBA==, tarball: https://registry.npmjs.org/@weapp-tailwindcss/postcss/-/postcss-3.0.0-next.8.tgz}
+  '@weapp-tailwindcss/postcss@3.0.0-next.10':
+    resolution: {integrity: sha512-PNGnwbTT0hqwjan13civO0JUzQ7LrX0cQgtlsE9h48AlXs8jnJKCHPTpcZEdJsDyCtEgJBTdgdjtaSwsyz9N7w==, tarball: https://registry.npmjs.org/@weapp-tailwindcss/postcss/-/postcss-3.0.0-next.10.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
 
   '@weapp-tailwindcss/reset@0.1.1-next.1':
@@ -2750,8 +2750,8 @@ packages:
     resolution: {integrity: sha512-UXABvDZerj5goxh8bE6fhOJwQpgTrv/J2M3aJM8l69xs9WMKILlZ9A88i/oYxIxN5xX+pOMmOkz73dQ5Z8YtfA==, tarball: https://registry.npmjs.org/@weapp-tailwindcss/shared/-/shared-1.1.3.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
 
-  '@weapp-tailwindcss/shared@2.0.0-next.0':
-    resolution: {integrity: sha512-bZPEN9/ZQXLyazME0HkBLVqh9+6QsmH4zCj6trVDMMpCmT+5bOCqb84K2qxAGw4tvkddUn9G9/rhaW4E3bIT5g==, tarball: https://registry.npmjs.org/@weapp-tailwindcss/shared/-/shared-2.0.0-next.0.tgz}
+  '@weapp-tailwindcss/shared@2.0.0-next.1':
+    resolution: {integrity: sha512-REQKbR5sXOq8Jzg2ZnTFvJ2IiSGDO2eyPTSI75TM0TjBnmfRv9SHAYN5P2PSM0HO9gFLYg8O+uWzBxFOlfuV0A==, tarball: https://registry.npmjs.org/@weapp-tailwindcss/shared/-/shared-2.0.0-next.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
 
   '@weapp-vite/devtools-runtime@0.3.2':
@@ -5203,10 +5203,6 @@ packages:
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==, tarball: https://registry.npmjs.org/lru-cache/-/lru-cache-10.4.3.tgz}
 
-  lru-cache@11.5.0:
-    resolution: {integrity: sha512-5YgH9UJd7wVb9hIouI2adWpgqrrICkt070Dnj8EUY1+B4B2P9eRLPAkAAo6NICA7CEhOIeBHl46u9zSNpNu7zA==, tarball: https://registry.npmjs.org/lru-cache/-/lru-cache-11.5.0.tgz}
-    engines: {node: 20 || >=22}
-
   lru-cache@11.5.1:
     resolution: {integrity: sha512-RPimw/7aMdv2oqRrxKwvZXcPfwBrn/JZ2xYcY9Hus/6LaS3VOAKVWKWgNLCFSiOm1ESXinjsDlidVU7JlnCN2A==, tarball: https://registry.npmjs.org/lru-cache/-/lru-cache-11.5.1.tgz}
     engines: {node: 20 || >=22}
@@ -6732,12 +6728,12 @@ packages:
     resolution: {integrity: sha512-qkqLZB/1Kg0EVrp7QX7KtaiMvx80oj9NzkvVwg1REBr4Z/WGwjEkRkQzD4f6Xg1LqCtcsa/xj9zbqB3aNG+zGA==, tarball: https://registry.npmjs.org/tailwindcss-config/-/tailwindcss-config-1.1.5.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
 
-  tailwindcss-config@2.0.0-next.2:
-    resolution: {integrity: sha512-EmvbiL4K0nJrox0Vx27X2DCaAcQ26MYrOErFCDHzPwfljDnmgn+wDTnrhQFnzAdaAZsdUgvg4rczzhj90px9ig==, tarball: https://registry.npmjs.org/tailwindcss-config/-/tailwindcss-config-2.0.0-next.2.tgz}
+  tailwindcss-config@2.0.0-next.3:
+    resolution: {integrity: sha512-lAx20eiD2XoRMFKSjwY4Q4pikw6Kyu6Ub5h/5/rzuq7VlLR0X2v3ODzYfoEe3bDNOCoMehEnq82yWbbEtdpFVQ==, tarball: https://registry.npmjs.org/tailwindcss-config/-/tailwindcss-config-2.0.0-next.3.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
 
-  tailwindcss-patch@9.3.7:
-    resolution: {integrity: sha512-zMx+SmCLm+WxnY4hFdDtm0jOyC3aM3h/y0NmNaoL5xkuSYDJj3ky5DCVWoczmQsnKcDmM71xqcRBanfSvu/Z8Q==, tarball: https://registry.npmjs.org/tailwindcss-patch/-/tailwindcss-patch-9.3.7.tgz}
+  tailwindcss-patch@9.4.1:
+    resolution: {integrity: sha512-qC9RaxmhdxkeJzzzBKgrmc3rx1NDcQ03hHpHVtvhmJ9CYTfxRazCNPnVWvc5cHiu48Ffy71RckLVgrTFh1RfSA==, tarball: https://registry.npmjs.org/tailwindcss-patch/-/tailwindcss-patch-9.4.1.tgz}
     engines: {node: '>=18.0.0'}
     hasBin: true
     peerDependencies:
@@ -7202,8 +7198,8 @@ packages:
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
-  weapp-tailwindcss@5.0.0-next.32:
-    resolution: {integrity: sha512-p0vPsIVVC3V5mqecegQxk2eC/RhKGiIuwVxbUi+Cr+fRUmj05li6EMGcYYD4+G3G2yl/HwmGPVA/d1Pa0Q0eXA==, tarball: https://registry.npmjs.org/weapp-tailwindcss/-/weapp-tailwindcss-5.0.0-next.32.tgz}
+  weapp-tailwindcss@5.0.0-next.36:
+    resolution: {integrity: sha512-MGU0pHtSXl/l3pebvgsbgb3fA43qSbbHOx8f3b1w1SEnlgVSEAsAlcg2LQvz1TcHwRJRDwZtnzygE8A7Td9uNA==, tarball: https://registry.npmjs.org/weapp-tailwindcss/-/weapp-tailwindcss-5.0.0-next.36.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
@@ -11000,13 +10996,13 @@ snapshots:
       postcss-selector-parser: 7.1.1
       postcss-value-parser: 4.2.0
 
-  '@weapp-tailwindcss/postcss@3.0.0-next.8':
+  '@weapp-tailwindcss/postcss@3.0.0-next.10':
     dependencies:
       '@weapp-core/escape': 8.0.0
       '@weapp-tailwindcss/postcss-calc': 1.0.0(postcss@8.5.15)
-      '@weapp-tailwindcss/shared': 2.0.0-next.0
+      '@weapp-tailwindcss/shared': 2.0.0-next.1
       autoprefixer: 10.5.0(postcss@8.5.15)
-      lru-cache: 11.5.0
+      lru-cache: 11.5.1
       postcss: 8.5.15
       postcss-pxtrans: 1.0.4(postcss@8.5.15)
       postcss-rem-to-responsive-pixel: 7.0.4(postcss@8.5.15)
@@ -11027,7 +11023,7 @@ snapshots:
     dependencies:
       pathe: 2.0.3
 
-  '@weapp-tailwindcss/shared@2.0.0-next.0':
+  '@weapp-tailwindcss/shared@2.0.0-next.1':
     dependencies:
       defu: 6.1.7
       get-value: 4.0.1
@@ -13958,8 +13954,6 @@ snapshots:
 
   lru-cache@10.4.3: {}
 
-  lru-cache@11.5.0: {}
-
   lru-cache@11.5.1: {}
 
   lru-cache@5.1.1:
@@ -15924,12 +15918,12 @@ snapshots:
       jiti: 2.7.0
       lilconfig: 3.1.3
 
-  tailwindcss-config@2.0.0-next.2:
+  tailwindcss-config@2.0.0-next.3:
     dependencies:
-      '@weapp-tailwindcss/shared': 2.0.0-next.0
+      '@weapp-tailwindcss/shared': 2.0.0-next.1
       jiti: 2.7.0
 
-  tailwindcss-patch@9.3.7(tailwindcss@3.4.19):
+  tailwindcss-patch@9.4.1(tailwindcss@3.4.19):
     dependencies:
       '@babel/generator': 7.29.7
       '@babel/parser': 7.29.7
@@ -16542,7 +16536,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  weapp-tailwindcss@5.0.0-next.32(jiti@2.7.0)(postcss@8.5.15)(tailwindcss@3.4.19):
+  weapp-tailwindcss@5.0.0-next.36(jiti@2.7.0)(postcss@8.5.15)(tailwindcss@3.4.19):
     dependencies:
       '@ast-core/escape': 1.0.1
       '@babel/parser': 7.29.7
@@ -16550,9 +16544,9 @@ snapshots:
       '@babel/types': 7.29.7
       '@weapp-core/escape': 8.0.0
       '@weapp-tailwindcss/logger': 2.0.0-next.0
-      '@weapp-tailwindcss/postcss': 3.0.0-next.8
+      '@weapp-tailwindcss/postcss': 3.0.0-next.10
       '@weapp-tailwindcss/reset': 0.1.1-next.1(tailwindcss@3.4.19)
-      '@weapp-tailwindcss/shared': 2.0.0-next.0
+      '@weapp-tailwindcss/shared': 2.0.0-next.1
       comment-json: 5.0.0
       debug: 4.4.3
       fast-glob: 3.3.3
@@ -16562,8 +16556,8 @@ snapshots:
       micromatch: 4.0.8
       postcss-load-config: 6.0.1(jiti@2.7.0)(postcss@8.5.15)(yaml@2.9.0)
       semver: 7.8.1
-      tailwindcss-config: 2.0.0-next.2
-      tailwindcss-patch: 9.3.7(tailwindcss@3.4.19)
+      tailwindcss-config: 2.0.0-next.3
+      tailwindcss-patch: 9.4.1(tailwindcss@3.4.19)
       yaml: 2.9.0
     transitivePeerDependencies:
       - jiti
