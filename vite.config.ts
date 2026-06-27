@@ -1,7 +1,6 @@
 import uni from '@dcloudio/vite-plugin-uni'
 import { defineConfig } from 'vite'
 import { WeappTailwindcss } from 'weapp-tailwindcss/vite'
-import postcssPlugins from './postcss.config'
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => {
@@ -14,6 +13,7 @@ export default defineConfig(async () => {
     plugins: [
       uni(),
       WeappTailwindcss({
+        cssEntries: ['./src/tailwind.css'],
         rem2rpx: true,
       }),
       AutoImport({
@@ -26,9 +26,6 @@ export default defineConfig(async () => {
     ],
     // 内联 postcss 注册 tailwindcss
     css: {
-      postcss: {
-        plugins: postcssPlugins,
-      },
       // https://vitejs.dev/config/shared-options.html#css-preprocessoroptions
       preprocessorOptions: {
         scss: {

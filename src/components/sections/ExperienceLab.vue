@@ -304,8 +304,16 @@ function copy(data: string) {
   </view>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 .test {
-  @apply flex text-center h-[100px] w-[222.222px] items-center justify-center rounded-[40px] bg-[#123456] bg-opacity-[0.54] text-[#ffffff] #{!important};
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 222.222px;
+  height: 100px;
+  border-radius: 40px;
+  background-color: rgb(18 52 86 / 0.54);
+  color: #ffffff;
+  text-align: center;
 }
 </style>

@@ -19,7 +19,7 @@ const gradientShowcase = [
 
 const featureCards = [
   {
-    icon: 'i-mdi-view-grid-outline',
+    icon: 'i-[mdi--view-grid-outline]',
     title: '栅格 + 弹性',
     desc: 'flex、grid、aspect-ratio 等原子类直接可用，快速搭组件。',
     chip: 'Layout',
@@ -27,7 +27,7 @@ const featureCards = [
     backdrop: 'from-sky-500/15 to-cyan-500/15',
   },
   {
-    icon: 'i-mdi-brightness-auto',
+    icon: 'i-[mdi--brightness-auto]',
     title: '主题同步',
     desc: 'uni.onThemeChange + tailwind，深浅模式自动切换。',
     chip: 'Theme',
@@ -35,7 +35,7 @@ const featureCards = [
     backdrop: 'from-indigo-500/15 to-purple-500/15',
   },
   {
-    icon: 'i-mdi-all-inclusive',
+    icon: 'i-[mdi--all-inclusive]',
     title: '任意值语法',
     desc: 'bg-[url(...)], rounded-[20rpx], after:content-[] 统统搞定。',
     chip: '[]',
@@ -43,7 +43,7 @@ const featureCards = [
     backdrop: 'from-rose-500/15 to-orange-500/15',
   },
   {
-    icon: 'i-mdi-rocket-launch-outline',
+    icon: 'i-[mdi--rocket-launch-outline]',
     title: 'Icon + Animate',
     desc: 'iconify + animate + ring，覆盖状态、加载、空态。',
     chip: 'Icon',

@@ -26,11 +26,11 @@ function copy(data) {
       class="flex items-center justify-center text-gray-600/75"
       @click="copy('https://github.com/sonofmagic/weapp-tailwindcss')"
     >
-      <view class="i-mdi-github-circle mx-2 text-[32px] text-black" />
+      <view class="i-[mdi--github-circle] mx-2 text-[32px] text-black" />
       <view class="text-[22px]">
         +
       </view>
-      <view class="i-mdi-star mx-2 text-[32px] text-yellow-400" />
+      <view class="i-[mdi--star] mx-2 text-[32px] text-yellow-400" />
     </view>
     <view
       class="

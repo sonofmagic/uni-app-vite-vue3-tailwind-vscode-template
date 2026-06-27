@@ -9,15 +9,15 @@ const accentClass = computed(() => (showAccent.value
     ]
   : []))
 const iconList = [
-  'i-svg-spinners-12-dots-scale-rotate',
-  'i-svg-spinners-180-ring',
-  'i-svg-spinners-3-dots-bounce',
-  'i-svg-spinners-6-dots-rotate',
-  'i-svg-spinners-90-ring',
-  'i-svg-spinners-bars-fade',
-  'i-svg-spinners-blocks-scale',
-  'i-svg-spinners-clock',
-  'i-svg-spinners-tadpole',
+  'i-[svg-spinners--12-dots-scale-rotate]',
+  'i-[svg-spinners--180-ring]',
+  'i-[svg-spinners--3-dots-bounce]',
+  'i-[svg-spinners--6-dots-rotate]',
+  'i-[svg-spinners--90-ring]',
+  'i-[svg-spinners--bars-fade]',
+  'i-[svg-spinners--blocks-scale]',
+  'i-[svg-spinners--clock]',
+  'i-[svg-spinners--tadpole]',
 ]
 </script>
 
