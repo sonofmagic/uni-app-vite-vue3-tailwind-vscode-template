@@ -1,12 +1,7 @@
 @import 'tailwindcss' source(none);
-@import 'tailwindcss/theme' layer(theme);
-@import 'tailwindcss/preflight' layer(base);
-@import 'tailwindcss/utilities' layer(utilities);
-
-@plugin 'weapp-tailwindcss/css-macro';
 
 @plugin '@iconify/tailwind4' {
-  prefix: i;
+  prefix: 'i';
 }
 
 @custom-variant wx {
@@ -15,7 +10,7 @@
   /*  #endif  */
 }
 
-@custom-variant -wx {
+@custom-variant not-wx {
   /*  #ifndef  MP-WEIXIN  */
   @slot;
   /*  #endif  */

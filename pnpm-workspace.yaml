@@ -7,3 +7,5 @@ allowBuilds:
 onlyBuiltDependencies:
   - '@weapp-tailwindcss/merge'
 minimumReleaseAge: 0
+overrides:
+  weapp-tailwindcss: link:../../../Projects/github/weapp-tailwindcss/packages/weapp-tailwindcss
