@@ -34,7 +34,7 @@ function copy(data) {
     </view>
     <view
       class="
-        bg-gradient-to-r from-green-400 to-sky-400 bg-clip-text text-2xl
+        bg-linear-to-r from-green-400 to-sky-400 bg-clip-text text-2xl
         font-extrabold text-transparent underline
       "
       @click="copy('https://tw.icebreaker.top/')"
