@@ -9,7 +9,7 @@ const timelineShots = [
   {
     icon: 'i-[mdi--earth]',
     title: '多端统一',
-    detail: 'wx / not-wx / ifdef 自动拆分不同宿主。',
+    detail: 'wx / not-wx 用同一套语法拆分不同宿主。',
     tone: 'border-violet-200/70 bg-violet-50/80 text-violet-700',
   },
   {
