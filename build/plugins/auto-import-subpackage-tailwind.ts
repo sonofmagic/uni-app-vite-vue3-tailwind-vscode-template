@@ -6,8 +6,6 @@ import process from 'node:process'
 import { compile } from 'tailwindcss'
 import { createContext } from 'weapp-tailwindcss/core'
 
-type UniPlatform = string
-
 interface PagesJson {
   subPackages?: {
     root: string
@@ -25,7 +23,6 @@ interface SubpackageTailwindEntry {
 }
 
 export interface AutoImportSubpackageTailwindOptions {
-  platform?: UniPlatform
   root?: string
   srcDir?: string
   pagesJson?: PagesJson
@@ -33,31 +30,14 @@ export interface AutoImportSubpackageTailwindOptions {
 }
 
 interface CollectSubpackageTailwindImportsOptions {
+  bundle: OutputBundle
   pagesJson: PagesJson
   root: string
   srcDir: string
-  styleExt: string
-}
-
-export const miniProgramStyleExtMap: Record<string, string> = {
-  'mp-alipay': '.acss',
-  'mp-baidu': '.css',
-  'mp-harmony': '.css',
-  'mp-jd': '.jxss',
-  'mp-kuaishou': '.css',
-  'mp-lark': '.ttss',
-  'mp-qq': '.qss',
-  'mp-toutiao': '.ttss',
-  'mp-weixin': '.wxss',
-  'mp-xhs': '.css',
 }
 
 export function normalizePath(file: string) {
   return file.split(path.sep).join('/')
-}
-
-export function getMiniProgramStyleExt(platform = process.env.UNI_PLATFORM) {
-  return platform ? miniProgramStyleExtMap[platform] : undefined
 }
 
 export function stripJsonComments(source: string) {
@@ -71,39 +51,76 @@ function readPagesJson(root: string, srcDir: string): PagesJson {
   return JSON.parse(stripJsonComments(source)) as PagesJson
 }
 
+export function findGeneratedPageStyleFile(bundle: OutputBundle, pagePath: string) {
+  const normalizedPagePath = normalizePath(pagePath)
+  const candidates: string[] = []
+
+  for (const [fileName, chunk] of Object.entries(bundle)) {
+    const normalizedFileName = normalizePath(fileName)
+    const ext = path.posix.extname(normalizedFileName)
+
+    if (
+      chunk.type === 'asset'
+      && ext
+      && ext !== '.json'
+      && normalizedFileName === `${normalizedPagePath}${ext}`
+    ) {
+      candidates.push(normalizedFileName)
+    }
+  }
+
+  return candidates.find((fileName) => {
+    const asset = bundle[fileName]
+    const source = asset?.type === 'asset' ? asset.source.toString().trimStart() : ''
+
+    return source.length === 0 || (!source.startsWith('<') && !source.startsWith('{'))
+  })
+}
+
 export function collectSubpackageTailwindImports({
+  bundle,
   pagesJson,
   root: projectRoot,
   srcDir,
-  styleExt,
 }: CollectSubpackageTailwindImportsOptions) {
-  const pageWxssImports = new Map<string, string>()
+  const pageStyleImports = new Map<string, string>()
   const subpackageEntries: SubpackageTailwindEntry[] = []
 
   for (const subpackage of pagesJson.subPackages ?? []) {
     const subpackageRoot = subpackage.root.replace(/^\/|\/$/g, '')
-    const tailwindFile = `${subpackageRoot}/tailwind${styleExt}`
-    const sourceFiles: string[] = []
+    const sourceFiles = (subpackage.pages ?? []).map(page =>
+      path.resolve(projectRoot, srcDir, subpackageRoot, `${page.path}.vue`),
+    )
+    const styleExts = new Set<string>()
 
     for (const page of subpackage.pages ?? []) {
-      const pageWxssFile = `${subpackageRoot}/${page.path}${styleExt}`
-      const importPath = normalizePath(path.relative(path.posix.dirname(pageWxssFile), tailwindFile))
+      const pageStyleFile = findGeneratedPageStyleFile(bundle, `${subpackageRoot}/${page.path}`)
+
+      if (!pageStyleFile) {
+        continue
+      }
+
+      const styleExt = path.posix.extname(pageStyleFile)
+      const tailwindFile = `${subpackageRoot}/tailwind${styleExt}`
+      const importPath = normalizePath(path.relative(path.posix.dirname(pageStyleFile), tailwindFile))
       const normalizedImportPath = importPath.startsWith('.') ? importPath : `./${importPath}`
 
-      pageWxssImports.set(pageWxssFile, normalizedImportPath)
-      sourceFiles.push(path.resolve(projectRoot, srcDir, subpackageRoot, `${page.path}.vue`))
+      pageStyleImports.set(pageStyleFile, normalizedImportPath)
+      styleExts.add(styleExt)
     }
 
-    subpackageEntries.push({
-      root: subpackageRoot,
-      sourceEntry: path.resolve(projectRoot, srcDir, subpackageRoot, 'tailwind.css'),
-      outputEntry: tailwindFile,
-      sourceFiles,
-    })
+    for (const styleExt of styleExts) {
+      subpackageEntries.push({
+        root: subpackageRoot,
+        sourceEntry: path.resolve(projectRoot, srcDir, subpackageRoot, 'tailwind.css'),
+        outputEntry: `${subpackageRoot}/tailwind${styleExt}`,
+        sourceFiles,
+      })
+    }
   }
 
   return {
-    pageWxssImports,
+    pageStyleImports,
     subpackageEntries,
   }
 }
@@ -150,15 +167,14 @@ export async function compileSubpackageTailwind(entry: SubpackageTailwindEntry, 
 
 export function prependSubpackageTailwindImports(
   bundle: OutputBundle,
-  pageWxssImports: Map<string, string>,
-  styleExt: string,
+  pageStyleImports: Map<string, string>,
 ) {
   for (const [fileName, chunk] of Object.entries(bundle)) {
-    if (chunk.type !== 'asset' || !fileName.endsWith(styleExt)) {
+    if (chunk.type !== 'asset') {
       continue
     }
 
-    const importPath = pageWxssImports.get(normalizePath(fileName))
+    const importPath = pageStyleImports.get(normalizePath(fileName))
 
     if (!importPath) {
       continue
@@ -213,8 +229,6 @@ export function writeGeneratedSubpackageTailwindAssets(outputDir: string | undef
 export function autoImportSubpackageTailwind(options: AutoImportSubpackageTailwindOptions = {}): Plugin {
   const root = options.root ?? process.cwd()
   const srcDir = options.srcDir ?? 'src'
-  const platform = options.platform ?? process.env.UNI_PLATFORM
-  const styleExt = getMiniProgramStyleExt(platform)
   const rem2rpx = options.rem2rpx ?? true
   const generatedSources = new Map<string, string>()
 
@@ -222,16 +236,12 @@ export function autoImportSubpackageTailwind(options: AutoImportSubpackageTailwi
     name: 'auto-import-subpackage-tailwind',
     enforce: 'post' as const,
     async generateBundle(_options, bundle) {
-      if (!styleExt) {
-        return
-      }
-
       const pagesJson = options.pagesJson ?? readPagesJson(root, srcDir)
-      const { pageWxssImports, subpackageEntries } = collectSubpackageTailwindImports({
+      const { pageStyleImports, subpackageEntries } = collectSubpackageTailwindImports({
+        bundle,
         pagesJson,
         root,
         srcDir,
-        styleExt,
       })
 
       for (const entry of subpackageEntries) {
@@ -248,13 +258,9 @@ export function autoImportSubpackageTailwind(options: AutoImportSubpackageTailwi
         }
       }
 
-      prependSubpackageTailwindImports(bundle, pageWxssImports, styleExt)
+      prependSubpackageTailwindImports(bundle, pageStyleImports)
     },
     writeBundle(outputOptions) {
-      if (!styleExt) {
-        return
-      }
-
       writeGeneratedSubpackageTailwindAssets(resolveOutputDir(outputOptions), generatedSources)
     },
   }
