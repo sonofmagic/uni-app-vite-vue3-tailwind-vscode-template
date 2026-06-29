@@ -13,9 +13,11 @@
 - `uni-app`
 - `Vite`
 - `Vue 3`
-- `Tailwind CSS v3`
+- `Tailwind CSS v4`
 - `weapp-tailwindcss`
 - `pnpm`
+
+> 当前主分支是 `tailwindcss@4` 版本；如果需要 `tailwindcss@3` 版本，请切换到 `tailwindcss@3` 分支。
 
 ## 使用前提
 
@@ -50,6 +52,7 @@ pnpm open:build
 ## 模板说明
 
 - 安装依赖后会自动执行 `weapp-tw patch`
+- 样式条件编译示例已改成 `@custom-variant wx` / `@custom-variant not-wx`
 - 请先把 `src/manifest.json` 中的 `appid` 改成你自己的
 - 模板内保留了 `up:pkg` 和 `up:uniapp`，用于分别升级通用依赖和 `uni-app` 依赖
 - 推荐在 VS Code 中安装 `Tailwind CSS IntelliSense`、`ESLint`、`Stylelint`

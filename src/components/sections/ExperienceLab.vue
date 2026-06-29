@@ -163,10 +163,10 @@ function copy(data: string) {
         </view>
         <view class="mt-4">
           <view class="text-sm font-semibold text-slate-600">
-            weapp-tailwindcss/css-macro
+            wx / not-wx 自定义 variant
           </view>
           <view class="text-xs text-slate-500">
-            tailwind 语法条件编译
+            通过 @custom-variant 直接承载条件编译
           </view>
           <view class="mt-2 flex flex-wrap gap-2 text-xs">
             <view
@@ -174,7 +174,7 @@ function copy(data: string) {
                 rounded-full bg-slate-900/5 px-3 py-1 font-semibold
                 text-slate-600
               "
-              @click="copy('https://tw.icebreaker.top/docs/quick-start/uni-app-css-macro')"
+              @click="copy('https://tw.icebreaker.top/docs/guide')"
             >
               点击复制文档
             </view>
@@ -304,8 +304,16 @@ function copy(data: string) {
   </view>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 .test {
-  @apply flex text-center h-[100px] w-[222.222px] items-center justify-center rounded-[40px] bg-[#123456] bg-opacity-[0.54] text-[#ffffff] #{!important};
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 222.222px;
+  height: 100px;
+  border-radius: 40px;
+  background-color: rgb(18 52 86 / 0.54);
+  color: #ffffff;
+  text-align: center;
 }
 </style>

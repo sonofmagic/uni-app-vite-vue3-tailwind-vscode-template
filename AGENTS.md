@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-This template uses `uni-app + Vite + Vue 3 + Tailwind CSS` with `pnpm`. Application code lives in `src/`. Put route pages under `src/pages/`, shared UI in `src/components/`, and Pinia stores in `src/stores/`. Static files belong in `src/static/`. Global entry files are `src/main.ts`, `src/App.vue`, `src/pages.json`, and `src/manifest.json`. Tooling is defined at the root in [`vite.config.ts`](/Users/yangqiming/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template/vite.config.ts), [`tailwind.config.ts`](/Users/yangqiming/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template/tailwind.config.ts), and [`eslint.config.mjs`](/Users/yangqiming/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template/eslint.config.mjs).
+This template uses `uni-app + Vite + Vue 3 + Tailwind CSS` with `pnpm`. Application code lives in `src/`. Put route pages under `src/pages/`, shared UI in `src/components/`, and Pinia stores in `src/stores/`. Static files belong in `src/static/`. Global entry files are `src/main.ts`, `src/App.vue`, `src/pages.json`, and `src/manifest.json`. Tooling is defined at the root in [`vite.config.ts`](/Users/yangqiming/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template/vite.config.ts) and [`eslint.config.mjs`](/Users/yangqiming/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template/eslint.config.mjs), with Tailwind v4 configuration in [`src/tailwind.css`](/Users/yangqiming/Documents/GitHub/uni-app-vite-vue3-tailwind-vscode-template/src/tailwind.css).
 
 ## Build, Test, and Development Commands
 

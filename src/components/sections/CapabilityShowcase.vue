@@ -1,19 +1,19 @@
 <script setup lang="ts">
 const timelineShots = [
   {
-    icon: 'i-mdi-speedometer',
+    icon: 'i-[mdi--speedometer]',
     title: '极速原子',
     detail: 'tailwind 原子能力 1:1 传递到小程序。',
     tone: 'border-sky-200/70 bg-sky-50/80 text-sky-700',
   },
   {
-    icon: 'i-mdi-earth',
+    icon: 'i-[mdi--earth]',
     title: '多端统一',
-    detail: 'wx / -wx / ifdef 自动拆分不同宿主。',
+    detail: 'wx / not-wx 用同一套语法拆分不同宿主。',
     tone: 'border-violet-200/70 bg-violet-50/80 text-violet-700',
   },
   {
-    icon: 'i-mdi-toolbox-outline',
+    icon: 'i-[mdi--toolbox-outline]',
     title: '工程提效',
     detail: 'Pinia、iconify、@layer 定制组件。',
     tone: 'border-emerald-200/70 bg-emerald-50/80 text-emerald-700',

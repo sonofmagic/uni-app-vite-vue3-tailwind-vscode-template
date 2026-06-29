@@ -1,0 +1,38 @@
+@import 'tailwindcss' source(none);
+
+@plugin '@iconify/tailwind4' {
+  prefix: 'i';
+}
+
+@custom-variant wx {
+  /*  #ifdef  MP-WEIXIN  */
+  @slot;
+  /*  #endif  */
+}
+
+@custom-variant not-wx {
+  /*  #ifndef  MP-WEIXIN  */
+  @slot;
+  /*  #endif  */
+}
+
+@source "../index.html";
+@source "./**/*.{html,js,ts,jsx,tsx,vue}";
+
+@layer base {
+  /*  #ifdef  H5  */
+  svg {
+    display: initial;
+  }
+  /*  #endif  */
+}
+
+@layer components {
+  .raw-btn {
+    @apply after:border-none inline-flex items-center gap-2 rounded text-sm font-semibold transition-all;
+  }
+
+  .btn {
+    @apply after:border-none inline-flex items-center gap-2 rounded bg-linear-to-r from-[#9e58e9] to-blue-500 px-2 py-1 text-sm font-semibold text-white transition-all;
+  }
+}
