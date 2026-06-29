@@ -13,9 +13,11 @@
 - `uni-app`
 - `Vite`
 - `Vue 3`
-- `Tailwind CSS v3`
+- `Tailwind CSS v4`
 - `weapp-tailwindcss`
 - `pnpm`
+
+> 当前主分支是 `tailwindcss@4` 版本；如果需要 `tailwindcss@3` 版本，请切换到 `tailwindcss@3` 分支。
 
 ## 使用前提
 
