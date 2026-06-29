@@ -5,35 +5,21 @@ function copy(data: string) {
   })
 }
 
-const variantSnippet = `@custom-variant wx {
-  /*  #ifdef  MP-WEIXIN  */
-  @slot;
-  /*  #endif  */
-}
-
-@custom-variant not-wx {
-  /*  #ifndef  MP-WEIXIN  */
-  @slot;
-  /*  #endif  */
-}`
-
-const variantSamples = [
-  {
-    title: '宿主背景',
-    detail: 'wx 显示蓝色，not-wx 显示红色。',
-    classes: 'wx:bg-blue-500 not-wx:bg-red-500',
-  },
-  {
-    title: '文字强调',
-    detail: '微信小程序强调白字，其他端保留深色。',
-    classes: 'wx:text-white not-wx:text-slate-900',
-  },
-  {
-    title: '边框与阴影',
-    detail: '同一套标记在不同宿主呈现不同层次。',
-    classes: 'wx:ring-2 wx:ring-blue-200 not-wx:border not-wx:border-rose-200',
-  },
+const hashTag = '#'
+const variantLines = [
+  '@custom-variant wx {',
+  `  /*  ${hashTag}ifdef  MP-WEIXIN  */`,
+  '  @slot;',
+  `  /*  ${hashTag}endif  */`,
+  '}',
+  '',
+  '@custom-variant not-wx {',
+  `  /*  ${hashTag}ifndef  MP-WEIXIN  */`,
+  '  @slot;',
+  `  /*  ${hashTag}endif  */`,
+  '}',
 ]
+const variantSnippet = variantLines.join('\n')
 </script>
 
 <template>
@@ -47,11 +33,11 @@ const variantSamples = [
       条件编译
     </view>
     <view class="text-2xl font-semibold text-slate-900">
-      用 `@custom-variant` 直接表达宿主差异
+      用 @custom-variant 直接表达宿主差异
     </view>
     <view class="mt-4 space-y-4">
       <view class="text-sm text-neutral-600">
-        现在不再依赖 `weapp-tailwindcss/css-macro`，而是把宿主分支写成 `wx` / `not-wx`。
+        现在不再依赖 weapp-tailwindcss/css-macro，而是把宿主分支写成 wx / not-wx。
       </view>
       <view class="rounded-[24rpx] border border-dashed border-slate-200 bg-slate-50/80 p-4 text-sm text-slate-600">
         <view class="mb-2 flex items-center justify-between gap-3">
@@ -62,30 +48,57 @@ const variantSamples = [
             复制片段
           </text>
         </view>
-        <view class="whitespace-pre-wrap rounded-2xl bg-white/80 p-3 text-[24rpx] leading-6 text-slate-700">
-          {{ variantSnippet }}
+        <view class="rounded-2xl bg-white/80 p-3 text-[24rpx] leading-6 text-slate-700">
+          <view
+            v-for="(line, index) in variantLines"
+            :key="`${index}-${line}`"
+            :class="{ 'mt-2': index === 6, 'pl-3': line.startsWith('  ') }"
+          >
+            {{ line || ' ' }}
+          </view>
         </view>
       </view>
 
       <view class="grid gap-3">
-        <view
-          v-for="sample in variantSamples"
-          :key="sample.title"
-          class="rounded-[24rpx] border border-slate-200 bg-white/70 p-4"
-        >
+        <view class="rounded-[24rpx] border border-slate-200 bg-white/70 p-4">
           <view class="flex items-center justify-between gap-3">
             <view class="font-semibold text-slate-800">
-              {{ sample.title }}
+              宿主背景
             </view>
             <view class="text-[22rpx] text-slate-400">
-              {{ sample.classes }}
+              wx:bg-blue-500 not-wx:bg-red-500
             </view>
           </view>
-          <view
-            class="mt-3 rounded-2xl px-3 py-2 text-sm font-medium"
-            :class="sample.classes"
-          >
-            {{ sample.detail }}
+          <view class="mt-3 rounded-2xl px-3 py-2 text-sm font-medium text-white wx:bg-blue-500 not-wx:bg-red-500">
+            微信小程序为蓝色，不是微信小程序为红色。
+          </view>
+        </view>
+
+        <view class="rounded-[24rpx] border border-slate-200 bg-white/70 p-4">
+          <view class="flex items-center justify-between gap-3">
+            <view class="font-semibold text-slate-800">
+              文字强调
+            </view>
+            <view class="text-[22rpx] text-slate-400">
+              wx:text-white not-wx:text-slate-900
+            </view>
+          </view>
+          <view class="mt-3 rounded-2xl bg-slate-100 px-3 py-2 text-sm font-medium wx:bg-slate-900 wx:text-white not-wx:bg-rose-50 not-wx:text-slate-900">
+            微信小程序强调白字，其他端保留深色文字。
+          </view>
+        </view>
+
+        <view class="rounded-[24rpx] border border-slate-200 bg-white/70 p-4">
+          <view class="flex items-center justify-between gap-3">
+            <view class="font-semibold text-slate-800">
+              边框与阴影
+            </view>
+            <view class="text-[22rpx] text-slate-400">
+              wx:ring-2 not-wx:border
+            </view>
+          </view>
+          <view class="mt-3 rounded-2xl px-3 py-2 text-sm font-medium text-slate-700 wx:ring-2 wx:ring-blue-200 not-wx:border not-wx:border-rose-200 not-wx:bg-rose-50">
+            同一套标记在不同宿主呈现不同层次。
           </view>
         </view>
       </view>
@@ -96,13 +109,13 @@ const variantSamples = [
         </view>
         <view class="mt-2 grid gap-2 text-[24rpx] text-slate-600">
           <view class="rounded-xl bg-slate-900/5 px-3 py-2">
-            `wx:bg-blue-500 not-wx:bg-red-500`
+            wx:bg-blue-500 not-wx:bg-red-500
           </view>
           <view class="rounded-xl bg-slate-900/5 px-3 py-2">
-            `wx:text-white not-wx:text-slate-900`
+            wx:text-white not-wx:text-slate-900
           </view>
           <view class="rounded-xl bg-slate-900/5 px-3 py-2">
-            `wx:ring-2 wx:ring-blue-200 not-wx:border not-wx:border-rose-200`
+            wx:ring-2 wx:ring-blue-200 not-wx:border not-wx:border-rose-200
           </view>
         </view>
       </view>

@@ -80,7 +80,6 @@
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/svg-spinners": "^1.2.4",
     "@iconify/tailwind4": "^1.2.3",
-    "@tailwindcss/postcss": "^4.3.1",
     "@types/node": "^26.0.1",
     "@vue/runtime-core": "^3.5.39",
     "autoprefixer": "^10.5.2",
