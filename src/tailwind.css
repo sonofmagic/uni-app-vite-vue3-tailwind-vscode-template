@@ -17,7 +17,11 @@
 }
 
 @source "../index.html";
-@source "./**/*.{html,js,ts,jsx,tsx,vue}";
+@source "./App.vue";
+@source "./main.ts";
+@source "./pages/**/*.{html,js,ts,jsx,tsx,vue}";
+@source "./components/**/*.{html,js,ts,jsx,tsx,vue}";
+@source "./stores/**/*.{html,js,ts,jsx,tsx,vue}";
 
 @layer base {
   /*  #ifdef  H5  */

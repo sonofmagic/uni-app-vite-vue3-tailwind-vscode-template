@@ -1,0 +1,25 @@
+.basic-detail-shell {
+  --basic-detail-accent: #047857;
+
+  background: linear-gradient(160deg, rgba(209, 250, 229, 0.96), rgba(236, 253, 245, 0.68)), #ecfdf5;
+}
+
+.basic-detail-hero {
+  border: 1px solid rgba(4, 120, 87, 0.18);
+
+  & text {
+    display: inline-flex;
+    padding: 4rpx 8rpx;
+    border-radius: 6rpx;
+    background: rgba(4, 120, 87, 0.08);
+  }
+}
+
+.basic-detail-list {
+  border: 1px solid rgba(4, 120, 87, 0.16);
+  box-shadow: 0 16rpx 36rpx rgba(4, 120, 87, 0.1);
+
+  & > .basic-detail-list__item:last-child {
+    color: var(--basic-detail-accent);
+  }
+}

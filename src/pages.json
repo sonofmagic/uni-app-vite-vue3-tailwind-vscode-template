@@ -7,6 +7,73 @@
       }
     }
   ],
+  "subPackages": [
+    {
+      "root": "package-basic",
+      "pages": [
+        {
+          "path": "pages/home/index",
+          "style": {
+            "navigationBarTitleText": "普通分包"
+          }
+        },
+        {
+          "path": "pages/detail/index",
+          "style": {
+            "navigationBarTitleText": "普通分包详情"
+          }
+        }
+      ]
+    },
+    {
+      "root": "package-isolated",
+      "independent": true,
+      "pages": [
+        {
+          "path": "pages/home/index",
+          "style": {
+            "navigationBarTitleText": "独立分包"
+          }
+        },
+        {
+          "path": "pages/detail/index",
+          "style": {
+            "navigationBarTitleText": "独立分包详情"
+          }
+        }
+      ]
+    }
+  ],
+  "condition": {
+    "current": 0,
+    "list": [
+      {
+        "name": "主包首页",
+        "path": "pages/index/index",
+        "query": ""
+      },
+      {
+        "name": "普通分包首页",
+        "path": "package-basic/pages/home/index",
+        "query": ""
+      },
+      {
+        "name": "普通分包详情",
+        "path": "package-basic/pages/detail/index",
+        "query": ""
+      },
+      {
+        "name": "独立分包首页",
+        "path": "package-isolated/pages/home/index",
+        "query": ""
+      },
+      {
+        "name": "独立分包详情",
+        "path": "package-isolated/pages/detail/index",
+        "query": ""
+      }
+    ]
+  },
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "weapp-tailwindcss",

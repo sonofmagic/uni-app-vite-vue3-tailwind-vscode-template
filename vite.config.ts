@@ -1,6 +1,7 @@
 import uni from '@dcloudio/vite-plugin-uni'
 import { defineConfig } from 'vite'
 import { WeappTailwindcss } from 'weapp-tailwindcss/vite'
+import { autoImportSubpackageTailwind } from './build/plugins/auto-import-subpackage-tailwind'
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => {
@@ -13,9 +14,14 @@ export default defineConfig(async () => {
     plugins: [
       uni(),
       WeappTailwindcss({
-        cssEntries: ['./src/tailwind.css'],
+        cssEntries: [
+          './src/tailwind.css',
+          './src/package-basic/tailwind.css',
+          './src/package-isolated/tailwind.css',
+        ],
         rem2rpx: true,
       }),
+      autoImportSubpackageTailwind(),
       AutoImport({
         imports: ['vue', 'uni-app', 'pinia'],
         dts: './src/auto-imports.d.ts',

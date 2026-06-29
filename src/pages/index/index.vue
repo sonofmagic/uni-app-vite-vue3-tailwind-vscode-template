@@ -44,6 +44,26 @@ onLoad(() => {
       <view>
         <MacroShowcase />
       </view>
+      <view class="grid grid-cols-1 gap-3 md:grid-cols-2">
+        <navigator
+          class="
+            rounded-sm bg-emerald-600 px-4 py-3 text-center text-sm font-semibold
+            text-white shadow-sm
+          "
+          url="/package-basic/pages/home/index"
+        >
+          打开普通分包
+        </navigator>
+        <navigator
+          class="
+            rounded-sm bg-zinc-950 px-4 py-3 text-center text-sm font-semibold
+            text-white shadow-sm
+          "
+          url="/package-isolated/pages/home/index"
+        >
+          打开独立分包
+        </navigator>
+      </view>
     </view>
   </view>
 </template>
