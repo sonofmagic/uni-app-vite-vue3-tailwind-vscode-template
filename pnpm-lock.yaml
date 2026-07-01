@@ -89,10 +89,10 @@ importers:
         version: 3.0.0-5000720260410001(postcss@8.5.16)(rollup@4.30.1)(vite@5.2.8(@types/node@26.0.1)(lightningcss@1.32.0)(sass@1.101.0)(terser@5.31.3))(vue@3.4.21(typescript@6.0.3))
       '@icebreakers/eslint-config':
         specifier: ^6.0.0
-        version: 6.0.0(@next/eslint-plugin-next@16.2.4)(@unocss/eslint-plugin@66.6.8(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3))(eslint-plugin-jsx-a11y@6.10.2(eslint@10.6.0(jiti@2.7.0)))(eslint-plugin-pnpm@1.6.1(eslint@10.6.0(jiti@2.7.0)))(eslint-plugin-vuejs-accessibility@2.5.0(eslint@10.6.0(jiti@2.7.0))(globals@17.7.0))(eslint@10.6.0(jiti@2.7.0))(postcss@8.5.16)(stylelint@16.9.0(typescript@6.0.3))(tailwindcss@4.3.1)(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)
+        version: 6.0.0(@next/eslint-plugin-next@16.2.4)(@unocss/eslint-plugin@66.6.8(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3))(eslint-plugin-jsx-a11y@6.10.2(eslint@10.6.0(jiti@2.7.0)))(eslint-plugin-pnpm@1.6.1(eslint@10.6.0(jiti@2.7.0)))(eslint-plugin-vuejs-accessibility@2.5.0(eslint@10.6.0(jiti@2.7.0))(globals@17.7.0))(eslint@10.6.0(jiti@2.7.0))(postcss@8.5.16)(stylelint@16.9.0(typescript@6.0.3))(tailwindcss@4.3.2)(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)
       '@icebreakers/stylelint-config':
         specifier: ^5.0.0
-        version: 5.0.0(postcss@8.5.16)(stylelint@16.9.0(typescript@6.0.3))(tailwindcss@4.3.1)
+        version: 5.0.0(postcss@8.5.16)(stylelint@16.9.0(typescript@6.0.3))(tailwindcss@4.3.2)
       '@iconify-json/mdi':
         specifier: ^1.2.3
         version: 1.2.3
@@ -101,7 +101,7 @@ importers:
         version: 1.2.4
       '@iconify/tailwind4':
         specifier: ^1.2.3
-        version: 1.2.3(tailwindcss@4.3.1)
+        version: 1.2.3(tailwindcss@4.3.2)
       '@types/node':
         specifier: ^26.0.1
         version: 26.0.1
@@ -121,8 +121,8 @@ importers:
         specifier: ^1.101.0
         version: 1.101.0
       tailwindcss:
-        specifier: ^4.3.1
-        version: 4.3.1
+        specifier: ^4.3.2
+        version: 4.3.2
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -136,8 +136,8 @@ importers:
         specifier: ^5.4.10
         version: 5.4.10
       weapp-tailwindcss:
-        specifier: ^5.1.4
-        version: 5.1.4(jiti@2.7.0)(tailwindcss@4.3.1)
+        specifier: ^5.1.5
+        version: 5.1.5(jiti@2.7.0)(tailwindcss@4.3.2)
 
 packages:
 
@@ -208,9 +208,6 @@ packages:
 
   '@antfu/install-pkg@1.1.0':
     resolution: {integrity: sha512-MGQsmw10ZyI+EJo45CdSER4zEb+p31LpDAFp2Z3gkSd1yqVZGi0Ebx++YTEMonJy4oChEMLsxZ64j8FH6sSqtQ==, tarball: https://registry.npmjs.org/@antfu/install-pkg/-/install-pkg-1.1.0.tgz}
-
-  '@ast-core/escape@1.0.1':
-    resolution: {integrity: sha512-/kVjBkDzYrSW1S+gTBCuOfhnNkge9qZFJgLT+MOZdmPN4Vts36S60uU5br3ozoxpJ1eRGe6pGy7/EfcOpFFHlA==, tarball: https://registry.npmjs.org/@ast-core/escape/-/escape-1.0.1.tgz}
 
   '@babel/code-frame@7.24.7':
     resolution: {integrity: sha512-BcYH1CVJBO9tvyIZ2jVeXgSIMvGZ2FDRvDdOIVQyuklNKSsx+eppDEBq/g47Ayw+RqNFE+URvOShmf+f/qwAlA==, tarball: https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.24.7.tgz}
@@ -2287,8 +2284,8 @@ packages:
     peerDependencies:
       eslint: ^9.0.0 || ^10.0.0
 
-  '@tailwindcss-mangle/engine@0.1.1':
-    resolution: {integrity: sha512-GvPo/Kra4rWkoqvzovw3CqXRvjBnqmRtXq83VL08QrO0ZxlGOwq19be8p6YxVMRFPlvZ5ZhSE0jeXYjFj/4xmw==, tarball: https://registry.npmjs.org/@tailwindcss-mangle/engine/-/engine-0.1.1.tgz}
+  '@tailwindcss-mangle/engine@0.1.2':
+    resolution: {integrity: sha512-njrAQmrh5NPs6yViYkxkImbLIylo566c7Gk/qsN9oWQz9QKCfpave/LElpYUPjAaYh60GwFR7Y2pOhV7Hehsyw==, tarball: https://registry.npmjs.org/@tailwindcss-mangle/engine/-/engine-0.1.2.tgz}
     engines: {node: '>=18.20.0'}
     peerDependencies:
       tailwindcss: '>=2.0.0'
@@ -2296,69 +2293,69 @@ packages:
       tailwindcss:
         optional: true
 
-  '@tailwindcss/node@4.3.1':
-    resolution: {integrity: sha512-6NDaqRoAMSXD1mr/RXu0HBvNE9a2n5tHPsxu9XHLws8o4Twes5rBM2205SUUiJ9goAtadrN6xTGX0UDEwp/N4A==, tarball: https://registry.npmjs.org/@tailwindcss/node/-/node-4.3.1.tgz}
+  '@tailwindcss/node@4.3.2':
+    resolution: {integrity: sha512-yWP/sqEcBLaD8JuA6zNwxoYKr75qxTioYwlRwekj5Jr/I5GXnoJfjetH/psLUIv74cYTH2lBUEzBkinthoYcBg==, tarball: https://registry.npmjs.org/@tailwindcss/node/-/node-4.3.2.tgz}
 
-  '@tailwindcss/oxide-android-arm64@4.3.1':
-    resolution: {integrity: sha512-SVlyf61g374l5cHyg8x9kf5xmLcOaxvOTsbsqDnSsDJaKOEFZ7GCvi84VAVGpxojYOs1+3K6M0UjXfqPU8vmOQ==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-android-arm64/-/oxide-android-arm64-4.3.1.tgz}
+  '@tailwindcss/oxide-android-arm64@4.3.2':
+    resolution: {integrity: sha512-WHxqIuHpvZ5VtdX6GTl1Ik/Vp2YuN42Et+0CdeaVd/frQ9jAvGmvR8vLT+jk3e8/Q3x8kECB9+R17pgpp2BulA==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-android-arm64/-/oxide-android-arm64-4.3.2.tgz}
     engines: {node: '>= 20'}
     cpu: [arm64]
     os: [android]
 
-  '@tailwindcss/oxide-darwin-arm64@4.3.1':
-    resolution: {integrity: sha512-hVnWLwv+e/l7c4WKyVtHVrIPvYdqWHjRB3MDIqARynzFtnQg85kmQEFCbV9Ja0VVx4xXTIiDWY60Y7iz/iNoDA==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-darwin-arm64/-/oxide-darwin-arm64-4.3.1.tgz}
+  '@tailwindcss/oxide-darwin-arm64@4.3.2':
+    resolution: {integrity: sha512-GZypeUY/IDJW3877KeM+O67vbXr3MBnbtEL4aYhNErv/JWZhye2vGSWWG9tB6iiqR2MqRNkY8IOUy4NdSZV26w==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-darwin-arm64/-/oxide-darwin-arm64-4.3.2.tgz}
     engines: {node: '>= 20'}
     cpu: [arm64]
     os: [darwin]
 
-  '@tailwindcss/oxide-darwin-x64@4.3.1':
-    resolution: {integrity: sha512-Cf7abu0WVgbhU7ANgPUnSAvm7nCvMweusHb8FnaHlLfv/Caq4GYaEZg7ZImzzmjx4lIAfuS8q+eLIS7A7IzxIg==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-darwin-x64/-/oxide-darwin-x64-4.3.1.tgz}
+  '@tailwindcss/oxide-darwin-x64@4.3.2':
+    resolution: {integrity: sha512-UIIzmefR6KO1sDU7MzRqAxC8iBpft/VhkGjTjnhoS6k7Z3rQ9wEgA1ODSiyH/tcSYssulNm4Ci3hOeK1jH7ccQ==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-darwin-x64/-/oxide-darwin-x64-4.3.2.tgz}
     engines: {node: '>= 20'}
     cpu: [x64]
     os: [darwin]
 
-  '@tailwindcss/oxide-freebsd-x64@4.3.1':
-    resolution: {integrity: sha512-ZZqzX2Y+GXtXXfqSfpJhDm60OoZfvLHLCgm+J7NVqgHHJjG/m9ugZI77RwTsVd4fnBJuCFP6Ae6kTJb71UdS8g==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-freebsd-x64/-/oxide-freebsd-x64-4.3.1.tgz}
+  '@tailwindcss/oxide-freebsd-x64@4.3.2':
+    resolution: {integrity: sha512-GN+uAmcI6DNspnCDwtOAZrTz6oukJnp337qZvxqCGLd3BHBzJpO0ZbTLRvJNdztOeAmTzewewGIMPb0tk2R4WA==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-freebsd-x64/-/oxide-freebsd-x64-4.3.2.tgz}
     engines: {node: '>= 20'}
     cpu: [x64]
     os: [freebsd]
 
-  '@tailwindcss/oxide-linux-arm-gnueabihf@4.3.1':
-    resolution: {integrity: sha512-/Ah/xik0LaMYfv9DZ0S/t4pBlBNYOcqtRwusjgovHkvT8ixueWCLyJjsaF5kQIckjb4IT8Q6K6p/iPmZMixYgg==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-linux-arm-gnueabihf/-/oxide-linux-arm-gnueabihf-4.3.1.tgz}
+  '@tailwindcss/oxide-linux-arm-gnueabihf@4.3.2':
+    resolution: {integrity: sha512-4ABn7qSbdHRwTiDiuWNegCyb5+2FJ4vKIKc3DmKrvAFw7MU1Lm11dIkTPwUaFdTzc7IsOpDbqBrlh0x6y36U/w==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-linux-arm-gnueabihf/-/oxide-linux-arm-gnueabihf-4.3.2.tgz}
     engines: {node: '>= 20'}
     cpu: [arm]
     os: [linux]
 
-  '@tailwindcss/oxide-linux-arm64-gnu@4.3.1':
-    resolution: {integrity: sha512-gqdFoVJlw444GvpnheZLHmvTzSxI/cOUUh2KSNejQjTcYkW062SVD+En0rUgD+QV91bz1XGIGtt1HJd48xUGbQ==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-linux-arm64-gnu/-/oxide-linux-arm64-gnu-4.3.1.tgz}
+  '@tailwindcss/oxide-linux-arm64-gnu@4.3.2':
+    resolution: {integrity: sha512-wDgEIGwoM8w8pufh9LVt1PahDgNdKXrLC2qfAnV3vAmococ9RWbxeAw4pxPttd/TsJfwjyLf90Dg1y9y8I6Emw==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-linux-arm64-gnu/-/oxide-linux-arm64-gnu-4.3.2.tgz}
     engines: {node: '>= 20'}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
-  '@tailwindcss/oxide-linux-arm64-musl@4.3.1':
-    resolution: {integrity: sha512-Bwv9KwOvE0VKa86xPFif9b9c3Y1NxOV1P0gLti/IYaWEsQYZXDlxfGEtA8mdDZ7SG3wyNXAWYT5SIn3giL57oA==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-linux-arm64-musl/-/oxide-linux-arm64-musl-4.3.1.tgz}
+  '@tailwindcss/oxide-linux-arm64-musl@4.3.2':
+    resolution: {integrity: sha512-J5Nuk0uZQIiMTJj3LEx4sAA9tMFUoXQZFv1J6An+QGYe53HKRJuFDi0rpq/tuouCZeAbOBY3kQ6g8qeD4TUjtA==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-linux-arm64-musl/-/oxide-linux-arm64-musl-4.3.2.tgz}
     engines: {node: '>= 20'}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
-  '@tailwindcss/oxide-linux-x64-gnu@4.3.1':
-    resolution: {integrity: sha512-Ymi8O8T15HYQdOUWUtTI6ldN0neHP85FC+Qz32xTcZ7iJXtem/x8ITev0o1e9e5rkqj4lONZfTRLvkmin1+tKg==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-linux-x64-gnu/-/oxide-linux-x64-gnu-4.3.1.tgz}
+  '@tailwindcss/oxide-linux-x64-gnu@4.3.2':
+    resolution: {integrity: sha512-kqCZpSKOBEJO4mz7OqWoofBZeXTAwaVGPj0ErAj7CojmhKpWVWVOnrt9dE8odoIraZq4oj3ausM37kXi+Tow8w==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-linux-x64-gnu/-/oxide-linux-x64-gnu-4.3.2.tgz}
     engines: {node: '>= 20'}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
-  '@tailwindcss/oxide-linux-x64-musl@4.3.1':
-    resolution: {integrity: sha512-M+P/91qJ6uILLw4k2G93GMDRAXj61SMvFQYt39AqvUqYgExXpLL5aepfns7sj4HiAQeolirQF9E0lzRvdf4zPQ==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-linux-x64-musl/-/oxide-linux-x64-musl-4.3.1.tgz}
+  '@tailwindcss/oxide-linux-x64-musl@4.3.2':
+    resolution: {integrity: sha512-cixpqbh2toJDmkuCRI68nXA8ZxNmdK9Y+9v5h3MC3ZQKy/0BO8AWzlkWyRM7JAFSGBlfig4YVTPsK6MVgqz1uw==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-linux-x64-musl/-/oxide-linux-x64-musl-4.3.2.tgz}
     engines: {node: '>= 20'}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
-  '@tailwindcss/oxide-wasm32-wasi@4.3.1':
-    resolution: {integrity: sha512-zsM8uOeqvVGHsAXsJxsT28ttosFahLJKCLOTUBqRAtKnVgGSRitds9T432QiT8b77Yga7JIBkulIRRlJPtYhRA==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-wasm32-wasi/-/oxide-wasm32-wasi-4.3.1.tgz}
+  '@tailwindcss/oxide-wasm32-wasi@4.3.2':
+    resolution: {integrity: sha512-4ec2Z/LOmRsAgU23CS4xeJfcJlmRg94A/XrbGRCF1gyU/zdDfRLYDVsS+ynSZCmGNxQ1jQriQOKMQeQxBA3Isw==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-wasm32-wasi/-/oxide-wasm32-wasi-4.3.2.tgz}
     engines: {node: '>=14.0.0'}
     cpu: [wasm32]
     bundledDependencies:
@@ -2369,20 +2366,20 @@ packages:
       - '@emnapi/wasi-threads'
       - tslib
 
-  '@tailwindcss/oxide-win32-arm64-msvc@4.3.1':
-    resolution: {integrity: sha512-aiNvSq9BsVk8V513lDKlrCFAgf8qBMPZTpgEhInL+NwQqs97mYmupVMrPrgBBSL8Pv/0zXu9MrMF9rMun1ZeNg==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-win32-arm64-msvc/-/oxide-win32-arm64-msvc-4.3.1.tgz}
+  '@tailwindcss/oxide-win32-arm64-msvc@4.3.2':
+    resolution: {integrity: sha512-Zyr/M0+XcYZu3bZrUytc7TXvrk0ftWfl8gN2MwekNDzhqhKRUucMPSeOzM0o0wH5AWOU49BsKRrfKxI2atCPMQ==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-win32-arm64-msvc/-/oxide-win32-arm64-msvc-4.3.2.tgz}
     engines: {node: '>= 20'}
     cpu: [arm64]
     os: [win32]
 
-  '@tailwindcss/oxide-win32-x64-msvc@4.3.1':
-    resolution: {integrity: sha512-xDEyu1rg290472FEGaKHnzyDyh5QH+AlWvsU5hMoMtPpzmKlRI0jaYKCgSHDYtaQWZOYbMaduSyCwFwY4n1HmA==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-win32-x64-msvc/-/oxide-win32-x64-msvc-4.3.1.tgz}
+  '@tailwindcss/oxide-win32-x64-msvc@4.3.2':
+    resolution: {integrity: sha512-QI9BO7KlNZsp2GuO0jwAAj5jCDABOKXRkCk2XuKTSaNEFSdfzqswYVTtCHBNKHLsqyjFyFkqlDiwkNbTYSssMQ==, tarball: https://registry.npmjs.org/@tailwindcss/oxide-win32-x64-msvc/-/oxide-win32-x64-msvc-4.3.2.tgz}
     engines: {node: '>= 20'}
     cpu: [x64]
     os: [win32]
 
-  '@tailwindcss/oxide@4.3.1':
-    resolution: {integrity: sha512-yVPyo8RNkabVr3O2EhHEE0Rewu7YKzc1DhIqfL46LKveFrmu9XbDazNOJY7/GRuvw1h6u3utWnR29H/p5JPlgA==, tarball: https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.3.1.tgz}
+  '@tailwindcss/oxide@4.3.2':
+    resolution: {integrity: sha512-z8ZgnzX8gdNoWLBLqBPoh/sjnxkwvf9ZuWjnO0l0yIzbLa5/9S+eC5QxGZKRobVHIC3/1BoMWjHblqWjcgFgag==, tarball: https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.3.2.tgz}
     engines: {node: '>= 20'}
 
   '@tootallnate/once@1.1.2':
@@ -2482,6 +2479,12 @@ packages:
     peerDependencies:
       typescript: '>=4.8.4 <6.1.0'
 
+  '@typescript-eslint/project-service@8.62.1':
+    resolution: {integrity: sha512-yQ3RgY5RkSBpsNS1Bx/JQEcA24FOSdfGktoyprAr5u18390UQdtVcfnEv4nIrIshNnavlVyZBKxQwT1fIAE6cg==, tarball: https://registry.npmjs.org/@typescript-eslint/project-service/-/project-service-8.62.1.tgz}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      typescript: '>=4.8.4 <6.1.0'
+
   '@typescript-eslint/rule-tester@8.62.0':
     resolution: {integrity: sha512-WfzCnmTeOM3AifMf5rXPbFWHGWEru9rZKy4U6CSgpmxfOM6sTdKwjX7gTQEfXwsQp/MjRuEv3XOTBdQzxTCWMw==, tarball: https://registry.npmjs.org/@typescript-eslint/rule-tester/-/rule-tester-8.62.0.tgz}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -2493,8 +2496,18 @@ packages:
     resolution: {integrity: sha512-1lX38kNxXIRb8mEc3lbq5mdHq1Pf2+U0nFU65KfT18mtPxxl0fvjuEE92mHuXPuCtElJhOrddOpyMlM3Z0umEA==, tarball: https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-8.62.0.tgz}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@typescript-eslint/scope-manager@8.62.1':
+    resolution: {integrity: sha512-r4d249KbQ1SFdpeStvob8Ih6aPPIzfqllPVOtvhve6ZcpuVcYo5/7zUWckKpHE7StASX4kTKZTLf0WQm/wPkcg==, tarball: https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-8.62.1.tgz}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
   '@typescript-eslint/tsconfig-utils@8.62.0':
     resolution: {integrity: sha512-y2GAdB6ykaXUvuspbYnizQc4oDDz0Tz/Yc7iWrXf9mx8vm/L/0vLHCe0tS2boG96Zy+DivnVDQ9ZUEWoHqqx1g==, tarball: https://registry.npmjs.org/@typescript-eslint/tsconfig-utils/-/tsconfig-utils-8.62.0.tgz}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      typescript: '>=4.8.4 <6.1.0'
+
+  '@typescript-eslint/tsconfig-utils@8.62.1':
+    resolution: {integrity: sha512-xadytJqX9vJVQ2fdQjkcIVigwaOJNWkpjdLt6cEQ+xPnrI1fkp+/jZE/I97k9KUjqtpd25i0HeyZf3T6dutv2g==, tarball: https://registry.npmjs.org/@typescript-eslint/tsconfig-utils/-/tsconfig-utils-8.62.1.tgz}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       typescript: '>=4.8.4 <6.1.0'
@@ -2510,8 +2523,18 @@ packages:
     resolution: {integrity: sha512-KvAclkktORPvM54TgLgA4z9HIV1M8zOgw9ZVNXl9f/8dLYfXYX1wkMXP7qmabpijQRV5bHJLOmoyGQbLMaUYeg==, tarball: https://registry.npmjs.org/@typescript-eslint/types/-/types-8.62.0.tgz}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@typescript-eslint/types@8.62.1':
+    resolution: {integrity: sha512-ooCzJFaf+Hg+uG6fA3NRFGuFjlfNlDhBthbv4ZPU/0elCAFUfnyXUvf/WOpHz/jYwSmvU2GkR2LtyUfy1AxZ1Q==, tarball: https://registry.npmjs.org/@typescript-eslint/types/-/types-8.62.1.tgz}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
   '@typescript-eslint/typescript-estree@8.62.0':
     resolution: {integrity: sha512-+hVbNxtW64pIcZWDPGbyaKF7vp2IBTVY5ma1blwwksrjdsbdqqEKvJWMGbBofei4F6Dovx1M0RJgoFeNu2279A==, tarball: https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-8.62.0.tgz}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      typescript: '>=4.8.4 <6.1.0'
+
+  '@typescript-eslint/typescript-estree@8.62.1':
+    resolution: {integrity: sha512-xMcW9oP9u7fAMXYs9A65CVmtLQe2r//oXINHfi8HV+oiqhih17sbLdhXr4540YWlgpDKQdY854OL5ZrdCiQsAA==, tarball: https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-8.62.1.tgz}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       typescript: '>=4.8.4 <6.1.0'
@@ -2523,8 +2546,19 @@ packages:
       eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
       typescript: '>=4.8.4 <6.1.0'
 
+  '@typescript-eslint/utils@8.62.1':
+    resolution: {integrity: sha512-sHtbPfuKNZCG+ih8SyjjucqRntSVmp8XgL5u6o9mAhiSn8ds5o/M/XdM0abweme2Tln3szOstOrZ9OXitvPh0g==, tarball: https://registry.npmjs.org/@typescript-eslint/utils/-/utils-8.62.1.tgz}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
+      typescript: '>=4.8.4 <6.1.0'
+
   '@typescript-eslint/visitor-keys@8.62.0':
     resolution: {integrity: sha512-CY3uyFSRbcQv3nnSv8S0+lDftMVz6P963PoRlxrV7ew/Md564g9ut60PYzdLM5qW4jFn93GBF+Soi90ISAN+GQ==, tarball: https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-8.62.0.tgz}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@typescript-eslint/visitor-keys@8.62.1':
+    resolution: {integrity: sha512-4g3BLxfdTMy8iZG0MaBkadnlRrCJ74cQiFbyEVMrkwIoqdyaXXQM22cotDvrl4x28wgIZ9rEJRoM+mmhSJpJ1g==, tarball: https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-8.62.1.tgz}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@unocss/config@66.6.8':
@@ -2697,8 +2731,8 @@ packages:
     peerDependencies:
       postcss: ^8.4.38
 
-  '@weapp-tailwindcss/postcss@3.1.4':
-    resolution: {integrity: sha512-20yJgDAEOoGNzkLHpzJQuvrmw/pC3+ayMHrkYOYa1JjKAH7qLD9zW9PS3if5ztBMy3UcND04T+xnyVeOFPRQjA==, tarball: https://registry.npmjs.org/@weapp-tailwindcss/postcss/-/postcss-3.1.4.tgz}
+  '@weapp-tailwindcss/postcss@3.1.5':
+    resolution: {integrity: sha512-jKMSPCNnO7OI5NqRmQTKEwHTg6LhdugMeWOGuAaudkSl+M3CQmnSVlfXrQ0B51w741+pdsqB01tUghLDg8f3vg==, tarball: https://registry.npmjs.org/@weapp-tailwindcss/postcss/-/postcss-3.1.5.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
 
   '@weapp-tailwindcss/reset@0.1.1':
@@ -3228,6 +3262,9 @@ packages:
 
   confbox@0.2.2:
     resolution: {integrity: sha512-1NB+BKqhtNipMsov4xI/NnhCKp9XG9NamYp5PVm9klAT0fsrNPjaFICsCFhNhwZJKNh7zB/3q8qXz0E9oaMNtQ==, tarball: https://registry.npmjs.org/confbox/-/confbox-0.2.2.tgz}
+
+  confbox@0.2.4:
+    resolution: {integrity: sha512-ysOGlgTFbN2/Y6Cg3Iye8YKulHw+R2fNXHrgSmXISQdMnomY6eNDprVdW9R5xBguEqI954+S6709UyiO7B+6OQ==, tarball: https://registry.npmjs.org/confbox/-/confbox-0.2.4.tgz}
 
   consola@3.4.2:
     resolution: {integrity: sha512-5IKcdX0nnYavi6G7TtOhwkYzyjfJlatbjMjuLSfE2kYT5pMDOilZ4OvMhi637CcDICTmz3wARPoyhqyX1Y+XvA==, tarball: https://registry.npmjs.org/consola/-/consola-3.4.2.tgz}
@@ -4002,6 +4039,9 @@ packages:
   exsolve@1.0.7:
     resolution: {integrity: sha512-VO5fQUzZtI6C+vx4w/4BWJpg3s/5l+6pRQEHzFRM8WFi4XffSP1Z+4qi7GbjWbvRQEbdIco5mIMq+zX4rPuLrw==, tarball: https://registry.npmjs.org/exsolve/-/exsolve-1.0.7.tgz}
 
+  exsolve@1.1.0:
+    resolution: {integrity: sha512-D+42+T12DdIlJM3uepa55qGiL3sYdLBOxIl2ifQCzCHz4c7eiolaHsi3BIqEr7JxBzxv2pYZQX9kw16ziMcEmw==, tarball: https://registry.npmjs.org/exsolve/-/exsolve-1.1.0.tgz}
+
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==, tarball: https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz}
 
@@ -4028,8 +4068,8 @@ packages:
   fast-string-width@3.0.2:
     resolution: {integrity: sha512-gX8LrtNEI5hq8DVUfRQMbr5lpaS4nMIWV+7XEbXk2b8kiQIizgnlr12B4dA3ZEx3308ze0O4Q1R+cHts8kyUJg==, tarball: https://registry.npmjs.org/fast-string-width/-/fast-string-width-3.0.2.tgz}
 
-  fast-uri@3.1.2:
-    resolution: {integrity: sha512-rVjf7ArG3LTk+FS6Yw81V1DLuZl1bRbNrev6Tmd/9RaroeeRRJhAt7jg/6YFxbvAQXUCavSoZhPPj6oOx+5KjQ==, tarball: https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.2.tgz}
+  fast-uri@3.1.3:
+    resolution: {integrity: sha512-i70LwGWUduXqzicKXWshooq+sWL1K3WUU5rKZNG/0i3a1OSoX3HqhH5WbWwTmqWfor4urUakGPiRQcleRZTwOg==, tarball: https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.3.tgz}
 
   fast-wrap-ansi@0.2.2:
     resolution: {integrity: sha512-7F2Fl+TjRSenLqlU3UjSH0iyqopqoZIu7eZVpEirP2g1GtWa2G/ecEmBdgz31+Mxr+ELclgg6sokpSFIQiZ02Q==, tarball: https://registry.npmjs.org/fast-wrap-ansi/-/fast-wrap-ansi-0.2.2.tgz}
@@ -5309,6 +5349,9 @@ packages:
   mlly@1.8.0:
     resolution: {integrity: sha512-l8D9ODSRWLe2KHJSifWGwBqpTZXIXTeo8mlKjY+E2HAakaTeNpqAyBZ8GSqLzHgw4XmHmC8whvpjJNMbFZN7/g==, tarball: https://registry.npmjs.org/mlly/-/mlly-1.8.0.tgz}
 
+  mlly@1.8.2:
+    resolution: {integrity: sha512-d+ObxMQFmbt10sretNDytwt85VrbkhhUA/JBGm1MPaWJ65Cl4wOgLaB1NYvJSZ0Ef03MMEU/0xpPMXUIQ29UfA==, tarball: https://registry.npmjs.org/mlly/-/mlly-1.8.2.tgz}
+
   modern-tar@0.7.6:
     resolution: {integrity: sha512-sweCIVXzx1aIGTCdzcMlSZt1h8k5Tmk08VNAuRk3IU28XamGiOH5ypi11g6De2CH7PhYqSSnGy2A/EFhbWnVKg==, tarball: https://registry.npmjs.org/modern-tar/-/modern-tar-0.7.6.tgz}
     engines: {node: '>=18.0.0'}
@@ -5621,6 +5664,9 @@ packages:
 
   pkg-types@2.3.0:
     resolution: {integrity: sha512-SIqCzDRg0s9npO5XQ3tNZioRY1uK06lA41ynBC1YmFTmnY6FjUjVt6s4LoADmwoig1qqD0oK8h1p/8mlMx8Oig==, tarball: https://registry.npmjs.org/pkg-types/-/pkg-types-2.3.0.tgz}
+
+  pkg-types@2.3.1:
+    resolution: {integrity: sha512-y+ichcgc2LrADuhLNAx8DFjVfgz91pRxfZdI3UDhxHvcVEZsenLO+7XaU5vOp0u/7V/wZ+plyuQxtrDlZJ+yeg==, tarball: https://registry.npmjs.org/pkg-types/-/pkg-types-2.3.1.tgz}
 
   pluralize@8.0.0:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==, tarball: https://registry.npmjs.org/pluralize/-/pluralize-8.0.0.tgz}
@@ -6402,8 +6448,8 @@ packages:
     resolution: {integrity: sha512-FSdvTNxlO51+yK/kVV6PwYsJAwxHEV7+3bnojq2/kUUyAL8ZxfVqwmasuYFSWhFq8o9vijYky8yuiHQXYQaoVA==, tarball: https://registry.npmjs.org/tailwindcss-config/-/tailwindcss-config-2.0.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
 
-  tailwindcss@4.3.1:
-    resolution: {integrity: sha512-hk+TB1m+K8CYNrP6rjQaq/Y+4Zylwpa87mLYBKCunwnnQ9p+fHb7kmSfGqyEJoxF/O6CDyABWVFEafNSYKll+Q==, tarball: https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.3.1.tgz}
+  tailwindcss@4.3.2:
+    resolution: {integrity: sha512-WtctNNSH8A9jlMIqxzuYumOHU5uGZyRv0Q5svQl+oEPy5w84YpBxdb7MdqyiSPQge5jTJ6zFQLq0PFygdccSBA==, tarball: https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.3.2.tgz}
     hasBin: true
 
   tapable@2.3.3:
@@ -6557,6 +6603,9 @@ packages:
 
   ufo@1.6.1:
     resolution: {integrity: sha512-9a4/uxlTWJ4+a5i0ooc1rU7C7YOw3wT+UGqdeNNHWnOF9qcMBgLRS+4IYUqbczewFx4mLEig6gawh7X6mFlEkA==, tarball: https://registry.npmjs.org/ufo/-/ufo-1.6.1.tgz}
+
+  ufo@1.6.4:
+    resolution: {integrity: sha512-JFNbkD1Svwe0KvGi8GOeLcP4kAWQ609twvCdcHxq1oSL8svv39ZuSvajcD8B+5D0eL4+s1Is2D/O6KN3qcTeRA==, tarball: https://registry.npmjs.org/ufo/-/ufo-1.6.4.tgz}
 
   unbox-primitive@1.1.0:
     resolution: {integrity: sha512-nWJ91DjeOkej/TA8pXQ3myruKpKEYgqvpw9lz4OPHj/NWFNluYrjbz9j01CJ8yKQd2g4jFoOkINCTW2I5LEEyw==, tarball: https://registry.npmjs.org/unbox-primitive/-/unbox-primitive-1.1.0.tgz}
@@ -6794,8 +6843,12 @@ packages:
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
-  weapp-tailwindcss@5.1.4:
-    resolution: {integrity: sha512-CBwZw/vkpVm7P+8yLpcVL3yJlPP9yw3bcA5l7rXLDl/zlmBiHo8rzfCM0v/hzFTNLN/rJANjXrJe7mXYqmn+ww==, tarball: https://registry.npmjs.org/weapp-tailwindcss/-/weapp-tailwindcss-5.1.4.tgz}
+  weapp-style-injector@1.0.0:
+    resolution: {integrity: sha512-MnaHswJC4KE7JrRW84NSGcm/NX4wTU2o9xTNpTsEaiHRhLxAlbTKQyWnGNUI6ABKGFIsxvtBAdzwFu3dPMEuPw==, tarball: https://registry.npmjs.org/weapp-style-injector/-/weapp-style-injector-1.0.0.tgz}
+    engines: {node: ^20.19.0 || >=22.12.0}
+
+  weapp-tailwindcss@5.1.5:
+    resolution: {integrity: sha512-559qJupQkZVuwijO+WlYvM0HbZhtmOpXckJ25Rm1CW/WFuSVFSiJOEtd6KS6n52LJ4Gag1AvPeKbo/MXhn3GJA==, tarball: https://registry.npmjs.org/weapp-tailwindcss/-/weapp-tailwindcss-5.1.5.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
@@ -7058,8 +7111,6 @@ snapshots:
     dependencies:
       package-manager-detector: 1.6.0
       tinyexec: 1.0.2
-
-  '@ast-core/escape@1.0.1': {}
 
   '@babel/code-frame@7.24.7':
     dependencies:
@@ -9112,22 +9163,22 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@icebreakers/eslint-config@6.0.0(@next/eslint-plugin-next@16.2.4)(@unocss/eslint-plugin@66.6.8(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3))(eslint-plugin-jsx-a11y@6.10.2(eslint@10.6.0(jiti@2.7.0)))(eslint-plugin-pnpm@1.6.1(eslint@10.6.0(jiti@2.7.0)))(eslint-plugin-vuejs-accessibility@2.5.0(eslint@10.6.0(jiti@2.7.0))(globals@17.7.0))(eslint@10.6.0(jiti@2.7.0))(postcss@8.5.16)(stylelint@16.9.0(typescript@6.0.3))(tailwindcss@4.3.1)(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)':
+  '@icebreakers/eslint-config@6.0.0(@next/eslint-plugin-next@16.2.4)(@unocss/eslint-plugin@66.6.8(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3))(eslint-plugin-jsx-a11y@6.10.2(eslint@10.6.0(jiti@2.7.0)))(eslint-plugin-pnpm@1.6.1(eslint@10.6.0(jiti@2.7.0)))(eslint-plugin-vuejs-accessibility@2.5.0(eslint@10.6.0(jiti@2.7.0))(globals@17.7.0))(eslint@10.6.0(jiti@2.7.0))(postcss@8.5.16)(stylelint@16.9.0(typescript@6.0.3))(tailwindcss@4.3.2)(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)':
     dependencies:
       '@antfu/eslint-config': 9.1.0(@eslint-react/eslint-plugin@5.9.5(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3))(@next/eslint-plugin-next@16.2.4)(@typescript-eslint/rule-tester@8.62.0(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3))(@typescript-eslint/typescript-estree@8.62.0(typescript@6.0.3))(@typescript-eslint/utils@8.62.0(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3))(@unocss/eslint-plugin@66.6.8(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3))(@vue/compiler-sfc@3.5.39)(eslint-plugin-format@2.0.1(eslint@10.6.0(jiti@2.7.0)))(eslint-plugin-jsx-a11y@6.10.2(eslint@10.6.0(jiti@2.7.0)))(eslint-plugin-react-refresh@0.5.3(eslint@10.6.0(jiti@2.7.0)))(eslint-plugin-vuejs-accessibility@2.5.0(eslint@10.6.0(jiti@2.7.0))(globals@17.7.0))(eslint@10.6.0(jiti@2.7.0))(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)
       '@eslint-react/eslint-plugin': 5.9.5(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3)
-      '@icebreakers/stylelint-config': 5.0.0(postcss@8.5.16)(stylelint@16.9.0(typescript@6.0.3))(tailwindcss@4.3.1)
+      '@icebreakers/stylelint-config': 5.0.0(postcss@8.5.16)(stylelint@16.9.0(typescript@6.0.3))(tailwindcss@4.3.2)
       '@typescript-eslint/rule-tester': 8.62.0(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3)
       '@typescript-eslint/typescript-estree': 8.62.0(typescript@6.0.3)
       '@typescript-eslint/utils': 8.62.0(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3)
       '@vue/compiler-sfc': 3.5.39
       eslint-flat-config-utils: 3.2.0
       eslint-plugin-better-stylelint: 2.0.0(eslint@10.6.0(jiti@2.7.0))(stylelint@16.9.0(typescript@6.0.3))
-      eslint-plugin-better-tailwindcss: 4.6.0(eslint@10.6.0(jiti@2.7.0))(tailwindcss@4.3.1)(typescript@6.0.3)
+      eslint-plugin-better-tailwindcss: 4.6.0(eslint@10.6.0(jiti@2.7.0))(tailwindcss@4.3.2)(typescript@6.0.3)
       eslint-plugin-format: 2.0.1(eslint@10.6.0(jiti@2.7.0))
       eslint-plugin-react-hooks: 7.1.1(eslint@10.6.0(jiti@2.7.0))
       eslint-plugin-react-refresh: 0.5.3(eslint@10.6.0(jiti@2.7.0))
-      eslint-plugin-tailwindcss: 4.0.4(eslint@10.6.0(jiti@2.7.0))(tailwindcss@4.3.1)(typescript@6.0.3)
+      eslint-plugin-tailwindcss: 4.0.4(eslint@10.6.0(jiti@2.7.0))(tailwindcss@4.3.2)(typescript@6.0.3)
     optionalDependencies:
       eslint-plugin-pnpm: 1.6.1(eslint@10.6.0(jiti@2.7.0))
     transitivePeerDependencies:
@@ -9158,7 +9209,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@icebreakers/stylelint-config@5.0.0(postcss@8.5.16)(stylelint@16.9.0(typescript@6.0.3))(tailwindcss@4.3.1)':
+  '@icebreakers/stylelint-config@5.0.0(postcss@8.5.16)(stylelint@16.9.0(typescript@6.0.3))(tailwindcss@4.3.2)':
     dependencies:
       comment-json: 5.0.0
       postcss-html: 1.8.1
@@ -9168,7 +9219,7 @@ snapshots:
       stylelint-config-recommended-vue: 1.6.1(postcss-html@1.8.1)(stylelint@16.9.0(typescript@6.0.3))
       stylelint-config-standard-scss: 17.0.0(postcss@8.5.16)(stylelint@16.9.0(typescript@6.0.3))
       stylelint-order: 8.1.1(stylelint@16.9.0(typescript@6.0.3))
-      stylelint-plugin-tailwindcss: 3.0.0(stylelint@16.9.0(typescript@6.0.3))(tailwindcss@4.3.1)
+      stylelint-plugin-tailwindcss: 3.0.0(stylelint@16.9.0(typescript@6.0.3))(tailwindcss@4.3.2)
     transitivePeerDependencies:
       - postcss
       - stylelint
@@ -9182,12 +9233,12 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify/tailwind4@1.2.3(tailwindcss@4.3.1)':
+  '@iconify/tailwind4@1.2.3(tailwindcss@4.3.2)':
     dependencies:
       '@iconify/tools': 5.0.12
       '@iconify/types': 2.0.0
       '@iconify/utils': 3.1.0
-      tailwindcss: 4.3.1
+      tailwindcss: 4.3.2
 
   '@iconify/tools@5.0.12':
     dependencies:
@@ -10082,17 +10133,17 @@ snapshots:
       estraverse: 5.3.0
       picomatch: 4.0.4
 
-  '@tailwindcss-mangle/engine@0.1.1(tailwindcss@4.3.1)':
+  '@tailwindcss-mangle/engine@0.1.2(tailwindcss@4.3.2)':
     dependencies:
-      '@tailwindcss/node': 4.3.1
-      '@tailwindcss/oxide': 4.3.1
+      '@tailwindcss/node': 4.3.2
+      '@tailwindcss/oxide': 4.3.2
       micromatch: 4.0.8
       pathe: 2.0.3
       postcss: 8.5.16
     optionalDependencies:
-      tailwindcss: 4.3.1
+      tailwindcss: 4.3.2
 
-  '@tailwindcss/node@4.3.1':
+  '@tailwindcss/node@4.3.2':
     dependencies:
       '@jridgewell/remapping': 2.3.5
       enhanced-resolve: 5.21.6
@@ -10100,58 +10151,58 @@ snapshots:
       lightningcss: 1.32.0
       magic-string: 0.30.21
       source-map-js: 1.2.1
-      tailwindcss: 4.3.1
+      tailwindcss: 4.3.2
 
-  '@tailwindcss/oxide-android-arm64@4.3.1':
+  '@tailwindcss/oxide-android-arm64@4.3.2':
     optional: true
 
-  '@tailwindcss/oxide-darwin-arm64@4.3.1':
+  '@tailwindcss/oxide-darwin-arm64@4.3.2':
     optional: true
 
-  '@tailwindcss/oxide-darwin-x64@4.3.1':
+  '@tailwindcss/oxide-darwin-x64@4.3.2':
     optional: true
 
-  '@tailwindcss/oxide-freebsd-x64@4.3.1':
+  '@tailwindcss/oxide-freebsd-x64@4.3.2':
     optional: true
 
-  '@tailwindcss/oxide-linux-arm-gnueabihf@4.3.1':
+  '@tailwindcss/oxide-linux-arm-gnueabihf@4.3.2':
     optional: true
 
-  '@tailwindcss/oxide-linux-arm64-gnu@4.3.1':
+  '@tailwindcss/oxide-linux-arm64-gnu@4.3.2':
     optional: true
 
-  '@tailwindcss/oxide-linux-arm64-musl@4.3.1':
+  '@tailwindcss/oxide-linux-arm64-musl@4.3.2':
     optional: true
 
-  '@tailwindcss/oxide-linux-x64-gnu@4.3.1':
+  '@tailwindcss/oxide-linux-x64-gnu@4.3.2':
     optional: true
 
-  '@tailwindcss/oxide-linux-x64-musl@4.3.1':
+  '@tailwindcss/oxide-linux-x64-musl@4.3.2':
     optional: true
 
-  '@tailwindcss/oxide-wasm32-wasi@4.3.1':
+  '@tailwindcss/oxide-wasm32-wasi@4.3.2':
     optional: true
 
-  '@tailwindcss/oxide-win32-arm64-msvc@4.3.1':
+  '@tailwindcss/oxide-win32-arm64-msvc@4.3.2':
     optional: true
 
-  '@tailwindcss/oxide-win32-x64-msvc@4.3.1':
+  '@tailwindcss/oxide-win32-x64-msvc@4.3.2':
     optional: true
 
-  '@tailwindcss/oxide@4.3.1':
+  '@tailwindcss/oxide@4.3.2':
     optionalDependencies:
-      '@tailwindcss/oxide-android-arm64': 4.3.1
-      '@tailwindcss/oxide-darwin-arm64': 4.3.1
-      '@tailwindcss/oxide-darwin-x64': 4.3.1
-      '@tailwindcss/oxide-freebsd-x64': 4.3.1
-      '@tailwindcss/oxide-linux-arm-gnueabihf': 4.3.1
-      '@tailwindcss/oxide-linux-arm64-gnu': 4.3.1
-      '@tailwindcss/oxide-linux-arm64-musl': 4.3.1
-      '@tailwindcss/oxide-linux-x64-gnu': 4.3.1
-      '@tailwindcss/oxide-linux-x64-musl': 4.3.1
-      '@tailwindcss/oxide-wasm32-wasi': 4.3.1
-      '@tailwindcss/oxide-win32-arm64-msvc': 4.3.1
-      '@tailwindcss/oxide-win32-x64-msvc': 4.3.1
+      '@tailwindcss/oxide-android-arm64': 4.3.2
+      '@tailwindcss/oxide-darwin-arm64': 4.3.2
+      '@tailwindcss/oxide-darwin-x64': 4.3.2
+      '@tailwindcss/oxide-freebsd-x64': 4.3.2
+      '@tailwindcss/oxide-linux-arm-gnueabihf': 4.3.2
+      '@tailwindcss/oxide-linux-arm64-gnu': 4.3.2
+      '@tailwindcss/oxide-linux-arm64-musl': 4.3.2
+      '@tailwindcss/oxide-linux-x64-gnu': 4.3.2
+      '@tailwindcss/oxide-linux-x64-musl': 4.3.2
+      '@tailwindcss/oxide-wasm32-wasi': 4.3.2
+      '@tailwindcss/oxide-win32-arm64-msvc': 4.3.2
+      '@tailwindcss/oxide-win32-x64-msvc': 4.3.2
 
   '@tootallnate/once@1.1.2': {}
 
@@ -10269,6 +10320,16 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@typescript-eslint/project-service@8.62.1(typescript@6.0.3)':
+    dependencies:
+      '@typescript-eslint/tsconfig-utils': 8.62.1(typescript@6.0.3)
+      '@typescript-eslint/types': 8.62.1
+      debug: 4.4.3
+      typescript: 6.0.3
+    transitivePeerDependencies:
+      - supports-color
+    optional: true
+
   '@typescript-eslint/rule-tester@8.62.0(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3)':
     dependencies:
       '@typescript-eslint/parser': 8.62.0(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3)
@@ -10288,9 +10349,20 @@ snapshots:
       '@typescript-eslint/types': 8.62.0
       '@typescript-eslint/visitor-keys': 8.62.0
 
+  '@typescript-eslint/scope-manager@8.62.1':
+    dependencies:
+      '@typescript-eslint/types': 8.62.1
+      '@typescript-eslint/visitor-keys': 8.62.1
+    optional: true
+
   '@typescript-eslint/tsconfig-utils@8.62.0(typescript@6.0.3)':
     dependencies:
       typescript: 6.0.3
+
+  '@typescript-eslint/tsconfig-utils@8.62.1(typescript@6.0.3)':
+    dependencies:
+      typescript: 6.0.3
+    optional: true
 
   '@typescript-eslint/type-utils@8.62.0(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3)':
     dependencies:
@@ -10305,6 +10377,9 @@ snapshots:
       - supports-color
 
   '@typescript-eslint/types@8.62.0': {}
+
+  '@typescript-eslint/types@8.62.1':
+    optional: true
 
   '@typescript-eslint/typescript-estree@8.62.0(typescript@6.0.3)':
     dependencies:
@@ -10321,6 +10396,22 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@typescript-eslint/typescript-estree@8.62.1(typescript@6.0.3)':
+    dependencies:
+      '@typescript-eslint/project-service': 8.62.1(typescript@6.0.3)
+      '@typescript-eslint/tsconfig-utils': 8.62.1(typescript@6.0.3)
+      '@typescript-eslint/types': 8.62.1
+      '@typescript-eslint/visitor-keys': 8.62.1
+      debug: 4.4.3
+      minimatch: 10.2.5
+      semver: 7.8.5
+      tinyglobby: 0.2.17
+      ts-api-utils: 2.5.0(typescript@6.0.3)
+      typescript: 6.0.3
+    transitivePeerDependencies:
+      - supports-color
+    optional: true
+
   '@typescript-eslint/utils@8.62.0(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3)':
     dependencies:
       '@eslint-community/eslint-utils': 4.9.1(eslint@10.6.0(jiti@2.7.0))
@@ -10332,10 +10423,28 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@typescript-eslint/utils@8.62.1(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3)':
+    dependencies:
+      '@eslint-community/eslint-utils': 4.9.1(eslint@10.6.0(jiti@2.7.0))
+      '@typescript-eslint/scope-manager': 8.62.1
+      '@typescript-eslint/types': 8.62.1
+      '@typescript-eslint/typescript-estree': 8.62.1(typescript@6.0.3)
+      eslint: 10.6.0(jiti@2.7.0)
+      typescript: 6.0.3
+    transitivePeerDependencies:
+      - supports-color
+    optional: true
+
   '@typescript-eslint/visitor-keys@8.62.0':
     dependencies:
       '@typescript-eslint/types': 8.62.0
       eslint-visitor-keys: 5.0.1
+
+  '@typescript-eslint/visitor-keys@8.62.1':
+    dependencies:
+      '@typescript-eslint/types': 8.62.1
+      eslint-visitor-keys: 5.0.1
+    optional: true
 
   '@unocss/config@66.6.8':
     dependencies:
@@ -10350,7 +10459,7 @@ snapshots:
 
   '@unocss/eslint-plugin@66.6.8(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3)':
     dependencies:
-      '@typescript-eslint/utils': 8.62.0(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3)
+      '@typescript-eslint/utils': 8.62.1(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3)
       '@unocss/config': 66.6.8
       '@unocss/core': 66.6.8
       '@unocss/rule-utils': 66.6.8
@@ -10595,9 +10704,9 @@ snapshots:
       postcss-selector-parser: 7.1.4
       postcss-value-parser: 4.2.0
 
-  '@weapp-tailwindcss/postcss@3.1.4(jiti@2.7.0)(tailwindcss@4.3.1)(yaml@2.9.0)':
+  '@weapp-tailwindcss/postcss@3.1.5(jiti@2.7.0)(tailwindcss@4.3.2)(yaml@2.9.0)':
     dependencies:
-      '@tailwindcss-mangle/engine': 0.1.1(tailwindcss@4.3.1)
+      '@tailwindcss-mangle/engine': 0.1.2(tailwindcss@4.3.2)
       '@weapp-core/escape': 8.0.0
       '@weapp-tailwindcss/postcss-calc': 1.0.2(postcss@8.5.16)
       '@weapp-tailwindcss/shared': 2.0.0
@@ -10618,9 +10727,9 @@ snapshots:
       - tsx
       - yaml
 
-  '@weapp-tailwindcss/reset@0.1.1(tailwindcss@4.3.1)':
+  '@weapp-tailwindcss/reset@0.1.1(tailwindcss@4.3.2)':
     dependencies:
-      tailwindcss: 4.3.1
+      tailwindcss: 4.3.2
 
   '@weapp-tailwindcss/runtime@0.1.6':
     dependencies:
@@ -10710,7 +10819,7 @@ snapshots:
   ajv@8.20.0:
     dependencies:
       fast-deep-equal: 3.1.3
-      fast-uri: 3.1.2
+      fast-uri: 3.1.3
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
 
@@ -11177,6 +11286,8 @@ snapshots:
   confbox@0.1.8: {}
 
   confbox@0.2.2: {}
+
+  confbox@0.2.4: {}
 
   consola@3.4.2: {}
 
@@ -11646,7 +11757,7 @@ snapshots:
     optionalDependencies:
       stylelint: 16.9.0(typescript@6.0.3)
 
-  eslint-plugin-better-tailwindcss@4.6.0(eslint@10.6.0(jiti@2.7.0))(tailwindcss@4.3.1)(typescript@6.0.3):
+  eslint-plugin-better-tailwindcss@4.6.0(eslint@10.6.0(jiti@2.7.0))(tailwindcss@4.3.2)(typescript@6.0.3):
     dependencies:
       '@eslint/css-tree': 4.0.4
       '@valibot/to-json-schema': 1.7.1(valibot@1.4.1(typescript@6.0.3))
@@ -11654,7 +11765,7 @@ snapshots:
       jiti: 2.7.0
       synckit: 0.11.13
       tailwind-csstree: 0.3.3
-      tailwindcss: 4.3.1
+      tailwindcss: 4.3.2
       tsconfig-paths-webpack-plugin: 4.2.0
       valibot: 1.4.1(typescript@6.0.3)
     optionalDependencies:
@@ -11907,14 +12018,14 @@ snapshots:
       regexp-ast-analysis: 0.7.1
       scslre: 0.3.0
 
-  eslint-plugin-tailwindcss@4.0.4(eslint@10.6.0(jiti@2.7.0))(tailwindcss@4.3.1)(typescript@6.0.3):
+  eslint-plugin-tailwindcss@4.0.4(eslint@10.6.0(jiti@2.7.0))(tailwindcss@4.3.2)(typescript@6.0.3):
     dependencies:
       '@typescript-eslint/utils': 8.62.0(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3)
       postcss: 8.5.16
       postcss-nested: 7.0.2(postcss@8.5.16)
       synckit: 0.11.13
-      tailwind-api-utils: 1.0.3(tailwindcss@4.3.1)
-      tailwindcss: 4.3.1
+      tailwind-api-utils: 1.0.3(tailwindcss@4.3.2)
+      tailwindcss: 4.3.2
     optionalDependencies:
       typescript: 6.0.3
     transitivePeerDependencies:
@@ -12202,6 +12313,8 @@ snapshots:
 
   exsolve@1.0.7: {}
 
+  exsolve@1.1.0: {}
+
   fast-deep-equal@3.1.3: {}
 
   fast-diff@1.3.0: {}
@@ -12233,7 +12346,7 @@ snapshots:
     dependencies:
       fast-string-truncated-width: 3.0.3
 
-  fast-uri@3.1.2: {}
+  fast-uri@3.1.3: {}
 
   fast-wrap-ansi@0.2.2:
     dependencies:
@@ -13447,8 +13560,8 @@ snapshots:
 
   local-pkg@1.2.1:
     dependencies:
-      mlly: 1.8.0
-      pkg-types: 2.3.0
+      mlly: 1.8.2
+      pkg-types: 2.3.1
       quansync: 0.2.11
 
   localstorage-polyfill@1.0.1: {}
@@ -13915,6 +14028,13 @@ snapshots:
       pkg-types: 1.3.1
       ufo: 1.6.1
 
+  mlly@1.8.2:
+    dependencies:
+      acorn: 8.17.0
+      pathe: 2.0.3
+      pkg-types: 1.3.1
+      ufo: 1.6.4
+
   modern-tar@0.7.6: {}
 
   module-alias@2.2.3: {}
@@ -14204,6 +14324,12 @@ snapshots:
     dependencies:
       confbox: 0.2.2
       exsolve: 1.0.7
+      pathe: 2.0.3
+
+  pkg-types@2.3.1:
+    dependencies:
+      confbox: 0.2.4
+      exsolve: 1.1.0
       pathe: 2.0.3
 
   pluralize@8.0.0: {}
@@ -15005,12 +15131,12 @@ snapshots:
       postcss-sorting: 10.0.0(postcss@8.5.16)
       stylelint: 16.9.0(typescript@6.0.3)
 
-  stylelint-plugin-tailwindcss@3.0.0(stylelint@16.9.0(typescript@6.0.3))(tailwindcss@4.3.1):
+  stylelint-plugin-tailwindcss@3.0.0(stylelint@16.9.0(typescript@6.0.3))(tailwindcss@4.3.2):
     dependencies:
       postcss-tailwindcss: 3.0.0
       stylelint: 16.9.0(typescript@6.0.3)
     optionalDependencies:
-      tailwindcss: 4.3.1
+      tailwindcss: 4.3.2
 
   stylelint-scss@7.2.0(stylelint@16.9.0(typescript@6.0.3)):
     dependencies:
@@ -15124,12 +15250,12 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
 
-  tailwind-api-utils@1.0.3(tailwindcss@4.3.1):
+  tailwind-api-utils@1.0.3(tailwindcss@4.3.2):
     dependencies:
       enhanced-resolve: 5.24.1
       jiti: 2.7.0
       local-pkg: 1.2.1
-      tailwindcss: 4.3.1
+      tailwindcss: 4.3.2
 
   tailwind-csstree@0.3.3: {}
 
@@ -15140,7 +15266,7 @@ snapshots:
       '@weapp-tailwindcss/shared': 2.0.0
       jiti: 2.7.0
 
-  tailwindcss@4.3.1: {}
+  tailwindcss@4.3.2: {}
 
   tapable@2.3.3: {}
 
@@ -15310,6 +15436,8 @@ snapshots:
   ufo@1.5.4: {}
 
   ufo@1.6.1: {}
+
+  ufo@1.6.4: {}
 
   unbox-primitive@1.1.0:
     dependencies:
@@ -15595,18 +15723,22 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  weapp-tailwindcss@5.1.4(jiti@2.7.0)(tailwindcss@4.3.1):
+  weapp-style-injector@1.0.0:
     dependencies:
-      '@ast-core/escape': 1.0.1
+      '@weapp-tailwindcss/shared': 2.0.0
+      micromatch: 4.0.8
+
+  weapp-tailwindcss@5.1.5(jiti@2.7.0)(tailwindcss@4.3.2):
+    dependencies:
       '@babel/parser': 7.29.7
       '@babel/traverse': 7.29.7
       '@babel/types': 7.29.7
-      '@tailwindcss-mangle/engine': 0.1.1(tailwindcss@4.3.1)
+      '@tailwindcss-mangle/engine': 0.1.2(tailwindcss@4.3.2)
       '@vue/compiler-dom': 3.5.39
       '@weapp-core/escape': 8.0.0
       '@weapp-tailwindcss/logger': 2.0.0
-      '@weapp-tailwindcss/postcss': 3.1.4(jiti@2.7.0)(tailwindcss@4.3.1)(yaml@2.9.0)
-      '@weapp-tailwindcss/reset': 0.1.1(tailwindcss@4.3.1)
+      '@weapp-tailwindcss/postcss': 3.1.5(jiti@2.7.0)(tailwindcss@4.3.2)(yaml@2.9.0)
+      '@weapp-tailwindcss/reset': 0.1.1(tailwindcss@4.3.2)
       '@weapp-tailwindcss/shared': 2.0.0
       comment-json: 5.0.0
       debug: 4.4.3
@@ -15617,6 +15749,7 @@ snapshots:
       micromatch: 4.0.8
       semver: 7.8.5
       tailwindcss-config: 2.0.1
+      weapp-style-injector: 1.0.0
       yaml: 2.9.0
     transitivePeerDependencies:
       - jiti
