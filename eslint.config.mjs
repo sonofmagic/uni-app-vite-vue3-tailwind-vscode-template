@@ -3,7 +3,7 @@ import { icebreaker } from '@icebreakers/eslint-config'
 export default icebreaker(
   {
     vue: true,
-    tailwindcss: {
+    betterTailwindcss: {
       entryPoint: './src/tailwind.css',
     },
     weapp: true,
