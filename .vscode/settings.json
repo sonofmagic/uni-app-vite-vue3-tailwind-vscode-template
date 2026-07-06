@@ -27,6 +27,9 @@
       "(?:'|\"|`)([^']*)(?:'|\"|`)"
     ]
   ],
+  // Mini Program rpx arbitrary text sizes, for example text-[24rpx],
+  // can be misreported as conflicting with text color utilities.
+  "tailwindCSS.lint.cssConflict": "ignore",
   // Silent the stylistic rules in you IDE, but still auto fix them
   "eslint.rules.customizations": [
     {
