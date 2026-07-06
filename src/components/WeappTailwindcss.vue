@@ -45,7 +45,7 @@ function copy(data) {
       你可以在上方的官网上，找到大量的提效解决方案
     </view>
     <view class="text-xs text-gray-600/75">
-      在使用这个模板之前，确保你安装了 Nodejs@20 和 Vscode，然后安装了 eslint 插件，本模板使用 eslint 进行错误校验和格式化
+      在使用这个模板之前，确保你安装了 Nodejs@22 和 Vscode，然后安装了 eslint 插件，本模板使用 eslint 进行错误校验和格式化
     </view>
     <view
       class="
