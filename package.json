@@ -75,8 +75,8 @@
     "@dcloudio/uni-cli-shared": "3.0.0-5010420260703001",
     "@dcloudio/uni-stacktracey": "3.0.0-5010420260703001",
     "@dcloudio/vite-plugin-uni": "3.0.0-5010420260703001",
-    "@icebreakers/eslint-config": "^7.0.0",
-    "@icebreakers/stylelint-config": "^5.0.1",
+    "@icebreakers/eslint-config": "^7.0.1",
+    "@icebreakers/stylelint-config": "^5.0.2",
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/svg-spinners": "^1.2.4",
     "@iconify/tailwind4": "^1.2.3",
@@ -93,6 +93,6 @@
     "unplugin-auto-import": "^20.3.0",
     "vite": "5.2.8",
     "weapp-ide-cli": "^5.4.10",
-    "weapp-tailwindcss": "^5.1.8"
+    "weapp-tailwindcss": "^5.1.9"
   }
 }
