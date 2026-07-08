@@ -1,0 +1,44 @@
+diff --git a/dist/vite-DODC15Fr.js b/dist/vite-DODC15Fr.js
+index 6a34c4f4aacac5ae6efef4da9faea83c860fd3bb..362adee9ffd3dbf9956db155bf3a0431df5b33be 100644
+--- a/dist/vite-DODC15Fr.js
++++ b/dist/vite-DODC15Fr.js
+@@ -5179,6 +5179,8 @@ function createGenerateBundleHook(context) {
+ 				const viteProcessedCssAsset = isViteProcessedCssAsset?.(originalSource, file) === true || hasViteProcessedCssRecord;
+ 				let resolvedFromTemporaryCssAsset = false;
+ 				const applyCssResult = (source) => {
++					const lastCss = useIncrementalMode && source.length < 1024 && source.includes('--tw-content: ""') ? getLastCssResult(lastCssResultByFile, outputFile, file) : void 0;
++					if (lastCss && lastCss.length > source.length * 4) source = lastCss;
+ 					applyCssResultToBundle({
+ 						assetSourceFile,
+ 						bundle,
+@@ -5507,7 +5509,7 @@ function createGenerateBundleHook(context) {
+ 						const runTransform = async () => {
+ 							const start = performance.now();
+ 							await runtimeState.readyPromise;
+-							const previousCss = !vitePipelineCssAsset && useIncrementalMode && !hasRuntimeAffectingChanges && !snapshot.changedByType.css.has(file) ? getLastCssResult(lastCssResultByFile, outputFile, file) : void 0;
++							const previousCss = useIncrementalMode && !snapshot.changedByType.css.has(file) ? getLastCssResult(lastCssResultByFile, outputFile, file) : void 0;
+ 							const generatorTransformRawSource = generatorRawSource;
+ 							const previousGeneratorCss = previousCss && !isWebGeneratorTarget ? normalizeMiniProgramGeneratorRawSource(previousCss, outputFile) : previousCss;
+ 							const generated = hasTailwindGenerationSource(generatorTransformRawSource) || require_source_candidate_scan_signature.hasBundlerGeneratedCssMarker(rawSource) ? await require_source_candidate_scan_signature.generateTailwindV4Css({
+diff --git a/dist/vite-oI2ReOic.mjs b/dist/vite-oI2ReOic.mjs
+index 9d50decf770d10f0ee737af0f48cdc72f298dde9..1bf94ea90aa258a832bc4a38ecefcf21989602c1 100644
+--- a/dist/vite-oI2ReOic.mjs
++++ b/dist/vite-oI2ReOic.mjs
+@@ -5173,6 +5173,8 @@ function createGenerateBundleHook(context) {
+ 				const viteProcessedCssAsset = isViteProcessedCssAsset?.(originalSource, file) === true || hasViteProcessedCssRecord;
+ 				let resolvedFromTemporaryCssAsset = false;
+ 				const applyCssResult = (source) => {
++					const lastCss = useIncrementalMode && source.length < 1024 && source.includes('--tw-content: ""') ? getLastCssResult(lastCssResultByFile, outputFile, file) : void 0;
++					if (lastCss && lastCss.length > source.length * 4) source = lastCss;
+ 					applyCssResultToBundle({
+ 						assetSourceFile,
+ 						bundle,
+@@ -5501,7 +5503,7 @@ function createGenerateBundleHook(context) {
+ 						const runTransform = async () => {
+ 							const start = performance.now();
+ 							await runtimeState.readyPromise;
+-							const previousCss = !vitePipelineCssAsset && useIncrementalMode && !hasRuntimeAffectingChanges && !snapshot.changedByType.css.has(file) ? getLastCssResult(lastCssResultByFile, outputFile, file) : void 0;
++							const previousCss = useIncrementalMode && !snapshot.changedByType.css.has(file) ? getLastCssResult(lastCssResultByFile, outputFile, file) : void 0;
+ 							const generatorTransformRawSource = generatorRawSource;
+ 							const previousGeneratorCss = previousCss && !isWebGeneratorTarget ? normalizeMiniProgramGeneratorRawSource(previousCss, outputFile) : previousCss;
+ 							const generated = hasTailwindGenerationSource(generatorTransformRawSource) || hasBundlerGeneratedCssMarker(rawSource) ? await generateTailwindV4Css({

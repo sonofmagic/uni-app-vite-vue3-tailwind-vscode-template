@@ -18,6 +18,7 @@
 
 @source "../index.html";
 @source "./**/*.{html,js,ts,jsx,tsx,vue}";
+@source inline("i-[mdi--github-circle] i-[mdi--star] before:content-['现在，让我们开始神奇的_tailwindcss_开发之旅吧！'] before:content-['现在，让我们继续神奇的_tailwindcss_HMR_回归之旅吧！']");
 
 @layer base {
   /*  #ifdef  H5  */
