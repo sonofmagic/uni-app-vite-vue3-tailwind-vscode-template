@@ -7,5 +7,3 @@ allowBuilds:
 onlyBuiltDependencies:
   - '@weapp-tailwindcss/merge'
 minimumReleaseAge: 0
-patchedDependencies:
-  weapp-tailwindcss@5.1.11: patches/weapp-tailwindcss@5.1.11.patch

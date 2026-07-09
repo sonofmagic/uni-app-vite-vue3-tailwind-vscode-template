@@ -4,9 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-patchedDependencies:
-  weapp-tailwindcss@5.1.11: adbc620407d92e0a20e12da131b673da87cb7a2ee32269192591168720987c73
-
 importers:
 
   .:
@@ -145,8 +142,8 @@ importers:
         specifier: ^5.4.10
         version: 5.4.10
       weapp-tailwindcss:
-        specifier: ^5.1.11
-        version: 5.1.11(patch_hash=adbc620407d92e0a20e12da131b673da87cb7a2ee32269192591168720987c73)(jiti@2.7.0)(tailwindcss@4.3.2)
+        specifier: ^5.1.12
+        version: 5.1.12(jiti@2.7.0)(tailwindcss@4.3.2)
 
 packages:
 
@@ -6841,8 +6838,8 @@ packages:
     resolution: {integrity: sha512-tc4s7+OlKKg4343Bfm/ZkhBhnvRJbpP4Wyr97p8lTIPVkGQTerWWVhUO/WAcSg+mKbEGey2Zzm54gok7V6mL6A==, tarball: https://registry.npmjs.org/weapp-style-injector/-/weapp-style-injector-1.0.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
 
-  weapp-tailwindcss@5.1.11:
-    resolution: {integrity: sha512-90QtBHgvvyrxS9dFkcAnsfAx/tR9r6vn1KHaQ1/xLPZjDiRjdIpns1AWdhDbUrSC3T4oJyGVrvrBbwgzWKuPiw==, tarball: https://registry.npmjs.org/weapp-tailwindcss/-/weapp-tailwindcss-5.1.11.tgz}
+  weapp-tailwindcss@5.1.12:
+    resolution: {integrity: sha512-1dw/28xJOlY2TUIHa/gPDby86b+LIgYvkdjC2dYofqRLlQwLDR4p2Qf5UlyqhmOgF2lBRy1JuhuEjutcvr0NJA==, tarball: https://registry.npmjs.org/weapp-tailwindcss/-/weapp-tailwindcss-5.1.12.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
@@ -15579,7 +15576,7 @@ snapshots:
       '@weapp-tailwindcss/shared': 2.0.0
       micromatch: 4.0.8
 
-  weapp-tailwindcss@5.1.11(patch_hash=adbc620407d92e0a20e12da131b673da87cb7a2ee32269192591168720987c73)(jiti@2.7.0)(tailwindcss@4.3.2):
+  weapp-tailwindcss@5.1.12(jiti@2.7.0)(tailwindcss@4.3.2):
     dependencies:
       '@babel/parser': 7.29.7
       '@babel/traverse': 7.29.7
