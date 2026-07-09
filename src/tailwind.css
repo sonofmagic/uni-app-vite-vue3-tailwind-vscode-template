@@ -6,13 +6,17 @@
 
 @custom-variant wx {
   /*  #ifdef  MP-WEIXIN  */
+
   @slot;
+
   /*  #endif  */
 }
 
 @custom-variant not-wx {
   /*  #ifndef  MP-WEIXIN  */
+
   @slot;
+
   /*  #endif  */
 }
 
@@ -22,9 +26,11 @@
 
 @layer base {
   /*  #ifdef  H5  */
+
   svg {
     display: initial;
   }
+
   /*  #endif  */
 }
 

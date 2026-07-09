@@ -142,8 +142,8 @@ importers:
         specifier: ^5.4.10
         version: 5.4.10
       weapp-tailwindcss:
-        specifier: ^5.1.12
-        version: 5.1.12(jiti@2.7.0)(tailwindcss@4.3.2)
+        specifier: ^5.1.13
+        version: 5.1.13(jiti@2.7.0)(tailwindcss@4.3.2)
 
 packages:
 
@@ -5397,6 +5397,10 @@ packages:
     resolution: {integrity: sha512-J6l92tKHX6w8Jy5nO1Vuc01NoIiRGi/d6qBKVxh+IQ8Cr3b6HbVNfKiF8ZpFKufTwpwxMmce2W3iQZ861ZRyTg==, tarball: https://registry.npmjs.org/node-releases/-/node-releases-2.0.50.tgz}
     engines: {node: '>=18'}
 
+  node-releases@2.0.51:
+    resolution: {integrity: sha512-wRNIrw4DmVLKQlbgOMdkMx27Wrpzes2hh5Jtbi2bjPd+4wJstWIqP5A+lscnqbm0xxmT5Bpg8Lec5ItEBwx6BQ==, tarball: https://registry.npmjs.org/node-releases/-/node-releases-2.0.51.tgz}
+    engines: {node: '>=18'}
+
   normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==, tarball: https://registry.npmjs.org/normalize-path/-/normalize-path-3.0.0.tgz}
     engines: {node: '>=0.10.0'}
@@ -6838,8 +6842,8 @@ packages:
     resolution: {integrity: sha512-tc4s7+OlKKg4343Bfm/ZkhBhnvRJbpP4Wyr97p8lTIPVkGQTerWWVhUO/WAcSg+mKbEGey2Zzm54gok7V6mL6A==, tarball: https://registry.npmjs.org/weapp-style-injector/-/weapp-style-injector-1.0.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
 
-  weapp-tailwindcss@5.1.12:
-    resolution: {integrity: sha512-1dw/28xJOlY2TUIHa/gPDby86b+LIgYvkdjC2dYofqRLlQwLDR4p2Qf5UlyqhmOgF2lBRy1JuhuEjutcvr0NJA==, tarball: https://registry.npmjs.org/weapp-tailwindcss/-/weapp-tailwindcss-5.1.12.tgz}
+  weapp-tailwindcss@5.1.13:
+    resolution: {integrity: sha512-mIQH8eYneyHYxbIJ0Dq5e9sGbXI1iraZfJgM1cG+XXjLNKK6dkLsNFE8XjbEzWkCyO2vOyOhKNs6qxJYtKGhRw==, tarball: https://registry.npmjs.org/weapp-tailwindcss/-/weapp-tailwindcss-5.1.13.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
@@ -10970,7 +10974,7 @@ snapshots:
       baseline-browser-mapping: 2.10.42
       caniuse-lite: 1.0.30001803
       electron-to-chromium: 1.5.389
-      node-releases: 2.0.50
+      node-releases: 2.0.51
       update-browserslist-db: 1.2.3(browserslist@4.28.5)
 
   bser@2.1.1:
@@ -13909,6 +13913,8 @@ snapshots:
 
   node-releases@2.0.50: {}
 
+  node-releases@2.0.51: {}
+
   normalize-path@3.0.0: {}
 
   normalize-range@0.1.2: {}
@@ -15576,7 +15582,7 @@ snapshots:
       '@weapp-tailwindcss/shared': 2.0.0
       micromatch: 4.0.8
 
-  weapp-tailwindcss@5.1.12(jiti@2.7.0)(tailwindcss@4.3.2):
+  weapp-tailwindcss@5.1.13(jiti@2.7.0)(tailwindcss@4.3.2):
     dependencies:
       '@babel/parser': 7.29.7
       '@babel/traverse': 7.29.7
