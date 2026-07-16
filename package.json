@@ -1,7 +1,7 @@
 {
   "name": "uni-app-vite-vue3-tailwind-vscode-template",
   "version": "0.0.0",
-  "packageManager": "pnpm@11.9.0",
+  "packageManager": "pnpm@11.13.1",
   "imports": {
     "#tailwind.css": "./src/tailwind.css"
   },
@@ -84,9 +84,9 @@
     "@iconify/tailwind4": "^1.2.3",
     "@types/node": "^26.1.1",
     "@vue/runtime-core": "^3.4.21",
-    "autoprefixer": "^10.5.2",
+    "autoprefixer": "^10.5.3",
     "eslint": "^10.7.0",
-    "postcss": "^8.5.16",
+    "postcss": "^8.5.19",
     "rollup": "4.14.3",
     "sass": "^1.101.0",
     "stylelint": "^17.14.0",
@@ -94,7 +94,7 @@
     "typescript": "^6.0.3",
     "unplugin-auto-import": "^20.3.0",
     "vite": "5.2.8",
-    "weapp-ide-cli": "^5.4.10",
-    "weapp-tailwindcss": "^5.1.14"
+    "weapp-ide-cli": "^5.4.12",
+    "weapp-tailwindcss": "^5.1.16"
   }
 }
