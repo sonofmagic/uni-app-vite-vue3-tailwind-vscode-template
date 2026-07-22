@@ -7,6 +7,14 @@
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
   },
+  // Reuse diagnostics collected while editing instead of linting the whole file again on save.
+  "eslint.codeActionsOnSave.mode": "problems",
+  // This is a single-package workspace; keep config and dependency resolution at its root.
+  "eslint.workingDirectories": [
+    {
+      "mode": "location"
+    }
+  ],
   // https://github.com/tailwindlabs/tailwindcss/discussions/5258
   "css.customData": [
     ".vscode/tailwind.json"
@@ -73,28 +81,13 @@
       "severity": "off"
     }
   ],
-  // Enable eslint for all supported languages
+  // Validate source languages only. Stylelint owns CSS/SCSS in the editor.
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "vue",
-    "html",
-    "markdown",
-    "json",
-    "jsonc",
-    "yaml",
-    "toml",
-    "xml",
-    "gql",
-    "graphql",
-    "astro",
-    "css",
-    "less",
-    "scss",
-    "pcss",
-    "postcss"
+    "vue"
   ],
   "css.validate": false,
   "less.validate": false,
